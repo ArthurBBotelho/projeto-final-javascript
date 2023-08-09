@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,20 +9,27 @@
 </head>
 
 <body>
-    <div class="insercaoDeDados">
+    <div class="container">
         <h1>Bem vindo a página de login</h1>
-       <p>Usuário</p>
-       <input type="text" name="firstName">   
-      <br>
-      <p>Senha</p>
-        <input type="text" name="secondName">
+        <form class="login">
+        <div class="username"> 
+            <input type="text" placeholder="Usuário" class="inputUsuario">
+            <label for="username" class="labelUsuario" id="usarnameLabel">usuário</label>
+        <br>
+        </div>
+        <div class="username"> 
+        <input type="text" placeholder="Senha" class="inputUsuario">
+        <label for="username" class="labelUsuario" id="usarnameLabel">Senha</label>
+            <br>
+        </div>
+        </form>
 
-       <br>
 
-        <button>Login</button>
+        <button id="butonLogin">Login</button>
 
     </div>
-   
+   <script src="./scryptPaginaLogin.js">
+   </script>
 
 </body>
 
