@@ -15,13 +15,13 @@ let valor = document.getElementById("valor")
 
 function increment() {
     count += 1
-    countEl.innerText = count + " = "
+    countEl.innerText = count + " = " + valor.value
 }
 
 function decrement() {
     count -= 1
-    countEl.innerText = count + " = "
-    valor == valor - valor
+    countEl.innerText = count + " = " + valor.value
+
 }
 
 
