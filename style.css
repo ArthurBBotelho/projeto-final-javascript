@@ -1,5 +1,11 @@
-:root{
+:root {
     --primary-color: rgb(239, 246, 221);
     --secundary-color: rgb(81, 92, 81);
     --text-color: rgb(54, 50, 50);
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0%;
+    margin: 0%;
 }
