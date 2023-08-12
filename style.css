@@ -34,7 +34,7 @@ header:hover {
     transform: ease-in 1s;
 }
 
-.titulo a {
+.tituloD a {
     display: flex;
     flex-wrap: nowrap;
     color: var(--secundary-color);
@@ -42,7 +42,7 @@ header:hover {
     font-size: 32px;
 }
 
-.titulo a:hover {
+.tituloD a:hover {
     color: var(--terciary-color);
 }
 
