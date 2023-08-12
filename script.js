@@ -1,3 +1,11 @@
+const hamburguer = document.getElementsByClassName()[0]
+const navLink = document.getElementsByClassName()[0]
+
+hamburguer.addEventListener('click', () => {
+    navbarLink.classList.toggle('active')
+})
+
+
 // ----------------------------------------------------INSCRIÇÃO NEWSLETTER
 
 let nome = document.getElementById("nome")
@@ -35,3 +43,5 @@ class Produto {
         this.vendido = false;
     }
 }
+
+const produto1 = new Produto("Cadeira Comfy", "cadeira", 1490.90, 16)

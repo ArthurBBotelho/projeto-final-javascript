@@ -25,16 +25,20 @@ header {
     color: var(--secundary-color);
     font-weight: 900;
     padding: 10px 50px 10px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+    display: grid;
+    grid-template: 33% / 33% 33% 34%;
+    grid-template-areas:
+        "tituloDhouse navLink navIcones"
+        "descubra . ."
+        "compreAgora . .";
 }
 
-header:hover {
-    transform: ease-in 1s;
+.tituloDhouse {
+    grid-area: tituloDhouse;
+    position: absolute;
 }
 
-.tituloD a {
+.tituloDhouse a {
     display: flex;
     flex-wrap: nowrap;
     color: var(--secundary-color);
@@ -42,16 +46,18 @@ header:hover {
     font-size: 32px;
 }
 
-.tituloD a:hover {
+.tituloDhouse a:hover {
     color: var(--terciary-color);
 }
 
-#nav {
+.navLink {
+    grid-area: navLink;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-#nav a {
+.navLink a {
     color: var(--secundary-color);
     transition: color 1s;
     padding: 10px;
@@ -59,19 +65,40 @@ header:hover {
     font-weight: 900;
 }
 
-#nav a:hover {
+.navLink a:hover {
     color: var(--terciary-color);
 }
 
-#iconesEntrada a img {
+.navIcones {
+    grid-area: navIcones;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconeEntrada img {
     width: 24px;
     opacity: 0.6;
     padding: 10px;
 }
 
-#iconesEntrada a img:hover {
+.iconeEntrada img:hover {
     border-bottom: solid 3px;
     color: black;
+}
+
+.descubra {
+    grid-area: descubra;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.compreAgora {
+    grid-area: compreAgora;
+    background-color: transparent;
+    height: 80px;
+    width: 50%;
+    color: var(--secundary-color);
+    border: solid 2px var(--secundary-color);
 }
 
 /* ------------------------------------------------------NEWSLETTER */
@@ -80,7 +107,7 @@ header:hover {
     display: flex;
     justify-content: center;
     color: var(--text-color);
-    margin: 50px;
+    margin: 20px;
 }
 
 #d-animation {
