@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1 id="titulo"><a href="index.html">D-house</a></h1>
+        <h1 class="titulo"><a href="index.html">D-house</a></h1>
         <nav id="nav">
             <a href="pagina-sobre/index.html">Sobre</a>
             <a href="#">Produtos</a>
@@ -29,32 +29,36 @@
             <a class="cart"><img src="imagem/icones/shopping.png"></a>
         </div>
     </header>
-    <div id="d-animation">
-        <img src="imagem/icones/icone-principal.png">
-        <img src="imagem/icones/icone-principal (1).png">
-        <img src="imagem/icones/icone-principal (2).png">
-        <img src="imagem/icones/icone-principal (3).png">
-        <img src="imagem/icones/icone-principal (4).png">
-    </div>
-    <section>
-        <h2>
-            Lorem ipsum dolor!
-        </h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora sequi voluptas quibusdam doloremque
-            fugiat, dolor dolore. Assumenda delectus distinctio placeat doloremque ea iste est voluptatum
-            laudantium,
-            quaerat iure, voluptas sint! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora sequi
-            voluptas quibusdam doloremque fugiat, dolor dolore. Assumenda delectus distinctio placeat doloremque ea
-            iste
-            est voluptatum laudantium, quaerat iure, voluptas sint! Assumenda delectus distinctio placeat doloremque
-            ea
-            iste est voluptatum laudantium, quaerat iure, voluptas
-        </p>
-        <br>
-        <p>Digite seu nome para se inscrever na nossa newsletter</p>
-        <input type="text" id="nome">
-        <button id="newsLetter" onclick="inscrever()">Inscrever</button>
+
+    <section id="sectionNewsLetter">
+        <div id="d-animation">
+            <img src="imagem/icones/icone-principal (2).png">
+            <img src="imagem/icones/icone-principal (1).png">
+            <img src="imagem/icones/icone-principal.png">
+            <img src="imagem/icones/icone-principal (3).png">
+            <img src="imagem/icones/icone-principal (4).png">
+        </div>
+        <div id="newsLetter">
+            <div>
+                <h2 class="titulo">
+                    Lorem ipsum dolor!
+                </h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora sequi voluptas quibusdam
+                    doloremque
+                    fugiat, dolor dolore. Assumenda delectus distinctio placeat doloremque ea iste est voluptatum
+                    laudantium!
+                </p>
+
+                <div id="camposNewsLetter">
+                    <h2 class="titulo">Se inscreva na nossa newsletter e receba todo nosso conteúdo semanalmente!</h2>
+                    <p class="texto">Digite seu nome</p>
+                    <input type="text" id="campo" placeholder=" nome">
+                    <p class="texto">Digite seu e-mail</p>
+                    <input type="text" id="nome" placeholder=" e-mail"><br>
+                    <button id="bottonNewsLetter" onclick="inscrever()">INSCREVER</button>
+                </div>
+            </div>
     </section>
     <hr>
     <main>
@@ -73,6 +77,7 @@
             </div>
         </div>
     </main>
+
 
     <footer>
 

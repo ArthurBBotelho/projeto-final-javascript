@@ -21,7 +21,7 @@ header {
     background-image: url(imagem/produtos/sofa-philip.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
+    height: 960px;
     color: var(--secundary-color);
     font-weight: 900;
     padding: 10px 50px 10px 50px;
@@ -30,12 +30,19 @@ header {
     align-items: start;
 }
 
-#titulo a {
+header:hover {
+    transform: ease-in 1s;
+}
+
+.titulo a {
+    display: flex;
+    flex-wrap: nowrap;
     color: var(--secundary-color);
+    transition: color 1s;
     font-size: 32px;
 }
 
-#titulo a:hover {
+.titulo a:hover {
     color: var(--terciary-color);
 }
 
@@ -46,6 +53,7 @@ header {
 
 #nav a {
     color: var(--secundary-color);
+    transition: color 1s;
     padding: 10px;
     font-size: 20px;
     font-weight: 900;
@@ -61,14 +69,80 @@ header {
     padding: 10px;
 }
 
-/* ------------------------------------------------------ANIMATION */
+#iconesEntrada a img:hover {
+    border-bottom: solid 3px;
+    color: black;
+}
+
+/* ------------------------------------------------------NEWSLETTER */
+
+#sectionNewsLetter {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    margin: 50px;
+}
 
 #d-animation {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-around;
+    margin-right: 30px;
 }
 
 #d-animation img {
-    width: 10%;
+    width: 100px;
+    animation: ease-in .2 1;
+}
+
+#newsLetter {
+    background-color: var(--primary-color);
+    height: 500px;
+    width: 500px;
+    padding: 0px 0px 30px 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.texto {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#camposNewsLetter {
+    margin-top: 60px;
+}
+
+#camposNewsLetter input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 30px;
+    border: solid 2px var(--text-color);
+}
+
+#bottonNewsLetter {
+    margin: 10px 10px 0px 0px;
+    font-family: 'Inter', sans-serif;
+    width: 204px;
+    height: 34px;
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+#bottonNewsLetter:hover {
+    background-color: var(--quarter-color)
+}
+
+#bottonNewsLetter:active {
+    background-color: var(--secundary-color)
 }
