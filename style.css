@@ -15,6 +15,8 @@
     text-decoration: none;
 }
 
+/* ------------------------------------------------------HEADER */
+
 header {
     background-image: url(imagem/produtos/sofa-philip.png);
     background-repeat: no-repeat;
@@ -53,9 +55,20 @@ header {
     color: var(--terciary-color);
 }
 
-
 #iconesEntrada a img {
     width: 24px;
     opacity: 0.6;
     padding: 10px;
+}
+
+/* ------------------------------------------------------ANIMATION */
+
+#d-animation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#d-animation img {
+    width: 10%;
 }
