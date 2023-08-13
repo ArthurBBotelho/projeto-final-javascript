@@ -27,11 +27,39 @@ function decrement() {
 
 // ----------------------------------------------------PRODUTO
 
-const produtos = [{ id: 1, produto: "Cadeira Comfy", categoria: "cadeira", preço: 1490.90, estoque: 16, vendido: false },
-{ id: 2, produto: "Sofa Outline", categoria: "sofa", preço: 6390.90, estoque: 8, vendido: false },
-{ id: 3, produto: "Sofa Phillip", categoria: "sofa", preço: 4190.90, estoque: 3, vendido: false }];
+const produtos = [{
+    id: 1,
+    imagem: "imagem/produtos/outline-sofa/outline-sofa.png",
+    produto: "Cadeira Comfy",
+    categoria: "cadeira",
+    preço: 1490.90,
+    estoque: 16,
+    vendido: false
+},
+{
+    id: 2,
+    imagem: "imagem/produtos/sofa-phillip/sofa-phillip.png",
+    produto: "Sofa Outline",
+    categoria: "sofa",
+    preço: 6390.90,
+    estoque: 8,
+    vendido: false
+},
+{
+    id: 3,
+    imagem: "imagem/produtos/cadeira-comfy/cadeira-confy.jpg",
+    produto: "Sofa Phillip",
+    categoria: "sofa",
+    preço: 4190.90,
+    estoque: 3,
+    vendido: false
+}];
 
-for (const produto of produtos) {
-    console.log(produto.id);
-    console.log(produto.produto);
+function produtosTela() {
+    for (const produto of produtos) {
+        console.log(produto.id);
+        console.log(produto.produto);
+    }
+
 }
+produtosTela()
