@@ -27,22 +27,11 @@ function decrement() {
 
 // ----------------------------------------------------PRODUTO
 
-class Produto {
-    construtor(id, nome, categoria, preço, estoque, vendido) {
-        this.id = parseInt(id);
-        this.nome = nome;
-        this.categoria = categoria;
-        this.preço = parseFloat(preço);
-        this.estoque = parseInt(estoque);
-        this.vendido = false;
-    }
+const produtos = [{ id: 1, produto: "Cadeira Comfy", categoria: "cadeira", preço: 1490.90, estoque: 16, vendido: false },
+{ id: 2, produto: "Sofa Outline", categoria: "sofa", preço: 6390.90, estoque: 8, vendido: false },
+{ id: 3, produto: "Sofa Phillip", categoria: "sofa", preço: 4190.90, estoque: 3, vendido: false }];
 
-    telaNome() {
-        console.log(this.nome)
-    }
+for (const produto of produtos) {
+    console.log(produto.id);
+    console.log(produto.produto);
 }
-
-const produto1 = new Produto(1, "Cadeira Comfy", "cadeira", 1490.90, 16)
-const produto2 = new Produto(2, "Sofa line", "sofa", 6390, 90, 8)
-
-produto1.telaNome()
