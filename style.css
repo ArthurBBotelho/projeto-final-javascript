@@ -29,8 +29,8 @@ header {
     grid-template: 33% / 33% 33% 34%;
     grid-template-areas:
         "tituloDhouse navLink navIcones"
-        "descubra . ."
-        "compreAgora . .";
+        ". descubra ."
+        ". compreAgora .";
 }
 
 .tituloDhouse {
@@ -43,7 +43,7 @@ header {
     flex-wrap: nowrap;
     color: var(--secundary-color);
     transition: color 1s;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .tituloDhouse a:hover {
@@ -57,10 +57,15 @@ header {
     justify-content: center;
 }
 
+.navLink ul {
+    display: flex;
+    padding: 12px;
+}
+
 .navLink a {
     color: var(--secundary-color);
     transition: color 1s;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
     font-weight: 900;
 }
@@ -92,13 +97,31 @@ header {
     flex-flow: column wrap;
 }
 
+.descubra .titulo{
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.descubra .texto {
+    font-size: 16px;
+    font-weight: 600;
+} 
+
 .compreAgora {
     grid-area: compreAgora;
     background-color: transparent;
     height: 80px;
     width: 50%;
-    color: var(--secundary-color);
-    border: solid 2px var(--secundary-color);
+    color: var(--text-color);
+    border: solid 3px var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
 }
 
 /* ------------------------------------------------------NEWSLETTER */
