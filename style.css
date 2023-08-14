@@ -108,6 +108,7 @@ header {
 } 
 
 .compreAgora {
+    margin-top: 180px;
     grid-area: compreAgora;
     background-color: transparent;
     height: 80px;
