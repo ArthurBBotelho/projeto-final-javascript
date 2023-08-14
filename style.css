@@ -18,7 +18,7 @@
 /* ------------------------------------------------------HEADER */
 
 header {
-    background-image: url(imagem/produtos/sofa-phillip/sofa-philip.png);
+    background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 960px;
@@ -123,6 +123,15 @@ header {
     align-items: center;
     justify-content: center;
     justify-self: center;
+    transition: border-radius 1s;
+}
+
+.compreAgora:hover {
+    border-radius: 50px;
+} 
+
+.compreAgora a{
+    color: var(--text-color);
 }
 
 /* ------------------------------------------------------NEWSLETTER */
@@ -149,11 +158,11 @@ header {
 #newsLetter {
     background-color: var(--primary-color);
     height: 500px;
-    width: 500px;
+    width: 650px;
     padding: 0px 0px 30px 30px;
     display: flex;
     flex-flow: column wrap;
-    justify-content: end;
+    justify-content: center;
 }
 
 .titulo {
@@ -188,6 +197,7 @@ header {
     font-weight: 900;
     font-size: 20px;
     background-color: transparent;
+    transition: background-color 1s;
 }
 
 #bottonNewsLetter:hover {
