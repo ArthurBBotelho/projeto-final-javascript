@@ -66,6 +66,6 @@ function produtosTela() {
             return 0;
         }
     }
-    console.log("Preço do menor para o maior" + (produtos.sort(compare).value))
+    console.log("Preço do menor para o maior" + produtos)
 }
 produtosTela()
