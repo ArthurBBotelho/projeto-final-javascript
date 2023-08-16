@@ -64,8 +64,6 @@ const produtos = [{
     vendido: false
 }];
 
-console.log(produtos)
-
 produtos.sort((a, b) => {
     if (a.produto > b.produto) {
         return 1;
@@ -77,3 +75,14 @@ produtos.sort((a, b) => {
 })
 
 console.log(produtos)
+
+// ------------------------------------------------------------------SEARCH
+
+
+function search() {
+    let buscaUser = prompt("Faça sua busca: ")
+    const buscaProduto = produtos.filter((o) => o.produto.toUpperCase().includes(buscaUser.toUpperCase()))
+    console.log(buscaProduto)
+}
+
+
