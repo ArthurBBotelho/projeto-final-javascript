@@ -53,19 +53,27 @@ const produtos = [{
     preço: 4190.90,
     estoque: 3,
     vendido: false
+},
+{
+    id: 4,
+    imagem: "imagem/produtos/cadeira-quad/cadeira-quad.jpg",
+    produto: "Cadeira Quad",
+    categoria: "cadeira",
+    preço: 1860.90,
+    estoque: 15,
+    vendido: false
 }];
 
+console.log(produtos)
 
-for (const produto of produtos) {
-    console.log(produtos.produto)
-}
-
-produtos.sort(function (a, b) {
-    if (a.preço > b.preço) {
-        return -1;
-    } else {
-        return true
+produtos.sort((a, b) => {
+    if (a.produto > b.produto) {
+        return 1;
     }
+    if (a.produto < b.produto) {
+        return -1;
+    }
+    return 0;
 })
 
-console.log("Preço do menor para o maior" + produtos)
+console.log(produtos)
