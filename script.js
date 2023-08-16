@@ -55,11 +55,17 @@ const produtos = [{
     vendido: false
 }];
 
-function produtosTela() {
-    for (const produto of produtos) {
-        console.log(produto.id);
-        console.log(produto.produto);
-    }
 
+for (const produto of produtos) {
+    console.log(produtos.produto)
 }
-produtosTela()
+
+produtos.sort(function (a, b) {
+    if (a.preço > b.preço) {
+        return -1;
+    } else {
+        return true
+    }
+})
+
+console.log("Preço do menor para o maior" + produtos)
