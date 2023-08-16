@@ -15,7 +15,7 @@ const novaPessoa = new adicionaPessoa(prompt("Digite Seu Nome")//prompt("Digite 
 );
 console.log(novaPessoa)
 
-//função para acrscentar essas pessoas em um array
+//função para acrscentar essas pessoas em um arraypagina-login/scryptPaginaLogin.js
 cadastro.push(novaPessoa);
 
 //reotornar "cadastro realizado com sucesso"
