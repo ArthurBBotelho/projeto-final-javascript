@@ -1,5 +1,9 @@
 document.getElementById("butonLogin").addEventListener("click", function(){ alert("Hello World!"); })
 
+
+//fazer a tela de cadastro igual a vitória do lig4, com fundo embassado....
+
+
 //REALIZANDO O CADSTRO DENTRO DO ARRAY
 let cadastro = []
 //pedindo dados para o usari
@@ -19,11 +23,16 @@ console.log(novaPessoa)
 cadastro.push(novaPessoa);
 
 //reotornar "cadastro realizado com sucesso"
-alert("Cadastro realizado com sucesso!")
+//função para validar se usuário digitou os dados
+if (novaPessoa !== ' '){   // validação errada revisar a aula de validação.... 
+    alert("Cadastro realizado com sucesso!")
+}
+    else{alert("Digite novamente seu nome");
+    }
 
 //acessar esses dados dentro do array cadastro e comparar se a senha é igual ao nome e email
 
-let nomeUsuario = prompt("Digite seu e-mail");
+let nomeUsuario = prompt("Digite seu nome para fazer login");
 //let inserirSenha = prompt("Digite a sua senha");
 
 for (const adicionaPessoa of cadastro){
