@@ -5,39 +5,46 @@ document.getElementById("butonLogin").addEventListener("click", function(){ aler
 
 
 //REALIZANDO O CADSTRO DENTRO DO ARRAY
-let cadastro = []
 //pedindo dados para o usari
 //função para criar a pessoa
-
-function adicionaPessoa(nome, senha, email){
-    this.nome = nome;
-    //this.senha = senha;
-    //  this.email = email;
+class adicionaPessoa {
+    constructor(nome, senha) {
+        //tornar tudo maiusculo
+        this.nome = nome.toUpperCase();
+        //tornar numero inteiro
+        this.senha = senha;
+        // this.email = email;
+    }
 }
+
 //adicionando uma pessoa e pedindo dados ao usuário
-const novaPessoa = new adicionaPessoa(prompt("Digite Seu Nome")//prompt("Digite Sua senha"), prompt("Digite seu E-mail")
-);
-console.log(novaPessoa)
-
-//função para acrscentar essas pessoas em um arraypagina-login/scryptPaginaLogin.js
-cadastro.push(novaPessoa);
-
-//reotornar "cadastro realizado com sucesso"
-//função para validar se usuário digitou os dados
-if (novaPessoa !== ' '){   // validação errada revisar a aula de validação.... 
+let cadastro = [];
+//const novaPessoa = new adicionaPessoa(prompt("Digite Seu Nome para o Cadastro"), prompt("Digite Sua senha"), prompt("Digite seu E-mail"));
+let novaPessoa = new adicionaPessoa(prompt("Digite Seu Nome para o Cadastro"), prompt("Digite Sua senha"));
+if (novaPessoa !=""){    
     alert("Cadastro realizado com sucesso!")
 }
-    else{alert("Digite novamente seu nome");
+    else{alert("Digite um nome");
     }
 
-//acessar esses dados dentro do array cadastro e comparar se a senha é igual ao nome e email
+cadastro.push(novaPessoa)
+console.log(cadastro)
 
-let nomeUsuario = prompt("Digite seu nome para fazer login");
-//let inserirSenha = prompt("Digite a sua senha");
 
-for (const adicionaPessoa of cadastro){
-    if (nomeUsuario == adicionaPessoa.nome) {
-        alert("Seus dados estão corretos")
-} else { alert("Revise seus dados e tente novamente")   
+//função para validar se usuário digitou os dados no cadastro
+
+//determina variaveis para captar usuario e senha agtravés de prompt
+let nomeUsuario = prompt("Digite seu nome para fazer login").toUpperCase()
+let inserirSenha = prompt("Digite a sua senha");
+
+//percorre o array cadastro e pega um dos itens do contrutor
+for (const nome of cadastro){ 
+        console.log(nome.nome)
+        console.log(nome.senha)
+
+        if((nome.nome === nomeUsuario) && (nome.senha === inserirSenha)) {
+            alert("Seus dados estão corretos")
+        }
+        else{ alert("Dados não são iguais")
+        }
     }
-}
