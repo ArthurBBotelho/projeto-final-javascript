@@ -21,9 +21,8 @@ header {
     background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center center;
-    width: 92%;
-    height: 400px;
+    background-position: center;
+    height: 960px;
     color: var(--secundary-color);
     padding: 10px 50px 10px 50px;
     display: grid;
@@ -34,7 +33,7 @@ header {
         ". compreAgora .";
 }
 
-.
+
 .tituloDhouse {
     grid-area: tituloDhouse;
     position: absolute;
@@ -96,12 +95,7 @@ header {
 .descubra {
     grid-area: descubra;
     display: flex;
-    flex-flow: column wrap;
-    border-radius: 10px;
-    width: 400px;
-    height: 2500px;
-    padding: 10px;
-    background-color: rgba(211, 211, 211, 0.4) ;
+    flex-flow: column wrap;    
 }
 
 .descubra .titulo {
@@ -131,7 +125,6 @@ header {
     justify-content: center;
     justify-self: center;
     transition: border-radius 1s;
-    position:absolute;
 }
 
 .compreAgora:hover {
