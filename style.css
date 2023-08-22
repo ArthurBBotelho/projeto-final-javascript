@@ -20,7 +20,7 @@
 header {
     background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:contain;
     background-position: center;
     height: 960px;
     color: var(--secundary-color);
@@ -217,4 +217,23 @@ header {
     font-size: 54px;
     font-weight: 900;
     color: var(--primary-color);
+    padding: 10px 0px 10px 50px;
+}
+
+main {
+    margin: 5px;
+    padding: none;
+    display: grid;
+    grid-template: 33% / 50% 50%;
+    grid-template-areas:
+        "cadeira-comfy .";
+}
+
+.cadeira-comfy {
+    background-image: url(produtos/cadeira-comfy/imagem/cadeira-confy.jpg);
+    width: 100%;
+    height: 640px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
 }
