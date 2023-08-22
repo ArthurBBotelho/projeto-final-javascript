@@ -17,12 +17,12 @@
 
 /* ------------------------------------------------------HEADER */
 
-header {
+#header {
     background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     background-position: center;
-    height: 960px;
+    height: 940px;
     color: var(--secundary-color);
     padding: 10px 50px 10px 50px;
     display: grid;
@@ -36,7 +36,6 @@ header {
 
 .tituloDhouse {
     grid-area: tituloDhouse;
-    position: absolute;
 }
 
 .tituloDhouse a {
@@ -226,13 +225,25 @@ main {
     display: grid;
     grid-template: 33% / 50% 50%;
     grid-template-areas:
-        "cadeira-comfy .";
+        "cadeira-comfy . "
+        "cadeira-quad . ";
 }
 
 .cadeira-comfy {
+    grid-area: cadeira-comfy;
     background-image: url(produtos/cadeira-comfy/imagem/cadeira-confy.jpg);
     width: 100%;
-    height: 640px;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
+}
+
+.cadeira-quad {
+    grid-area: cadeira-quad;
+    background-image: url(produtos/cadeira-quad/cadeira-quad.jpg);
+    width: 100%;
+    height: 900px;
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid red;
