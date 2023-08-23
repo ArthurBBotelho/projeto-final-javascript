@@ -20,8 +20,9 @@
 #header {
     background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
+    background-color: var(--primary-color);
     height: 940px;
     color: var(--secundary-color);
     padding: 10px 50px 10px 50px;
@@ -94,7 +95,7 @@
 .descubra {
     grid-area: descubra;
     display: flex;
-    flex-flow: column wrap;    
+    flex-flow: column wrap;
 }
 
 .descubra .titulo {
@@ -132,6 +133,65 @@
 
 .compreAgora a {
     color: var(--text-color);
+}
+
+/* -------------------------------------------------------DESTAQUES */
+
+#destaquesSeparação {
+    margin-top: 50px;
+    background-color: var(--primary-color);
+    height: 150%;
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destaquesNome {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--secundary-color);
+}
+
+.destaquesNome1 {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--terciary-color);
+}
+
+.destaquesNome2 {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--quarter-color);
+}
+
+.destaquesNome3 {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+
+main {
+    margin: 5px;
+    padding: none;
+    display: grid;
+    grid-template: 50% / 50% 50%;
+    grid-template-areas:
+        "cadeira-comfy . "
+        "cadeira-quad . ";
+}
+
+.cadeira-comfy {
+    grid-area: cadeira-comfy;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 45px;
+}
+
+.cadeira-quad {
+    grid-area: cadeira-quad;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    padding: 45px;
 }
 
 /* ------------------------------------------------------NEWSLETTER */
@@ -208,43 +268,15 @@
     background-color: var(--secundary-color)
 }
 
-/* -------------------------------------------------------DESTAQUES */
+/* -------------------------------------------------------FOOTER */
 
-#destaquesSeparação {
-    background-color: var(--quarter-color);
-    height: 150%;
-    font-size: 54px;
-    font-weight: 900;
+footer {
+    margin-top: 150px;
+    background-color: var(--text-color);
     color: var(--primary-color);
-    padding: 10px 0px 10px 50px;
-}
-
-main {
-    margin: 5px;
-    padding: none;
-    display: grid;
-    grid-template: 33% / 50% 50%;
-    grid-template-areas:
-        "cadeira-comfy . "
-        "cadeira-quad . ";
-}
-
-.cadeira-comfy {
-    grid-area: cadeira-comfy;
-    background-image: url(produtos/cadeira-comfy/imagem/cadeira-confy.jpg);
-    width: 100%;
-    height: 900px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 1px solid red;
-}
-
-.cadeira-quad {
-    grid-area: cadeira-quad;
-    background-image: url(produtos/cadeira-quad/cadeira-quad.jpg);
-    width: 100%;
-    height: 900px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 1px solid red;
+    font-size: 18px;
+    height: 30px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
 }
