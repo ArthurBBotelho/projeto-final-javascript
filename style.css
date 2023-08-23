@@ -115,7 +115,7 @@
     height: 80px;
     width: 200px;
     color: var(--text-color);
-    border: solid 3px var(--text-color);
+    border: solid 2px var(--text-color);
     font-size: 24px;
     font-weight: 600;
     display: flex;
@@ -176,22 +176,116 @@ main {
     display: grid;
     grid-template: 50% / 50% 50%;
     grid-template-areas:
-        "cadeira-comfy . "
-        "cadeira-quad . ";
+        "imgComfy infoDestaqueComfy"
+        "infoDestaqueQuad imgQuad";
 }
 
-.cadeira-comfy {
-    grid-area: cadeira-comfy;
+/* -------------------------------------------------------COMFY */
+
+.imgComfy {
+    grid-area: imgComfy;
     display: flex;
-    flex-flow: row wrap;
-    padding: 45px;
+    flex-direction: row-reverse;
+    padding: 50px;
 }
 
-.cadeira-quad {
-    grid-area: cadeira-quad;
+.imgComfy a {
+    transition: opacity 1s;
+}
+
+.imgComfy a:hover {
+    opacity: 60%;
+}
+
+.infoDestaqueComfy {
+    grid-area: infoDestaqueComfy;
+    width: 400px;
     display: flex;
-    flex-flow: row-reverse wrap;
-    padding: 45px;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.infoDestaqueComfy h3 {
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+.infoDestaqueComfy p {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.infoDestaqueComfy button {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    border: solid 2px var(--text-color);
+    transition: border-radius 1s;
+}
+
+.infoDestaqueComfy button:hover {
+    border-radius: 50px;
+}
+
+/* -------------------------------------------------------QUAD */
+
+.imgQuad {
+    grid-area: imgQuad;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 50px;
+}
+
+.imgQuad a {
+    transition: opacity 1s;
+}
+
+.imgQuad a:hover {
+    opacity: 60%;
+}
+
+.infoDestaqueQuad {
+    grid-area: infoDestaqueQuad;
+    width: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.infoDestaqueQuad h3 {
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+.infoDestaqueQuad p {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.infoDestaqueQuad button {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    border: solid 2px var(--text-color);
+    transition: border-radius 1s;
+}
+
+.infoDestaqueQuad button:hover {
+    border-radius: 50px;
 }
 
 /* ------------------------------------------------------NEWSLETTER */
