@@ -176,8 +176,8 @@ main {
     display: grid;
     grid-template: 50% / 50% 50%;
     grid-template-areas:
-        "imgComfy infoDestaqueComfy"
-        "infoDestaqueQuad imgQuad";
+        "imgComfy infoDestaqueComfy "
+        "imgQuad infoDestaqueQuad ";
 }
 
 /* -------------------------------------------------------COMFY */
