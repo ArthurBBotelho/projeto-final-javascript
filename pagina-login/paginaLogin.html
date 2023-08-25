@@ -35,30 +35,26 @@
     </div>
     </header>
     <div class="container">
-        <h1>Login</h1>
-        <form class="login">
-        <div class="username"> 
-            <input type="text" placeholder="Usuário" class="inputUsuario">
-        <br>
+        <div class="container-login">
+            <h1>Login</h1>
+            <form class="login">
+                <div class="username"> 
+                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                    <br>
+                </div>
+                <div class="password"> 
+                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                    <br>
+                </div>
+            </form>
+            <div id="divCadastrado"></div>
+            <div class="complementos">
+                <button id="forgotPasswordButton">Esqueci a senha</button>
+                <button id="getLoginButton">Realizar Cadastro</button>
+                <button id="buttonLogin">Login</button>
+            </div>
         </div>
-        <div class="username"> 
-
-        <input type="text" placeholder="Senha" class="inputUsuario">
-        
-            <br>
-        </div>
-        </form>
-        
-        <div class="complementos">
-<h2> Esqueci a senha</h2> <h2>Realizar Cadastro</h2>
-
-</div>
-        <button id="butonLogin">Login</button>
-
-        
     </div>
-   <script src="./scryptPaginaLogin.js"></script>
-
+    <script src="./scryptPaginaLogin.js"></script>
 </body>
-
 </html>
