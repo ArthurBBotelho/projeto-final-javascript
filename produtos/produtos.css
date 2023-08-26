@@ -18,20 +18,13 @@
 /* ------------------------------------------------------HEADER */
 
 #header {
-    background-image: url(produtos/sofa-phillip/imagem/sofa-philip.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-color: var(--primary-color);
-    height: 940px;
     color: var(--secundary-color);
     padding: 10px 50px 10px 50px;
     display: grid;
     grid-template: 33% / 33% 33% 34%;
     grid-template-areas:
-        "tituloDhouse navLink navIcones"
-        ". descubra ."
-        ". compreAgora .";
+        "tituloDhouse navLink navIcones";
 }
 
 
