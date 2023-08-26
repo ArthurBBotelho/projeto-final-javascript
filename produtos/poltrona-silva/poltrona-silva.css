@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #f1f4de;
+    --secundary-color: #e07a5f;
+    --terciary-color: #46725d;
+    --text-color: #313349;
+    --quarter-color: #f2cc8f;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0%;
+    margin: 0%;
+    font-style: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------HEADER */
+
+#header {
+    color: var(--secundary-color);
+    padding: 10px 50px 10px 50px;
+    display: grid;
+    grid-template: 33% / 33% 33% 34%;
+    grid-template-areas:
+        "tituloDhouse navLink navIcones";
+}
+
+
+.tituloDhouse {
+    grid-area: tituloDhouse;
+}
+
+.tituloDhouse a {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--secundary-color);
+    transition: color 1s;
+    font-size: 36px;
+}
+
+.tituloDhouse a:hover {
+    color: var(--terciary-color);
+}
+
+.navLink {
+    grid-area: navLink;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.navLink ul {
+    display: flex;
+    padding: 12px;
+}
+
+.navLink a {
+    color: var(--secundary-color);
+    transition: color 1s;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.navLink a:hover {
+    color: var(--terciary-color);
+}
+
+.navIcones {
+    grid-area: navIcones;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconeEntrada img {
+    width: 24px;
+    opacity: 0.6;
+    padding: 10px;
+}
+
+.iconeEntrada img:hover {
+    border-bottom: solid 3px;
+    color: black;
+}
