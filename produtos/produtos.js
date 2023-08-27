@@ -15,13 +15,13 @@
 //     }
 // }
 
-// let cadeiraComfy = new Produtos(1, "Cadeira Comfy", "../imagem/produtos/outline-sofa/outline-sofa.png", "cadeira", 1490.90, 16, false);
+// let cadeiraComfy = new Produtos(1, "Cadeira Comfy", "../imagem/produtos/cadeira-comfy/cadeira-comfy.png", "cadeira", 1490.90, 16, false);
 
 // cadeiraComfy.tela()
 
 const produtos = [{
     id: 1,
-    imagem: "imagem/produtos/cadeira-comfy/cadeira-confy.jpg ",
+    imagem: '<img src="../produtos/cadeira-comfy/imagem/cadeira-comfy.png">',
     nome: "Cadeira Comfy",
     categoria: "cadeira",
     link: "cadeira-comfy",
@@ -31,7 +31,7 @@ const produtos = [{
 },
 {
     id: 2,
-    imagem: "imagem/produtos/outline-sofa/outline-sofa.png",
+    imagem: '<img src="../produtos/sofa-outline/imagem/sofa-outline.png">',
     nome: "Sofa Outline",
     categoria: "sofa",
     link: "sofa-outline",
@@ -41,7 +41,7 @@ const produtos = [{
 },
 {
     id: 3,
-    imagem: "imagem/produtos/sofa-phillip/sofa-phillip.png",
+    imagem: '<img src="../produtos/sofa-phillip/imagem/sofa-phillip.png">',
     nome: "Sofa Phillip",
     categoria: "sofa",
     link: "sofa-phillip",
@@ -51,7 +51,7 @@ const produtos = [{
 },
 {
     id: 4,
-    imagem: "imagem/produtos/cadeira-quad/cadeira-quad.jpg",
+    imagem: '<img src="../produtos/cadeira-quad/imagem/cadeira-quad.png">',
     nome: "Cadeira Quad",
     categoria: "cadeira",
     link: "cadeira-quad",
@@ -62,10 +62,11 @@ const produtos = [{
 
 for (const produto of produtos) {
     let container = document.createElement("div");
+    container.classList.add("produtosLayout")
 
     container.innerHTML = `<h3>${produto.nome}</h3>
-                           <a href="${produto.link}/${produto.link}.html"><img src="../produtos/${produto.link}/imagem/${produto.link}.png"></a>
-                            
-                            <p> $ ${produto.preço}</p>`;
+                            <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
+                            <p> $ ${produto.preço}</p>
+                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p> `;
     document.body.appendChild(container);
 }
