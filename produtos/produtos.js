@@ -58,7 +58,58 @@ const produtos = [{
     preço: 1860,
     estoque: 15,
     vendido: false
-}];
+},
+{
+    id: 5,
+    imagem: '<img src="../produtos/banco-hans/imagem/banco-hans.png">',
+    nome: "Banco Hans",
+    categoria: "banco",
+    link: "banco-hans",
+    preço: 780,
+    estoque: 3,
+    vendido: false
+},
+{
+    id: 6,
+    imagem: '<img src="../produtos/escrivaninha-copa/imagem/escrivaninha-copa.png">',
+    nome: "Escrivaninha Copa",
+    categoria: "escrivaninha",
+    link: "escrivaninha-copa",
+    preço: 3560,
+    estoque: 5,
+    vendido: false
+},
+{
+    id: 7,
+    imagem: '<img src="../produtos/mesa-apoio-cergle/imagem/mesa-apoio-cergle.png">',
+    nome: "Mesa de Apoio Cergle",
+    categoria: "mesa",
+    link: "mesa-apoio-cergle",
+    preço: 5130,
+    estoque: 8,
+    vendido: false
+},
+{
+    id: 8,
+    imagem: '<img src="../produtos/mesa-apoio-creation/imagem/mesa-apoio-creation.png">',
+    nome: "Mesa de Apoio Creation",
+    categoria: "mesa",
+    link: "mesa-apoio-creation",
+    preço: 4890,
+    estoque: 11,
+    vendido: false
+},
+{
+    id: 9,
+    imagem: '<img src="../produtos/poltrona-silva/imagem/poltrona-silva.png">',
+    nome: "Poltrona Silva",
+    categoria: "poltrona",
+    link: "poltrona-silva",
+    preço: 7550,
+    estoque: 7,
+    vendido: false
+}
+];
 
 for (const produto of produtos) {
     let container = document.createElement("div");
