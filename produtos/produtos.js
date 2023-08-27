@@ -63,7 +63,7 @@ const produtos = [{
 for (const produto of produtos) {
     let container = document.createElement("div");
 
-    container.innerHTML = `<h3> ID: ${produto.nome}</h3>
+    container.innerHTML = `<h3>${produto.nome}</h3>
                            <a href="${produto.link}/${produto.link}.html"><img src="../produtos/${produto.link}/imagem/${produto.link}.png"></a>
                             
                             <p> $ ${produto.preço}</p>`;
