@@ -16,11 +16,13 @@
 }
 
 /* ------------------------------------------------------HEADER */
+
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 5px;
 }
 
 .tituloDhouse a {
@@ -75,30 +77,28 @@ header {
   border-bottom: solid 3px;
   color: black;
 }
-/* ------------------------------------------------------BODY */
+
+/*--------------------------------------------------------------BODY */
+
 body{
     background-color: var(--primary-color);
+}
+.containerPC{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto 0;
-    font-family: 'Inter', sans-serif;
+    width: 50%;
+    padding: 10px;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    align-items: center;
-}
-
-.complementos{
-  display: flex;
-  flex-direction: row;
-}
-
 input{
   border-bottom: #313349 solid 1px;
   border-top: none;
@@ -125,24 +125,3 @@ input:hover{
 input:focus::-webkit-input-placeholder {
   color: transparent;
 }
-
-button {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  cursor: pointer;
-  background-color: var(--primary-color);
-  margin-top: 10px;
-  border: none;
-  font-family: 'Playfair Display', serif;
-  width: 100px;
-  transition: border 1s ease-out;
-}
-button:hover {
-  content: "";
-  font: var(--text-color);
-  border-bottom: #2736d8 solid 2px;
-}
-
-

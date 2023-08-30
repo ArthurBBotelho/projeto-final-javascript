@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <title>D-House | Cadastro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"></link>
+        <link href="./stylePaginaCadastro.css" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header">
+            <div class="tituloDhouse">
+                <h1><a href="index.html">D-house</a></h1>
+            </div>
+            <div class="navLink">
+                <ul>
+                    <li><a href="pagina-sobre/index.html">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="pagina-login/paginaLogin.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="navIcones">
+                <a id="search" class="iconeEntrada"><img src="imagem/icones/search.png" onclick="search()"></a>
+                <a class="iconeEntrada" href="pagina-login/paginaLogin.html"><img src="imagem/icones/user.png"></a>
+                <a class="iconeEntrada"><img src="imagem/icones/place.png"></a>
+                <a class="iconeEntrada"><img src="imagem/icones/shopping.png"></a>
+            </div>
+        </header>
+        
+        <div class="containerPC">
+            <div class="container-cadastro">
+                <form>
+                    <div>
+                        <input type="text" id="nomeCompleto" class="input-cadastro-nome" placeholder="Nome Completo"></div>
+                    <div>
+                        <input type="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
+                    <div>
+                        <input type="tel" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
+                    <div>
+                        <input type="text" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
+                    <div>
+                        <input type="password" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
+                </form>
+
+                <div class="btn">
+                    <button  id="enviarCadastro">Cadastrar</button>
+                    <button  class="limpar-cadastro">Limpar cadastro</button>
+                    <button  class="voltar-login"> Voltar</button>
+                </div>
+                <p>Já tem uma conta?</p><a href="./paginaLogin.html">Login</a><br>
+            </div>
+                <div id="cadastrado"> </div>
+        </div>
+
+        
+        <script src="./scriptPaginaCadastro.js"></script>
+    </body>
+</html>
