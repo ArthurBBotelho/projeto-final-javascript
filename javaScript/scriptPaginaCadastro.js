@@ -33,5 +33,16 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     console.log(cadastro)
     //salvar esse array no localstorage
     localStorage.setItem("cadastroUsuário", JSON.stringify(cadastro));
+    
+    document.getElementById('nomeCompleto').innerHTML = " ";
+    //faz uma variavel para criar o paragrafo onde vai o texto
+    let cadastradoOk = document.createElement('p')
+    //cria o texto
+    let textoCadastro = document.createTextNode("Cadastro Criado com sucesso!")
+    //linkando o texto com a criação do paragrafo
+    cadastradoOk.appendChild(textoCadastro)
+    //pegando no html onde tu quer que apareça
+    document.getElementById('cadastrado').appendChild(textoCadastro)
+    break
+
 }
- //limpar formulário após cadastro

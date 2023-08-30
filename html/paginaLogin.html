@@ -8,52 +8,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./stylePaginaLogin.css">
+    <link rel="stylesheet" href="../css/stylePaginaLogin.css">
     </link>
 </head>
 
 <body>
-    <header>
-        <div class="main">
-            <div class="tituloDhouse">
-                <h1><a href="./index.html">D-house</a></h1>
-            </div>
-            <div class="navLink">
-                <ul>
-                    <li><a href="./paginaSobre.html">Sobre</a></li>
-                    <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="./paginaLogin.html">Login</a></li>
-                </ul>
-            </div>
-            <div class="navIcones">
-                <a class="iconeEntrada"><img src=""></a>
-                <a class="iconeEntrada" href="paginaLogin.html"><img src="imagem/icones/user.png"></a>
-                <a class="iconeEntrada"><img src="imagem/icones/place.png"></a>
-                <a class="iconeEntrada"><img src="imagem/icones/shopping.png"></a>
-            </div>
+    <header id="header">
+        <div class="tituloDhouse">
+            <h1><a href="index.html">D-house</a></h1>
+        </div>
+        <div class="navLink">
+            <ul>
+                <li><a href="./paginaSobre.html">Sobre</a></li>
+                <li><a href="../produtos/produtos.html">Produtos</a></li>
+                <li><a href="./paginaLogin.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="navIcones">
+            <a class="iconeEntrada"><img src=""></a>
+            <a class="iconeEntrada" href="paginaLogin.html"><img src="../imagem/icones/user.png"></a>
+            <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
+            <a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
         </div>
     </header>
-    <div class="container">
-        <div class="container-login">
-            <h1>Login</h1>
-            <form class="login">
-                <div class="username"> 
-                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+    <div class="main">
+        <div class="containerLG">
+            <div class="container-login">
+                <h1>LOGIN</h1>
+                <form class="login">
+                    <div class="username"> 
+                        <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                        <br>
+                    </div>
+                    <div class="password"> 
+                        <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                        <br>
+                    </div>
+                </form>
+                <div class="complementos">
+                    <button id="buttonLogin" >Login</button>
                     <br>
+                    <a href="#esqueceuasenha">Esqueceu a senha?</a>
                 </div>
-                <div class="password"> 
-                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
-                    <br>
-                </div>
-            </form>
-            <div id="divCadastrado"></div>
-            <div class="complementos">
-                <button id="forgotPasswordButton">Esqueci a senha</button>
-                <a href="./paginaCadastro.html"><button id="getLoginButton">Realizar Cadastro</button></a>
-                <button id="buttonLogin" >Login</button></a>
             </div>
         </div>
+    
+        <div class="containerPC">
+            <div class="container-cadastro">
+                <h1>CADASTRE-SE</h1>
+                <form id="form">
+                    <div>
+                        <input type="text" id="nomeCompleto" class="input-cadastro-nome" placeholder="Nome Completo"></div>
+                    <div>
+                        <input type="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
+                    <div>
+                        <input type="tel" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
+                    <div>
+                        <input type="text" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
+                    <div>
+                        <input type="password" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
+                </form>
+                <div id="cadastrado"> </div>
+                <div class="btn">
+                    <button  id="enviarCadastro">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <script src="./scryptPaginaLogin.js"></script>
+    <script src="../javaScript/scryptPaginaLogin.js"></script>
+    <script src="../javaScript/scriptPaginaCadastro.js" </script></script>
 </body>
 </html>
