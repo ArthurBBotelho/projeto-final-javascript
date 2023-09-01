@@ -4,8 +4,10 @@ let nome = document.getElementById("nome")
 let email = document.getElementById("email")
 
 function inscrever() {
-    console.log(nome.value)
-    alert("Parabéns, " + nome.value + ", sua inscrição foi efetuada com sucesso!")
+    if (nome.value == "")
+        (alert("Informe um nome válido"))
+    else
+        alert("Parabéns, " + nome.value + ", sua inscrição foi efetuada com sucesso!")
 }
 
 // ----------------------------------------------------INCREMENTO PRODUTO
