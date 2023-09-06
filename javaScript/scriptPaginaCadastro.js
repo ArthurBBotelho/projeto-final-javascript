@@ -34,24 +34,19 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     //salvar esse array no localstorage
     localStorage.setItem("cadastroUsuário", JSON.stringify(cadastro));
     
+    nomeCompleto && email && telefone && endereco && senha != "" ?
     Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-      })
+        position: 'center',
+                icon: 'error',
+                title: 'Complete seu cadastro!',
+                timer: 1500,
+                background: '#f1f4de'
+        }) : Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Complete seu cadastro!',
+                timer: 1500,
+                background: '#f1f4de'
+            })
     }
-
-    // if (nomeCompleto && email && telefone && endereco && senha != "") {
    
-    // }
-    // else{
-    //     Swal.fire({
-    //         position: 'center',
-    //         icon: 'error',
-    //         title: 'Complete seu cadastro!',
-    //         timer: 1500,
-    //         background: '#f1f4de'
-    //     })
-    // } 
