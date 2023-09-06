@@ -37,16 +37,18 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     nomeCompleto && email && telefone && endereco && senha != "" ?
     Swal.fire({
         position: 'center',
-                icon: 'error',
-                title: 'Complete seu cadastro!',
+                icon: 'success',
+                title: 'Cadastro realizado com sucesso!',
                 timer: 1500,
-                background: '#f1f4de'
+                background: '#f1f4de',
+                confirmButtonColor: '#313349'
         }) : Swal.fire({
                 position: 'center',
                 icon: 'error',
                 title: 'Complete seu cadastro!',
                 timer: 1500,
-                background: '#f1f4de'
+                background: '#f1f4de',
+                confirmButtonColor: '#313349'
             })
     }
    
