@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/dialogLogin.css">
     </link>
 </head>
 
@@ -27,7 +28,7 @@
         </div>
         <div class="navIcones">
             <a class="iconeEntrada"><img src="imagem/icones/search.png"></a>
-            <a class="iconeEntrada" href="html/paginaLogin.html"><img src="imagem/icones/user.png"></a>
+            <a id="iconeLogin"  class="iconeEntrada"><img src="../imagem/icones/user.png"></a>
             <a class="iconeEntrada"><img src="imagem/icones/shopping.png"></a>
         </div>
 
@@ -50,7 +51,26 @@
         <span class="destaquesNome2">Destaques</span>
         <span class="destaquesNome3">Destaques</span>
     </div>
-
+    <dialog id="fazerLogin">
+        <div class="container-login">
+            <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
+            <h1>LOGIN</h1>
+            <form class="login">
+                <div class="username"> 
+                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                    <br>
+                </div>
+                <div class="password"> 
+                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                    <br>
+                </div>
+            </form>
+            <div class="complementos">
+                <button id="buttonLogin" >Login</button>
+                <br>
+                <a href="#esqueceuasenha">Esqueceu a senha?</a>
+            </div>
+    </dialog>
     <main id="destaques">
 
         <div class="imgComfy">
@@ -107,6 +127,7 @@
         <p>Todos os direitos reservados</p>
     </footer>
     <script src="script.js"></script>
+    <script src="/javaScript/scryptPaginaLogin.js"></script>
 </body>
 
 </html>

@@ -72,12 +72,11 @@
   justify-content: flex-end;
 }
 
-.iconeEntrada img {
+img {
   width: 24px;
   opacity: 0.6;
   padding: 10px;
 }
-
 .iconeEntrada img:hover {
   border-bottom: solid 3px;
   color: black;
@@ -85,9 +84,9 @@
 /* ------------------------------------------------------BODY */
 
 body{
-    background-color: var(--primary-color);
-    margin: auto 0;
-    font-family: 'Inter', sans-serif;
+  background-color: var(--primary-color);
+  margin: auto 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .main{
@@ -130,17 +129,18 @@ body{
   font-weight: 600;
 }
 .complementos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  align-items: center;
 }
+
 h1{
   margin-bottom: 30px;
   font-variant-caps: titling-caps;
 }
+
 input{
   border-bottom: #313349 solid 1px;
   border-top: none;
@@ -195,3 +195,4 @@ button:hover {
 .btn:hover{
   border-radius: 50px;
 }
+

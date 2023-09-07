@@ -27,30 +27,33 @@
         </div>
         <div class="navIcones">
             <a class="iconeEntrada"><img src=""></a>
-            <a class="iconeEntrada" href="paginaLogin.html"><img src="../imagem/icones/user.png"></a>
+            <a id="iconeLogin"  class="iconeEntrada"><img src="../imagem/icones/user.png"></a>
             <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
             <a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
         </div>
     </header>
     <div class="main">
         <div class="containerLG">
-            <div class="container-login">
-                <h1>LOGIN</h1>
-                <form class="login">
-                    <div class="username"> 
-                        <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+            <dialog id="fazerLogin">
+                <div class="container-login">
+                    <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
+                    <h1>LOGIN</h1>
+                    <form class="login">
+                        <div class="username"> 
+                            <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                            <br>
+                        </div>
+                        <div class="password"> 
+                            <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                            <br>
+                        </div>
+                    </form>
+                    <div class="complementos">
+                        <button id="buttonLogin" >Login</button>
                         <br>
+                        <a href="#esqueceuasenha">Esqueceu a senha?</a>
                     </div>
-                    <div class="password"> 
-                        <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
-                        <br>
-                    </div>
-                </form>
-                <div class="complementos">
-                    <button id="buttonLogin" >Login</button>
-                    <br>
-                    <a href="#esqueceuasenha">Esqueceu a senha?</a>
-                </div>
+                </dialog>
             </div>
         </div>
     
