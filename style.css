@@ -342,7 +342,7 @@ main {
     border: solid 2px var(--text-color);
 }
 
-#bottonNewsLetter {
+#buttonNewsLetter {
     margin: 10px 10px 0px 0px;
     font-family: 'Inter', sans-serif;
     width: 204px;
@@ -354,11 +354,11 @@ main {
     transition: background-color 1s;
 }
 
-#bottonNewsLetter:hover {
+#buttonNewsLetter:hover {
     background-color: var(--quarter-color)
 }
 
-#bottonNewsLetter:active {
+#buttonNewsLetter:active {
     background-color: var(--secundary-color)
 }
 

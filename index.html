@@ -28,7 +28,7 @@
         </div>
         <div class="navIcones">
             <a class="iconeEntrada"><img src="imagem/icones/search.png"></a>
-            <a id="iconeLogin"  class="iconeEntrada"><img src="../imagem/icones/user.png"></a>
+            <a id="iconeLogin" class="iconeEntrada"><img src="../imagem/icones/user.png"></a>
             <a class="iconeEntrada"><img src="imagem/icones/shopping.png"></a>
         </div>
 
@@ -56,17 +56,17 @@
             <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
             <h1>LOGIN</h1>
             <form class="login">
-                <div class="username"> 
+                <div class="username">
                     <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
                     <br>
                 </div>
-                <div class="password"> 
+                <div class="password">
                     <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
                     <br>
                 </div>
             </form>
             <div class="complementos">
-                <button id="buttonLogin" >Login</button>
+                <button id="buttonLogin">Login</button>
                 <br>
                 <a href="#esqueceuasenha">Esqueceu a senha?</a>
             </div>
@@ -114,11 +114,13 @@
             <div>
                 <div id="camposNewsLetter">
                     <h2 class="titulo">Se inscreva na nossa newsletter e receba todo nosso conteúdo semanalmente!</h2>
-                    <p class="texto">Digite seu nome</p>
-                    <input type="text" id="nome" placeholder=" nome">
-                    <p class="texto">Digite seu e-mail</p>
-                    <input type="text" id="email" placeholder=" e-mail"><br>
-                    <button id="bottonNewsLetter" onclick="inscrever()">INSCREVER</button>
+                    <form id="form">
+                        <label for="name">Nome:</label>
+                        <input type="text" placeholder=" nome" id="name">
+                        <label for="email">E-mail:</label>
+                        <input type="text" placeholder=" e-mail" id="email">
+                        <button type="submit" id="buttonNewsLetter">INSCREVER</button>
+                    </form>
                 </div>
             </div>
     </section>

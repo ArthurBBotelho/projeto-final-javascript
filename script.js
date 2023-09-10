@@ -1,13 +1,32 @@
 // ----------------------------------------------------INSCRIÇÃO NEWSLETTER
 
-let nome = document.getElementById("nome")
-let email = document.getElementById("email")
+const nome = document.querySelector("#nome")
+const email = document.querySelector("#email")
+const buttonNews = document.querySelector("#buttonNewsLetter")
+const form = document.querySelector("#form")
 
-function inscrever() {
-    if (nome.value == "")
-        (alert("Informe um nome válido"))
-    else
-        alert("Parabéns, " + nome.value + ", sua inscrição foi efetuada com sucesso!")
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    if (nome.value === "") {
+        alert("Preencha seu nome.")
+        return;
+    }
+    if (email.value === "" || !validEmail(email.value)) {
+        alert("Preencha um e-mail valido.")
+        return
+    }
+
+    form.submit()
+})
+
+function validEmail(email) {
+    const emailRegex = new RegExp(
+        /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,}$/
+    )
+    if (emailRegex.test(email)) {
+        return true
+    }
+    return false
 }
 
 // ----------------------------------------------------INCREMENTO PRODUTO
