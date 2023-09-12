@@ -1,23 +1,25 @@
 // ----------------------------------------------------INSCRIÇÃO NEWSLETTER
 
-const nome = document.querySelector("#nome")
-const email = document.querySelector("#email")
-const buttonNews = document.querySelector("#buttonNewsLetter")
-const form = document.querySelector("#form")
+let nome = document.querySelector("#nome");
+let email = document.querySelector("#email");
+let form = document.querySelector("#form");
+const botton = document.querySelector("#bottonNewsLetter");
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    if (nome.value === "") {
-        alert("Preencha seu nome.")
+form.addEventListener("submit", newsLetter)
+
+function newsLetter(e) {
+    e.preventDefault();
+    if (nome.value == "") {
+        alert("Preencha seu nome.");
         return;
     }
-    if (email.value === "" || !validEmail(email.value)) {
-        alert("Preencha um e-mail valido.")
-        return
+    if (email.value == "" || !validEmail(email.value)) {
+        alert("Preencha um e-mail valido.");
+        return;
     }
-
-    form.submit()
-})
+    alert("Inscrição realizada com sucesso!");
+    form.submit();
+}
 
 function validEmail(email) {
     const emailRegex = new RegExp(
