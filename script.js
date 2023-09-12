@@ -9,11 +9,11 @@ form.addEventListener("submit", newsLetter)
 
 function newsLetter(e) {
     e.preventDefault();
-    if (nome.value == "") {
+    if (nome == "") {
         alert("Preencha seu nome.");
         return;
     }
-    if (email.value == "" || !validEmail(email.value)) {
+    if (email == "" || !validEmail(email.value)) {
         alert("Preencha um e-mail valido.");
         return;
     }
