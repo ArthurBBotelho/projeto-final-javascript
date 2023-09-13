@@ -3,22 +3,43 @@
 let nome = document.querySelector("#nome");
 let email = document.querySelector("#email");
 let form = document.querySelector("#form");
-const botton = document.querySelector("#bottonNewsLetter");
 
 form.addEventListener("submit", newsLetter)
+
+//     Swal.fire({
+//         title: "Newslwtter",
+//         text: "Sua incrição foi realizada com sucesso!",
+//         icon: "success",
+//         confirmButtonText: "Ok"
+//     })
+// }
 
 function newsLetter(e) {
     e.preventDefault();
     if (nome == "") {
-        alert("Preencha seu nome.");
+        Swal.fire({
+            title: "Newsletter",
+            text: "Preencha seu nome",
+            icon: "error",
+            confirmButtonText: "Ok"
+        });
         return;
     }
     if (email == "" || !validEmail(email.value)) {
-        alert("Preencha um e-mail valido.");
+        Swal.fire({
+            title: "Newsletter",
+            text: "Preencha um e-mail valido.",
+            icon: "error",
+            confirmButtonText: "Ok"
+        });
         return;
     }
-    alert("Inscrição realizada com sucesso!");
-    form.submit();
+    Swal.fire({
+        title: "Newsletter",
+        text: "Sua incrição foi realizada com sucesso!",
+        icon: "success",
+        confirmButtonText: "Ok"
+    });
 }
 
 function validEmail(email) {
@@ -87,17 +108,20 @@ const produtos = [{
     vendido: false
 }];
 
-produtos.sort((a, b) => {
-    if (a.produto > b.produto) {
-        return 1;
-    }
-    if (a.produto < b.produto) {
-        return -1;
-    }
-    return 0;
-})
+function organizaProdutos() {
+    produtos.sort((a, b) => {
+        if (a.produto > b.produto) {
+            return 1;
+        }
+        if (a.produto < b.produto) {
+            return -1;
+        }
+        return 0;
+    })
+    console.log(produtos)
+}
 
-console.log(produtos)
+organizaProdutos()
 
 // ------------------------------------------------------------------SEARCH
 
@@ -107,6 +131,4 @@ function search() {
     const buscaProduto = produtos.filter((o) => o.produto.toUpperCase().includes(buscaUser.toUpperCase()))
     console.log(buscaProduto)
 }
-
-
 
