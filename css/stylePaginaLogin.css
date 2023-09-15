@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
+  background-color: var(--primary-color);
 }
 
 
@@ -84,7 +85,6 @@ img {
 /* ------------------------------------------------------BODY */
 
 body{
-  background-color: var(--primary-color);
   margin: auto 0;
   font-family: 'Inter', sans-serif;
 }
@@ -96,12 +96,24 @@ body{
   align-items: center;
 
 }
+.containerPL img{
+  height: 424px;
+  width: 285px;
+  z-index: -1;
+}
 .container-login{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -70px;
 }
 .complementos{
   display: flex;
