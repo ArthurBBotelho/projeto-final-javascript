@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="html/paginaSobre.html">Sobre</a></li>
                 <li><a href="produtos/produtos.html">Produtos</a></li>
-                <li><a href="html/paginaLogin.html">Login</a></li>
+                <li><a href="html/paginaLogin.html" id="iconeLogin">Login</a></li>
             </ul>
         </div>
         <div class="navIcones">
@@ -51,27 +51,7 @@
         <span class="destaquesNome2">Destaques</span>
         <span class="destaquesNome3">Destaques</span>
     </div>
-    <dialog id="fazerLogin">
-        <div class="container-login">
-            <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
-            <h1>LOGIN</h1>
-            <form class="login">
-                <div class="username">
-                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
-                    <br>
-                </div>
-                <div class="password">
-                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
-                    <br>
-                </div>
-            </form>
-            <div class="complementos">
-                <button id="buttonLogin">Login</button>
-                <br>
-                <a href="#esqueceuasenha">Esqueceu a senha?</a>
-            </div>
-    </dialog>
-
+    
     <main id="destaques">
         <div class="imgComfy">
             <a href="produtos/cadeira-comfy/cadeira-comfy.html"><img
@@ -123,6 +103,27 @@
                 </div>
             </div>
     </section>
+    <dialog id="fazerLogin" >
+        <div class="container-login">
+            <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
+            <h1>LOGIN</h1>
+            <form class="login">
+                <div class="username">
+                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                    <br>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                    <br>
+                </div>
+            </form>
+            <div class="complementos">
+                <button id="buttonLogin">Login</button>
+                <br>
+                <a href="#esqueceuasenha">Esqueceu a senha?</a>
+                <a href="./html/paginaCadastro.html">Não tem cadastro?</a>
+            </div>
+    </dialog>
 
 
     <footer>
@@ -131,6 +132,7 @@
     <script src="script.js"></script>
     <script src="/javaScript/scryptPaginaLogin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
