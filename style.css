@@ -319,6 +319,7 @@ main {
 
 #d-animation img {
     width: 100px;
+    height: 100px;
     animation: ease-in .2 1;
 }
 
