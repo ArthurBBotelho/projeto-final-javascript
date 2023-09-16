@@ -82,7 +82,7 @@
 }
 
 .iconeEntrada img {
-    width: 24px;
+    width: 30px;
     opacity: 0.6;
     padding: 10px;
 }
@@ -129,6 +129,7 @@
 
 .compreAgora:hover {
     border-radius: 50px;
+
 }
 
 .compreAgora a {
@@ -197,6 +198,11 @@ main {
     opacity: 60%;
 }
 
+.imgComfy img {
+    width: 360px;
+    height: 360px;
+}
+
 .infoDestaqueComfy {
     grid-area: infoDestaqueComfy;
     width: 400px;
@@ -250,6 +256,13 @@ main {
 .imgQuad a:hover {
     opacity: 60%;
 }
+
+
+.imgQuad img {
+    width: 360px;
+    height: 360px;
+}
+
 
 .infoDestaqueQuad {
     grid-area: infoDestaqueQuad;
