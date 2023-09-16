@@ -2,7 +2,7 @@
 //criando uma pessoa
 class adicionaPessoa {
     constructor(nomeCompleto, email, telefone, endereco, senha) {
-        //tornar tudo maiusculo
+        //tornar tudo maiusculo??
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.telefone = telefone;
@@ -24,31 +24,34 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     let telefone = document.getElementById('telefone').value;
     let endereco = document.getElementById('endereco').value;
     let senha = document.getElementById('senha').value;
-    //validar se os formulários estão preenchidos
+    
     //usar os dados para criar uma nova pessoa
     let novaPessoa = new adicionaPessoa (nomeCompleto, email, telefone, endereco, senha)
     
     //salvar a nova pessoa no array
     cadastro.push(novaPessoa)
+    //mostrando a nova pessoa asicionada no cadastro
     console.log(cadastro)
     //salvar esse array no localstorage
     localStorage.setItem("cadastroUsuário", JSON.stringify(cadastro));
     
+    //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
     nomeCompleto && email && telefone && endereco && senha != "" ?
-    Swal.fire({
-        position: 'center',
-                icon: 'success',
-                title: 'Cadastro realizado com sucesso!',
-                timer: 1500,
-                background: '#f1f4de',
-                confirmButtonColor: '#313349'
-        }) : Swal.fire({
-                position: 'center',
-                icon: 'error',
-                title: 'Complete seu cadastro!',
-                timer: 1500,
-                background: '#f1f4de',
-                confirmButtonColor: '#313349'
-            })
-    }
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Cadastro realizado com sucesso!',
+            timer: 1500,
+            background: '#f1f4de',
+            confirmButtonColor: '#313349'
+            }) : 
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Complete seu cadastro!',
+            timer: 1500,
+            background: '#f1f4de',
+            confirmButtonColor: '#313349'
+        })    
+}
    
