@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sofa-phillip.css">
+    <link rel="stylesheet" href="#">
     </link>
 </head>
 
@@ -29,12 +29,46 @@
             <a id="search" class="iconeEntrada"><img src="../../imagem/icones/search.png" onclick="search()"></a>
             <a class="iconeEntrada" href="../../pagina-login/paginaLogin.html"><img
                     src="../../imagem/icones/user.png"></a>
-            <a class="iconeEntrada"><img src="../../imagem/icones/place.png"></a>
             <a class="iconeEntrada"><img src="../../imagem/icones/shopping.png"></a>
         </div>
     </header>
+    <section id="sofaPhillip">
+        <img src="../sofa-phillip/imagem/sofa-phillip.png" width="300px">
+        <br>
+        <table>
+            <thead>
+                <tr>Sofa Phillip</tr>
+            </thead>
+            <tr>
+                <td>Categoria: Sofa</td>
+            </tr>
+            <tr>
+                <td>Nome: Sofa Philip</td>
+            </tr>
+            <tr>
+                <td>Preço: 4190</td>
+            </tr>
 
-    <img src="imagem/sofa-phillip.jpg">
+        </table>
+    </section>
+
+    <dialog id="carrinho">
+        <form method="dialog">
+            <section>
+                <p>
+                    SOFA PHILLIP
+                </p>
+            </section>
+            <menu>
+                <button id="cancel" type="reset">Cancel</button>
+                <button type="submit">Confirm</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <menu>
+        <button id="adicionarCarrinho">Update details</button>
+    </menu>
 
     <script src="sofa-phillip.js"></script>
 </body>
