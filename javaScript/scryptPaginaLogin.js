@@ -5,6 +5,7 @@
 
 // pega o array de objetos do localStoreage
 
+
 //percorre o array de objetos procurando o mesmo texto do input
 
 //achou o texto igual e comparar se email e senha digitados são iguais
