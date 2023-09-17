@@ -36,22 +36,26 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     localStorage.setItem("cadastroUsuário", JSON.stringify(cadastro));
     
     //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
-    nomeCompleto && email && telefone && endereco && senha != "" ?
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Cadastro realizado com sucesso!',
-            timer: 1500,
-            background: '#f1f4de',
-            confirmButtonColor: '#313349'
-            }) : 
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Complete seu cadastro!',
-            timer: 1500,
-            background: '#f1f4de',
-            confirmButtonColor: '#313349'
-        })    
-    }
-   
+   if (nomeCompleto && email && telefone && endereco && senha != "") {
+       Swal.fire({
+           position: 'center',
+           icon: 'success',
+           title: 'Cadastro realizado com sucesso!',
+           timer: 1500,
+           background: '#f1f4de',
+           confirmButtonColor: '#313349'
+           }) 
+           localStorage.setItem("salvarNomeUsuario", JSON.stringify(nomeCompleto));
+           window.location.href= "/index.html"
+        } else {
+       Swal.fire({
+           position: 'center',
+           icon: 'error',
+           title: 'Complete seu cadastro!',
+           timer: 1500,
+           background: '#f1f4de',
+           confirmButtonColor: '#313349'
+       })    
+    
+   }
+}
