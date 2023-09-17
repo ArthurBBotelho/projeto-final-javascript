@@ -53,5 +53,5 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
             background: '#f1f4de',
             confirmButtonColor: '#313349'
         })    
-}
+    }
    
