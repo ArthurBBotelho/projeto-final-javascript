@@ -5,32 +5,30 @@
 
 // pega o array de objetos do localStoreage
 
+let cadastroUsuario = JSON.parse(localStorage.getItem("cadastroUsuário"))
+console.log(cadastroUsuario)
 
+document.getElementById("buttonLogin").onclick = function getLogin(e) {
+    e.preventDefault();
+    //pegando elementos do HTML
+    let inputUserName = document.getElementById("inputUserName").value;
+    let inputPassword = document.getElementById("inputPassword").value;
+    let loginOk = false
 //percorre o array de objetos procurando o mesmo texto do input
-
-//achou o texto igual e comparar se email e senha digitados são iguais
-
-//aparece as mensagens confirmando ou não.
-
-//         if((nome.nome === nomeUsuario) && (nome.senha === inserirSenha)) {
-//             alert("Seus dados estão corretos")
-//         }
-//         else{ alert("Dados não são iguais")
-//         }
-//     }
-
-
-//div onde está o html do dialog
-let fazerLogin = document.getElementById('fazerLogin')
-
-document.getElementById('iconeLogin').onclick = function botaoLogin (e) {
-    e.preventDefault()
-    console.log("hello")
-    fazerLogin.showModal();
+for (let  dados of cadastroUsuario) {
+    if (inputUserName == dados.email && inputPassword == dados.senha) {
+        loginOk = true
+        document.getElementById("nomeUsuario").innerHTML = "Olá " + dados.nomeCompleto;
+        localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.nomeCompleto));
+        
+        break
+    } 
+}
+    if (loginOk == true ) {
+        window.location.href= "/index.html"
+    }
+    else {
+        alert("Verifique dados")
+    }
 }
 
-document.getElementById('btnFechar').onclick = function botaoFechar (e) {
-    e.preventDefault()
-    console.log("fechar")
-    fazerLogin.close();
-}
