@@ -6,14 +6,6 @@ let form = document.querySelector("#form");
 
 form.addEventListener("submit", newsLetter)
 
-//     Swal.fire({
-//         title: "Newslwtter",
-//         text: "Sua incrição foi realizada com sucesso!",
-//         icon: "success",
-//         confirmButtonText: "Ok"
-//     })
-// }
-
 function newsLetter(e) {
     e.preventDefault();
     if (nome == "") {
@@ -52,44 +44,9 @@ function validEmail(email) {
     return false
 }
 
-// ----------------------------------------------------INCREMENTO PRODUTO
-
-let countEl = document.getElementById("count-el")
-
-let count = 0
-
-function increment() {
-    count += 1
-    countEl.innerText = count
-}
-
-function decrement() {
-    count -= 1
-    countEl.innerText = count
-
-}
-
 // ----------------------------------------------------PRODUTO
 
 const produtos = [{
-    id: 1,
-    imagem: "imagem/produtos/outline-sofa/outline-sofa.png",
-    produto: "Cadeira Comfy",
-    categoria: "cadeira",
-    preço: 1490.90,
-    estoque: 16,
-    vendido: false
-},
-{
-    id: 2,
-    imagem: "imagem/produtos/sofa-phillip/sofa-phillip.png",
-    produto: "Sofa Outline",
-    categoria: "sofa",
-    preço: 6390.90,
-    estoque: 8,
-    vendido: false
-},
-{
     id: 3,
     imagem: "imagem/produtos/cadeira-comfy/cadeira-confy.jpg",
     produto: "Sofa Phillip",

@@ -1,23 +1,3 @@
-// ---------------------------------------CONSTRUTOR DE PRODUTOS
-
-// class Produtos {
-//     construtor(id, nome, imagem, categoria, preço, estoque, vendido) {
-//         this.id = id;
-//         this.nome = nome;
-//         this.imagem = imagem;
-//         this.categoria = categoria;
-//         this.preço = parseFloat(preço);
-//         this.estoque = estoque;
-//         this.vendido = vendido;
-//     }
-//     tela() {
-//         console.log("Restam apenas " + this.estoque + " do produto " + this.nome);
-//     }
-// }
-
-// let cadeiraComfy = new Produtos(1, "Cadeira Comfy", "../imagem/produtos/cadeira-comfy/cadeira-comfy.png", "cadeira", 1490.90, 16, false);
-
-// cadeiraComfy.tela()
 
 const produtos = [{
     id: 1,
@@ -25,7 +5,7 @@ const produtos = [{
     nome: "Cadeira Comfy",
     categoria: "cadeira",
     link: "cadeira-comfy",
-    preço: 1490,
+    price: 1490,
     estoque: 16,
     vendido: false
 },
@@ -35,7 +15,7 @@ const produtos = [{
     nome: "Sofa Outline",
     categoria: "sofa",
     link: "sofa-outline",
-    preço: 6390,
+    price: 6390,
     estoque: 8,
     vendido: false
 },
@@ -45,7 +25,7 @@ const produtos = [{
     nome: "Sofa Phillip",
     categoria: "sofa",
     link: "sofa-phillip",
-    preço: 4190,
+    price: 4190,
     estoque: 3,
     vendido: false
 },
@@ -55,7 +35,7 @@ const produtos = [{
     nome: "Cadeira Quad",
     categoria: "cadeira",
     link: "cadeira-quad",
-    preço: 1860,
+    price: 1860,
     estoque: 15,
     vendido: false
 },
@@ -65,7 +45,7 @@ const produtos = [{
     nome: "Banco Hans",
     categoria: "banco",
     link: "banco-hans",
-    preço: 780,
+    price: 780,
     estoque: 3,
     vendido: false
 },
@@ -75,7 +55,7 @@ const produtos = [{
     nome: "Escrivaninha Copa",
     categoria: "escrivaninha",
     link: "escrivaninha-copa",
-    preço: 3560,
+    price: 3560,
     estoque: 5,
     vendido: false
 },
@@ -85,7 +65,7 @@ const produtos = [{
     nome: "Mesa de Apoio Cergle",
     categoria: "mesa",
     link: "mesa-apoio-cergle",
-    preço: 5130,
+    price: 5130,
     estoque: 8,
     vendido: false
 },
@@ -95,7 +75,7 @@ const produtos = [{
     nome: "Mesa de Apoio Creation",
     categoria: "mesa",
     link: "mesa-apoio-creation",
-    preço: 4890,
+    price: 4890,
     estoque: 11,
     vendido: false
 },
@@ -105,7 +85,7 @@ const produtos = [{
     nome: "Poltrona Silva",
     categoria: "poltrona",
     link: "poltrona-silva",
-    preço: 7550,
+    price: 7550,
     estoque: 7,
     vendido: false
 }
@@ -117,7 +97,8 @@ for (const produto of produtos) {
 
     container.innerHTML = `<h3>${produto.nome}</h3>
                             <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
-                            <p> $ ${produto.preço}</p>
-                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p> `;
+                            <p> $ ${produto.price}</p>
+                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p> 
+                            <button id="adicionarCarrinho">Adicionar ao carriho</button>`;
     document.body.appendChild(container);
 }

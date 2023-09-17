@@ -85,3 +85,14 @@
     border-bottom: solid 3px;
     color: black;
 }
+
+/* ---------------------------------------------------IMGAEM */
+
+#sofaPhillip {
+    color: var(--text-color);
+    margin: 50px 50px 30px 50px
+}
+
+#sofaPhillip img {
+    height: 500px;
+}
