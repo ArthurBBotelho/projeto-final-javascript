@@ -72,7 +72,10 @@
   display: flex;
   justify-content: flex-end;
 }
-
+.navIcones div{
+  margin-top: 18px;
+  font-weight: 700;
+}
 img {
   width: 24px;
   opacity: 0.6;

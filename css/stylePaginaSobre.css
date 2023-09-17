@@ -4,105 +4,84 @@
     --terciary-color: #46725d;
     --text-color: #313349;
     --quarter-color: #f2cc8f;
-}
-
-* {
+  }
+  
+  * {
     font-family: 'Inter', sans-serif;
     padding: 0%;
     margin: 0%;
     font-style: none;
     list-style: none;
     text-decoration: none;
-}
-
-/* ------------------------------------------------------HEADER */
-
-#header {
+  }
+  
+  /* ------------------------------------------------------HEADER */
+  
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
     background-color: var(--primary-color);
-    height: 50px;
-    color: var(--secundary-color);
-    padding: 10px 50px 10px 50px;
-    display: grid;
-    grid-template: 33% / 33% 33% 34%;
-    grid-template-areas:
-        "tituloDhouse navLink navIcones";
-}
-
-
-.tituloDhouse {
+  }
+  
+  
+  .tituloDhouse {
     grid-area: tituloDhouse;
-}
-
-.tituloDhouse a {
+  }
+  
+  .tituloDhouse a {
     display: flex;
     flex-wrap: nowrap;
     color: var(--secundary-color);
     transition: color 1s;
     font-size: 36px;
-}
-
-.tituloDhouse a:hover {
+  }
+  
+  .tituloDhouse a:hover {
     color: var(--terciary-color);
-}
-
-.navLink {
+  }
+  
+  .navLink {
     grid-area: navLink;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-}
-
-.navLink ul {
+  }
+  
+  .navLink ul {
     display: flex;
     padding: 12px;
-}
-
-.navLink a {
+  }
+  
+  .navLink a {
     color: var(--secundary-color);
     transition: color 1s;
     padding: 12px;
     font-size: 20px;
     font-weight: 900;
-}
-
-.navLink a:hover {
+  }
+  
+  .navLink a:hover {
     color: var(--terciary-color);
-}
-
-.navIcones {
+  }
+  
+  .navIcones {
     grid-area: navIcones;
     display: flex;
     justify-content: flex-end;
-}
-.navIcones div{
+  }
+  .navIcones div{
     margin-top: 18px;
     font-weight: 700;
-}
-.iconeEntrada img {
+  }
+  img {
     width: 24px;
     opacity: 0.6;
     padding: 10px;
-}
-
-.iconeEntrada img:hover {
+  }
+  .iconeEntrada img:hover {
     border-bottom: solid 3px;
     color: black;
-}
-
-/*----------------------------------------------------PRODUTOS */
-
-.produtosLayout {
-    color: var(--text-color);
-    margin: 50px 50px 30px 50px
-}
-
-.produtosLayout img {
-    height: 500px;
-    transition: opacity 1s;
-}
-
-.produtosLayout img:hover {
-    opacity: 60%;
-}
-
-/* ------------------------------------------------------TESTE CARRINHO */
+  }
