@@ -23,6 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
+  background-color: var(--primary-color);
 }
 
 .tituloDhouse a {
@@ -83,9 +84,6 @@ header {
 
 /*--------------------------------------------------------------BODY */
 
-body{
-    background-color: var(--primary-color);
-}
 .containerPC{
     display: flex;
     flex-direction: row;
@@ -96,11 +94,8 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 10px;
-    align-content: center;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
 }
 input{
   border-bottom: #313349 solid 1px;
@@ -109,26 +104,25 @@ input{
   border-right: none;
   box-shadow: 0 0 0 0;
   outline: 0;
-  width: 10rem;
+  width: 21rem;
   height: 2rem;
   background-color: transparent;
   font-size: large;
   font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-  position: unset;
+  margin-bottom: 18px;
 }
 
 input:hover{
   border-bottom: #313349 solid 2px;
   border-top: none;
   border-left: none;
-  border-right: none;
+  border-right: none; 
 }
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
+.btn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-
 button {
   width: 200px;
     height: 50px;
