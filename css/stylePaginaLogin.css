@@ -186,3 +186,15 @@ button:hover {
 .btn:hover{
   border-radius: 50px;
 }
+
+.ri-mail-open-line {
+  left: 305px;
+    top: 2px;
+  position: relative;
+}
+
+.ri-lock-password-line{
+  left: 305px;
+    top: 2px;
+  position: relative;
+}
