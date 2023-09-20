@@ -18,8 +18,8 @@ document.getElementById("buttonLogin").onclick = function getLogin(e) {
 for (let  dados of cadastroUsuario) {
     if (inputUserName == dados.email && inputPassword == dados.senha) {
         loginOk = true
-        document.getElementById("nomeUsuario").innerHTML = "Olá " + dados.nomeCompleto;
-        localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.nomeCompleto));
+        document.getElementById("nomeUsuario").innerHTML = "Olá " + dados.primeiroNome;
+        localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));
         
         break
     } 

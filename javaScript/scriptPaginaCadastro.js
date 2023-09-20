@@ -1,9 +1,10 @@
 
 //criando uma pessoa
 class adicionaPessoa {
-    constructor(nomeCompleto, email, telefone, endereco, senha) {
+    constructor(primeiroNome, segundoNome, email, telefone, endereco, senha) {
         //tornar tudo maiusculo??
-        this.nomeCompleto = nomeCompleto;
+        this.primeiroNome = primeiroNome;
+        this.segundoNome = segundoNome
         this.email = email;
         this.telefone = telefone;
         this.endereco = endereco;
@@ -19,14 +20,15 @@ let cadastro = [];
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     e.preventDefault();
     //pegar dados do html
-    let nomeCompleto = document.getElementById('nomeCompleto').value;
+    let primeiroNome = document.getElementById('primeiroNome').value;
+    let segundoNome = document.getElementById('segundoNome').value;
     let email = document.getElementById('email').value;
     let telefone = document.getElementById('telefone').value;
     let endereco = document.getElementById('endereco').value;
     let senha = document.getElementById('senha').value;
     
     //usar os dados para criar uma nova pessoa
-    let novaPessoa = new adicionaPessoa (nomeCompleto, email, telefone, endereco, senha)
+    let novaPessoa = new adicionaPessoa (primeiroNome, segundoNome, email, telefone, endereco, senha)
     
     //salvar a nova pessoa no array
     cadastro.push(novaPessoa)
@@ -36,7 +38,7 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     localStorage.setItem("cadastroUsuário", JSON.stringify(cadastro));
     
     //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
-   if (nomeCompleto && email && telefone && endereco && senha != "") {
+   if (primeiroNome && segundoNome && email && telefone && endereco && senha != "") {
        Swal.fire({
            position: 'center',
            icon: 'success',
@@ -45,7 +47,7 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
            background: '#f1f4de',
            confirmButtonColor: '#313349'
            }) 
-           localStorage.setItem("salvarNomeUsuario", JSON.stringify(nomeCompleto));
+           localStorage.setItem("salvarNomeUsuario", JSON.stringify(primeiroNome));
            window.location.href= "/index.html"
         } else {
        Swal.fire({
@@ -56,6 +58,5 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
            background: '#f1f4de',
            confirmButtonColor: '#313349'
        })    
-    
    }
 }
