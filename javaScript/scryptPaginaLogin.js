@@ -18,9 +18,8 @@ document.getElementById("buttonLogin").onclick = function getLogin(e) {
 for (let  dados of cadastroUsuario) {
     if (inputUserName == dados.email && inputPassword == dados.senha) {
         loginOk = true
-        document.getElementById("nomeUsuario").innerHTML = "Olá " + dados.primeiroNome;
+        //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
         localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));
-        
         break
     } 
 }
@@ -31,4 +30,5 @@ for (let  dados of cadastroUsuario) {
         alert("Verifique dados")
     }
 }
+
 
