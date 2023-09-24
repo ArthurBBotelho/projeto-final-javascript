@@ -99,7 +99,8 @@ for (const produto of produtos) {
                             <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
                             <p> $ ${produto.price}</p>
                             <p> Restam apenas ${produto.estoque} unidades deste produto!</p> 
-                            <button id="adicionarCarrinho">Adicionar ao carrinho</button>`;
+                            <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
+                            <button id="comprarAgora">Comprar Agora</button>`;
     document.body.appendChild(container);
 }
 
@@ -111,6 +112,7 @@ let adicionarCarrinho = document.getElementById("adicionarCarrinho")
 adicionarCarrinho.addEventListener('click', adicionarProduto())
 
 function adicionarProduto() {
-
+    carrinho.push(produtos)
+    console.log(carrinho)
 }
 
