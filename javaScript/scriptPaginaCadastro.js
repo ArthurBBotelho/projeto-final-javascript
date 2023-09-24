@@ -32,7 +32,6 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
            position: 'center',
            icon: 'success',
            title: 'Cadastro realizado com sucesso!',
-           timer: 1000, 
            background: '#f1f4de',
            showConfirmButton: false,
            })
@@ -49,5 +48,8 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
    localStorage.setItem("salvarNomeUsuario", JSON.stringify(primeiroNome.value));
    console.log(primeiroNome.value)
    document.getElementById("nomeUsuario").innerHTML = "Olá, " + primeiroNome.value;
+   setTimeout( () =>{
+       window.location.href = "../index.html"
+   }, 1000)
 }
 
