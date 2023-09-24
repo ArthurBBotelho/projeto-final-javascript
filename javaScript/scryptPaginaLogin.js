@@ -5,7 +5,7 @@
 
 // pega o array de objetos do localStoreage
 
-let cadastroUsuario = JSON.parse(localStorage.getItem("cadastroUsuário"))
+let cadastroUsuario = JSON.parse(localStorage.getItem("cadastroUsuario"))
 console.log(cadastroUsuario)
 
 document.getElementById("buttonLogin").onclick = function getLogin(e) {
