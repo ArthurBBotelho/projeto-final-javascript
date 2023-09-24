@@ -102,17 +102,29 @@ for (const produto of produtos) {
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
                             <button id="comprarAgora">Comprar Agora</button>`;
     document.body.appendChild(container);
+
 }
 
 // --------------------------------------------------------------- CARRINHO
 
-let carrinho = []
+// const carrinho = []
 
-let adicionarCarrinho = document.getElementById("adicionarCarrinho")
-adicionarCarrinho.addEventListener('click', adicionarProduto())
+// let adicionarCarrinho = document.getElementById("adicionarCarrinho")
+// adicionarCarrinho.addEventListener('click', adicionarProduto())
 
-function adicionarProduto() {
-    carrinho.push(produtos)
-    console.log(carrinho)
+// function adicionarProduto() {
+//     alert(produtos.nome)
+// }
+
+
+// for (i = 0; i < produtos.length; i++) {
+//     adicionarProduto()
+// }
+
+let carrinhoModal = document.getElementById("carrinhoModal")
+
+document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
+    e.preventDefault()
+    console.log("Usuário abriu carrinho")
+    carrinhoModal.showModal();
 }
-

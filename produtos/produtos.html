@@ -20,27 +20,30 @@
         </div>
         <div class="navLink">
             <ul>
-                <li><a href="html/paginaSobre.html">Sobre</a></li>
-                <li><a href="produtos/produtos.html">Produtos</a></li>
-                <li><a href="html/paginaLogin.html">Login</a></li>
+                <li><a href="../html/paginaSobre.html">Sobre</a></li>
+                <li><a href="../produtos/produtos.html">Produtos</a></li>
+                <li><a href="../html/paginaLogin.html">Login</a></li>
             </ul>
         </div>
         <div class="navIcones">
             <a class="iconeEntrada"><img src="../imagem/icones/search.png"></a>
             <a id="iconeLogin" class="iconeEntrada" href=""><img src="../imagem/icones/user.png"></a>
-            <div id="nomeUsuario"></div><a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
+            <div id="nomeUsuario"></div>
+            <a id="iconeCarrinho" class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
         </div>
     </header>
 
-    <dialog id="carrinho">
-        <div>
-
-        </div>
-
+    <dialog id="carrinhoModal">
+        <form method="dialog">
+            <div>
+                <h1>CARRINHO DE COMPRAS</h1>
+                <p>Seu carrinho:</p>
+            </div>
+        </form>
     </dialog>
 
     <script src="../produtos/produtos.js"></script>
-    <script src="../javaScript/scriptIndex.js"></script>
+    <!-- <script src="../javaScript/scriptIndex.js"></script> -->
 </body>
 
 </html>
