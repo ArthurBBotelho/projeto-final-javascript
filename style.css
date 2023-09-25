@@ -80,10 +80,12 @@
     display: flex;
     justify-content: flex-end;
 }
-.navIcones div{
+
+.navIcones div {
     margin-top: 18px;
     font-weight: 700;
 }
+
 .iconeEntrada img {
     width: 30px;
     opacity: 0.6;
@@ -116,7 +118,7 @@
     grid-area: compreAgora;
     background-color: transparent;
     height: 80px;
-    width: 200px;
+    width: 250px;
     color: var(--text-color);
     border: solid 2px var(--text-color);
     font-size: 24px;
