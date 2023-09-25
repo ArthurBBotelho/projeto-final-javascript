@@ -1,4 +1,3 @@
-
 const produtos = [{
     id: 1,
     imagem: '<img src="../produtos/cadeira-comfy/imagem/cadeira-comfy.png">',
@@ -102,20 +101,18 @@ for (const produto of produtos) {
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
                             <button id="comprarAgora">Comprar Agora</button>`;
     document.body.appendChild(container);
-
 }
 
 // --------------------------------------------------------------- CARRINHO
 
-// const carrinho = []
+const carrinho = []
 
-// let adicionarCarrinho = document.getElementById("adicionarCarrinho")
-// adicionarCarrinho.addEventListener('click', adicionarProduto())
+let adicionarCarrinho = document.getElementById("adicionarCarrinho")
+adicionarCarrinho.addEventListener('click', adicionarProduto())
 
-// function adicionarProduto() {
-//     alert(produtos.nome)
-// }
-
+function adicionarProduto() {
+    console.log(produtos.nome)
+}
 
 // for (i = 0; i < produtos.length; i++) {
 //     adicionarProduto()
