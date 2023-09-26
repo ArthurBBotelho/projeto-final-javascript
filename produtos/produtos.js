@@ -96,27 +96,62 @@ for (const produto of produtos) {
 
     container.innerHTML = `<h3>${produto.nome}</h3>
                             <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
-                            <p> $ ${produto.price}</p>
-                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p> 
+                            <p>${produto.price}</p>
+                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
                             <button id="comprarAgora">Comprar Agora</button>`;
     document.body.appendChild(container);
+
 }
 
+// função para criar um novo elemento genérico 
+/* const createCustomElement = (element, id, innerText, href) => {
+    const e = document.createElement(element);
+    e.id = id;
+    e.innerText = innerText;
+    if (element == 'button') {
+      e.addEventListener('click', addProductsToCart);
+    }
+    return e;
+  };
+*/
 // --------------------------------------------------------------- CARRINHO
 
 const carrinho = []
 
-let adicionarCarrinho = document.getElementById("adicionarCarrinho")
-adicionarCarrinho.addEventListener('click', adicionarProduto())
+let arrayCarrinho = document.querySelectorAll("#adicionarCarrinho")
+console.log(arrayCarrinho)
+let dialogCarrinho = document.querySelector("#carrinhoModal")
+
 
 function adicionarProduto() {
-    console.log(produtos.nome)
+    const nome = this.parentElement.childNodes[0].innerText
+
+    const price = this.parentElement.childNodes[4].innerText
+
+    carrinho.push({ nome, price })
+    console.log(carrinho)
+
+    let nomeProduto = document.createElement("span")
+    nomeProduto.innerHTML = `<p>${nome}<p/>`
+    dialogCarrinho.appendChild(nomeProduto)
+
+    somaCarrinho()
 }
 
-// for (i = 0; i < produtos.length; i++) {
-//     adicionarProduto()
-// }
+function somaCarrinho() {
+    let resultadoCarrinho = 0
+
+    for (const price of carrinho) {
+        resultadoCarrinho += parseInt(price.price)
+    }
+    console.log("Valor do Carrinho: " + resultadoCarrinho)
+
+}
+
+for (i = 0; i < arrayCarrinho.length; i++) {
+    arrayCarrinho[i].addEventListener('click', adicionarProduto)
+}
 
 let carrinhoModal = document.getElementById("carrinhoModal")
 

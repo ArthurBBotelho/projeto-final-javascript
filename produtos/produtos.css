@@ -74,10 +74,12 @@
     display: flex;
     justify-content: flex-end;
 }
-.navIcones div{
+
+.navIcones div {
     margin-top: 18px;
     font-weight: 700;
 }
+
 .iconeEntrada img {
     width: 24px;
     opacity: 0.6;
@@ -105,4 +107,6 @@
     opacity: 60%;
 }
 
-/* ------------------------------------------------------TESTE CARRINHO */
+/* ------------------------------------------------------MODAL CARRINHO */
+
+#carrinhoModal {}
