@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-//----------------------------------------------------INSCRIÇÃO NEWSLETTER
-
-=======
 // ----------------------------------------------------INSCRIÇÃO NEWSLETTER
->>>>>>> 4550a07c42d2b014a4bdd394bf92860596f3dc3d
 let nome = document.querySelector("#nome");
 let email = document.querySelector("#email");
 let form = document.querySelector("#form");
