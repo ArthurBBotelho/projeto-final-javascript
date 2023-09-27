@@ -5,6 +5,15 @@
     let endereco = document.getElementById('endereco');
     let senha = document.getElementById('senha');
 
+    //validando o que o usuário está digitando está correto
+    senha.addEventListener("keyup", () => {
+        if (senha.value.length < 5 ) {
+            senha.setAttribute("style", "border-color: #e07a5f")
+
+        } else {
+            senha.setAttribute("style", "border-color: #46725d")
+        }
+    })
 //função com evento de clique de botão 
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     e.preventDefault();

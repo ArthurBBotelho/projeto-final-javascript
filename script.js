@@ -1,4 +1,4 @@
-// ----------------------------------------------------INSCRIÇÃO NEWSLETTER
+//----------------------------------------------------INSCRIÇÃO NEWSLETTER
 
 let nome = document.querySelector("#nome");
 let email = document.querySelector("#email");
