@@ -24,10 +24,28 @@ for (let  dados of cadastroUsuario) {
     } 
 }
     if (loginOk == true ) {
-        window.location.href= "/index.html"
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Bem vindo!',
+            background: '#f1f4de',
+            timer: 1000,
+            showConfirmButton: false,
+            })
+
+            setTimeout( () =>{
+                window.location.href = "../index.html"
+            }, 1000)
     }
     else {
-        alert("Verifique dados")
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Verifique seus dados',
+            timer: 1000,
+            background: '#f1f4de',
+            showConfirmButton: false,
+       })
     }
 }
 
