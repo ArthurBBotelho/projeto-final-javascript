@@ -42,7 +42,7 @@ h1 {
  }
 
 input{
-    border-bottom: #e6e7f4 solid 1px;
+    border-bottom: var(--terciary-color) solid 2px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -54,11 +54,11 @@ input{
     font-size: large;
     font-family: 'Inter', sans-serif;
     margin-bottom: 30px;
-    color: #f1f4de;
+    color: var(--terciary-color);
 }
 
 input:hover{
-    border-bottom: var(--secundary-color) solid 1px;
+    border-bottom: var(--secundary-color) solid 2px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -72,6 +72,7 @@ button {
     width: 140px;
     height: 50px;
     background-color: transparent;
+    text-transform: uppercase;
     color: var(--terciary-color);
     font-size: 14px;
     font-weight: 600;
@@ -96,6 +97,7 @@ button:hover{
 }
 .btnFechar {
     border: none;
+    text-transform: uppercase;
     display: flex;
     justify-content: flex-end;
     align-items: center;

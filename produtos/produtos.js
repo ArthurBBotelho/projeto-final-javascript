@@ -153,10 +153,23 @@ for (i = 0; i < arrayCarrinho.length; i++) {
     arrayCarrinho[i].addEventListener('click', adicionarProduto)
 }
 
-let carrinhoModal = document.getElementById("carrinhoModal")
+let carrinhoModal = document.getElementById('carrinho')
 
 document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
     e.preventDefault()
     console.log("Usuário abriu carrinho")
     carrinhoModal.showModal();
+    //pegando o botão fechar de dentro do dialog e fechando com o onclick
+    document.getElementById('btnFechar').onclick = function botaoFechar(e) {
+        e.preventDefault()
+        console.log("fechar")
+        carrinhoModal.close();
+    }
 }
+// let fazerLogin = document.getElementById('fazerLogin')
+// //pegando o botão e abrindo o dialog com o onclick
+// document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
+//     e.preventDefault()
+//     console.log("hello")
+//     fazerLogin.showModal();
+// }

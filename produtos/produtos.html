@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../produtos/produtos.css">
+    <link rel="stylesheet" href="../css/dialogCarrinho.css">
     </link>
 </head>
 
@@ -26,16 +27,42 @@
             </ul>
         </div>
         <div class="navIcones">
-            <a class="iconeEntrada"><img src="../imagem/icones/search.png"></a>
+            <a  class="iconeEntrada"><img src="../imagem/icones/search.png"></a>
             <a id="iconeLogin" class="iconeEntrada" href=""><img src="../imagem/icones/user.png"></a>
-            <div id="nomeUsuario"></div><a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
+            <div id="nomeUsuario"></div><a id="iconeCarrinho" class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
         </div>
     </header>
 
     <dialog id="carrinho">
         <div>
-
+            <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
         </div>
+
+    </dialog>
+
+    <dialog id="fazerLogin">
+        <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
+        <div class="container-login">
+            <h1>Entre, a casa é sua!</h1>
+            <form class="login">
+                <div class="username">
+                    <i class="ri-mail-open-line"></i>
+                    <input type="text" placeholder="Usuário" id="inputUsername" class="inputUsername">
+                    <br>
+                </div>
+                <div class="password">
+                    <i class="ri-lock-password-line"></i>
+                    <input type="password" placeholder="Senha" id="inputPassword" class="inputPassword">
+                    <br>
+                </div>
+            </form>
+            <div class="complementos">
+                <button id="buttonLogin">Login</button>
+                <div>
+                    <a href="#esqueceuasenha">Esqueceu a senha?</a> |
+                    <a href="./html/paginaCadastro.html">Não tem cadastro?</a>
+                </div>
+            </div>
 
     </dialog>
 
