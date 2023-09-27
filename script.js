@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 //----------------------------------------------------INSCRIÇÃO NEWSLETTER
 
+=======
+// ----------------------------------------------------INSCRIÇÃO NEWSLETTER
+>>>>>>> 4550a07c42d2b014a4bdd394bf92860596f3dc3d
 let nome = document.querySelector("#nome");
 let email = document.querySelector("#email");
 let form = document.querySelector("#form");
@@ -93,24 +97,24 @@ function search() {
 let pegaNomeUsuario = JSON.parse(localStorage.getItem("salvarNomeUsuario"));
 console.log(pegaNomeUsuario)
 if (pegaNomeUsuario == null) {
-    
-}else {
+
+} else {
     document.getElementById("nomeUsuario").innerHTML = "Olá, " + pegaNomeUsuario;
     console.log(pegaNomeUsuario)
-}   
+}
 
 //-----------------------------------------------------------------abrir e fechar DIALOG
 //div onde está o html do dialog
 let fazerLogin = document.getElementById('fazerLogin')
 //pegando o botão e abrindo o dialog com o onclick
-document.getElementById('iconeLogin').onclick = function botaoLogin (e) {
+document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
     e.preventDefault()
     console.log("hello")
     fazerLogin.showModal();
 }
 
 //pegando o botão fechar de dentro do dialog e fechando com o onclick
-document.getElementById('btnFechar').onclick = function botaoFechar (e) {
+document.getElementById('btnFechar').onclick = function botaoFechar(e) {
     e.preventDefault()
     console.log("fechar")
     fazerLogin.close();

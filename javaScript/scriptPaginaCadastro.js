@@ -61,4 +61,3 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
        window.location.href = "../index.html"
    }, 1000)
 }
-
