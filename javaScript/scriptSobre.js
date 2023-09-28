@@ -1,21 +1,12 @@
-// let cliente = prompt("Olá, adoramos conhecer nossos clientes! Por favor digite o seu primeiro nome: ")
+window.addEventListener('scroll', () => {
+	document
+        .querySelector('nav')
+		.classList.toggle('window-scroll', window.scrollY > 100);
+});
 
-// alert(cliente + " trabalhamos para proporcionar a melhor experiência, xxxxx")
 
 
-/*const botao = document.getElementById('btn');
-
-botao.addEventListener('click', () => {
-
-    const resposta = alert('Obrigado! Sua opinião é muito valiosa!');
-            
-            // Verifica se a resposta não é nula (quando o usuário clica em "Cancelar")
-        if (resposta !== null) {
-            alert('Você digitou: ' + resposta);
-        } else {
-            alert('Você cancelou o prompt.');
-}
-});*/
+/* -----  BT ------ */
 
 const botao = document.getElementById('btn');
 
