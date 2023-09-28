@@ -8,8 +8,8 @@
   
   * {
     font-family: 'Inter', sans-serif;
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     font-style: none;
     list-style: none;
     text-decoration: none;
@@ -18,6 +18,10 @@
   /* ------------------------------------------------------HEADER */
   
   #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -85,3 +89,570 @@
     border-bottom: solid 3px;
     color: black;
   }
+
+  /* --- FROM HERE ----*/
+
+  .label {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin: 0px 50px 50px 50px;
+}
+
+.label .textLabel {
+    margin: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.label label {
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+
+.label input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.label button {
+    background-color: #007BFF;
+    color: white;
+    margin-top: 10px;
+    width: 100px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.label button:hover {
+    background-color: #0056b3;
+}
+
+.nome-label {
+    color: #FF5733;
+}
+
+.email-label {
+    color: #FF5733; 
+}
+
+.text-label {
+    color: #FF5733; 
+}
+
+#nome {
+    width: 50%;
+}
+
+#email {
+    width: 50%;
+}
+
+#text {
+    height: 70px;
+    width: 50%;
+}
+
+/* --- END Label --- */
+
+/* ---  START DESCRIPTION  --- */
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--terciary-color);
+}
+
+.sobre{ 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(./../imagem//pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary-color);
+  height: 550px;
+  padding: 50px;
+}
+
+.titleDescriptionH2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--secundary-color);
+}
+
+.introduction{
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.titleDescriptionH4{
+    margin: 20px;
+    color: var(--secundary-color);
+    margin: 10px 50px 10px 50px;
+    font-size: 24px;
+}
+
+.titleDescriptonP {
+    font-size: 20px;
+    color: var(--text-color);
+     margin: 0px 50px 10px 50px;
+}
+
+/* ---  Inicio Carrossel --- */
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.carousel-slide p {
+    width: 300px;
+    font-size: 20px;
+}
+
+.carousel img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 10px 50px 10px 50px;
+    border: var(--terciary-color) solid 10px;
+}
+
+/* Estilo para o botão de próxima imagem no carrossel (opcional) */
+.fa-solidfa-chevron-left  {
+    cursor: pointer;
+}
+
+/* Estilo para ocultar a rolagem horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* footer */
+
+.footer-container {
+	display: grid;
+	grid-template-columns: 45% 55%;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 13rem;
+	background: linear-gradient(
+		180deg,
+		rgb(1, 53, 27) 0%,
+		hsla(42, 36%, 78%, 1) 90%
+	);
+	box-shadow: inset 0 0.5rem 2rem #46725d(0, 0, 0, 0.6);
+}
+
+.tituloDhouse{
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+	width: 75%;
+	font-weight: 600;
+	color: var(--text-color);
+	margin-bottom: 2rem;
+}
+
+.footer-wotc-terms {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+	font-weight: 700;
+}
+
+.footer-wotc-social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 3rem;
+	font-size: 1.2rem;
+}
+
+.footer-wotc-terms a,
+.footer-wotc-social a {
+	color: var(--text-color);
+	transition: var(--terciary-color);
+}
+
+.footer-wotc-terms a:hover,
+.footer-wotc-social a:hover {
+	color: var(--color-orange);
+}
+
+.footer-right {
+	text-align: right;
+}
+
+.dev-info-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-content: center;
+	justify-items: end;
+	gap: 2rem;
+}
+
+.dev-info h3 {
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+	color: var(--color-gold-300);
+}
+
+.dev-info h4 {
+	margin-bottom: 1.5rem;
+	font-weight: 400;
+	font-size: 1.1rem;
+	color: var(--color-darker);
+}
+
+.dev-contact {
+	margin-bottom: 1.5rem;
+	font-weight: 300;
+	font-size: 1rem;
+	color: var(--color-gold-300);
+}
+
+.dev-contact li i {
+	padding-right: 0.4rem;
+}
+
+.dev-socials {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 2rem;
+}
+
+.dev-socials a {
+	font-size: 1.2rem;
+	color: var(--color-gold-300);
+	transition: var(--transition);
+}
+
+.dev-socials a:hover {
+	color: var(--color-orange);
+}
+
+.footer-copyright {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 1.5rem 3rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	color: var(--color-gold-100);
+	text-align: center;
+}
+
+.footer-copyright-left {
+	text-align: left;
+}
+
+.footer-copyright-right {
+	text-align: right;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1440px) {
+	section {
+		padding: 5rem 0;
+	}
+
+	nav img {
+		width: 12%;
+	}
+
+	.nav-container {
+		width: var(--container-width-md);
+	}
+
+	.nav-menu a {
+		font-size: 0.8rem;
+	}
+
+	.upcoming-sets {
+		margin-top: -8rem;
+	}
+
+	.upcoming-card-info-img img {
+		bottom: 5rem;
+	}
+
+	.upcoming-card-info p {
+		margin: 2.3rem 1rem 2rem;
+		font-weight: 300;
+		font-size: 0.9rem;
+	}
+
+	.mom-btn,
+	.lotr-btn,
+	.masters-btn {
+		margin-bottom: 1rem;
+	}
+
+	.footer-container {
+		padding: 3rem 6rem;
+	}
+
+	.footer-left p {
+		font-size: 0.9rem;
+	}
+
+	.footer-copyright {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+
+	nav img {
+		width: 18%;
+	}
+
+	.nav-btn {
+		display: inline-block;
+		font-size: 2rem;
+		color: var(--color-light);
+	}
+
+	#closeBtn {
+		display: none;
+	}
+
+	.nav-menu {
+		width: 18rem;
+		height: fit-content;
+		display: none;
+		flex-direction: column;
+		gap: 0;
+		position: fixed;
+		top: 5rem;
+		right: 5%;
+		border: 2px solid var(--color-gold-100);
+		border-radius: 10px;
+		background-color: var(--color-dark);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+		overflow: hidden;
+	}
+
+	.nav-menu li {
+		width: 100%;
+		height: 5.8rem;
+	}
+
+	.nav-menu li a {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		place-items: center;
+		font-size: 1rem;
+		background-color: var(--color-dark);
+		box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+	}
+
+	.nav-menu li a:hover {
+		color: var(--color-dark);
+		background-color: var(--color-gold-100);
+	}
+
+	.header-container {
+		width: 70%;
+	}
+
+	.upcoming-sets {
+		background: linear-gradient(
+			to bottom,
+			#000 0%,
+			#000 20%,
+			#dcd0b4 20%,
+			#dcd0b4 100%
+		);
+	}
+
+	.upcoming-container {
+		max-width: 50%;
+		grid-template-columns: 1fr;
+	}
+
+	.upcoming-card-info-img img {
+		bottom: 8rem;
+	}
+
+	.upcoming-card-info p {
+		margin: 0 1.5rem 2.5rem;
+		font-weight: 300;
+		font-size: 1.2rem;
+	}
+
+	.connect-wotc-social {
+		font-size: 1.8rem;
+	}
+
+	.database-call-info h3 {
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	.database-call-info p {
+		margin-bottom: 2rem;
+		font-size: 0.9rem;
+	}
+
+	.footer-container {
+		grid-template-columns: 1fr;
+		place-items: center;
+		padding: 3rem 2rem;
+		text-align: center;
+	}
+
+	.footer-left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-left img {
+		width: 20%;
+		margin-bottom: 1rem;
+	}
+
+	.footer-left p {
+		width: 60%;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.footer-wotc-terms {
+		margin-bottom: 1.5rem;
+	}
+
+	.footer-right {
+		display: none;
+	}
+
+	.footer-copyright {
+		grid-template-columns: 1fr;
+		font-size: 0.9rem;
+	}
+
+	.footer-copyright-left,
+	.footer-copyright-right {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	nav img {
+		width: 20%;
+	}
+
+	.header-info p {
+		font-size: 1.5rem;
+	}
+
+	.upcoming-card-info-img img {
+		bottom: 6rem;
+		margin-bottom: 2rem;
+	}
+
+	.upcoming-card-info p {
+		font-size: 1rem;
+	}
+
+	.connect-wotc-social {
+		gap: 5rem;
+	}
+
+	.database-call-info h3 {
+		font-size: 1.5rem;
+	}
+
+	.database-call-info p {
+		font-size: 0.8rem;
+	}
+
+	.database-call-info a {
+		font-size: 0.9rem;
+	}
+}
+
+@media screen and (max-width: 440px) {
+
+	.footer-left img {
+		width: 40%;
+	}
+
+	.footer-left p {
+		width: 90%;
+	}
+
+	.footer-wotc-terms {
+		font-size: 0.9rem;
+	}
+
+	.footer-copyright {
+		font-size: 0.8rem;
+	}
+
+	.footer-copyright-left {
+		margin-bottom: 0.5rem;
+	}
+}
+
+
+
+  
