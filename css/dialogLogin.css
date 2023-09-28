@@ -16,7 +16,7 @@
     text-decoration: none;
   }
   
-dialog{
+#fazerLogin {
     margin: 106px 291px;
     width: 503px;
     height: 369px;
@@ -26,6 +26,21 @@ dialog{
     background-color:  var(--primary-color);
     backdrop-filter: blur(5px);
 }
+.btnFechar {
+    border: none;
+    position: relative;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    top: 4%;
+    left: 90%;
+    background-color: transparent;
+}
+
+.btnFechar img{
+    height: 18px;
+    width: 18px;
+}
 
 .container-login{
     display: flex;
@@ -33,13 +48,12 @@ dialog{
     flex-direction: column;
     align-items: center;
     color: var(--terciary-color);
-    backdrop-filter: blur(5px);
 }
 
 h1 {
     margin-bottom: 30px;
     font-variant-caps: titling-caps;
- }
+}
 
 input{
     border-bottom: var(--terciary-color) solid 2px;
@@ -67,10 +81,29 @@ input:hover{
 input:focus::-webkit-input-placeholder {
     color: transparent;
 }
-
-button {
+#fazerLogin .ri-mail-open-line {
+    left: 305px;
+    top: 2px;
+    position: relative;
+}  
+#fazerLogin .ri-lock-password-line{
+    left: 305px;
+    top: 2px;
+    position: relative;
+}
+.complementos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#fazerLogin a:link {
+    color: #46725d;
+}
+#buttonLogin {
     width: 140px;
     height: 50px;
+    align-items: center;
     background-color: transparent;
     text-transform: uppercase;
     color: var(--terciary-color);
@@ -80,46 +113,7 @@ button {
     transition: border-radius 1s;
     margin-bottom: 15px;
  }
-a:link {
-    color: #46725d;
-}
-button:hover{
+#buttonLogin:hover{
     border-radius: 50px;
     cursor: pointer;
-}
-.complementos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: beige;
-
-}
-.btnFechar {
-    border: none;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    top: 5px;
-    left: 333px;
-    cursor: pointer;
-}
-
-.btnFechar img{
-    height: 18px;
-    width: 18px;
-}
-
-.ri-mail-open-line {
-    left: 305px;
-    top: 2px;
-    position: relative;
-}
-  
-.ri-lock-password-line{
-    left: 305px;
-    top: 2px;
-    position: relative;
 }

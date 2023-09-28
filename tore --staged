@@ -1,0 +1,237 @@
+[33mcommit 3e3878f2b802792c2e34feecf3400fe6a6302e5d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 23:40:26 2023 -0300
+
+    layout da página de produtos apra aprovação
+
+[33mcommit 600c51b63ae1ed7de9ae1fe287b7529c36456f46[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 22:47:17 2023 -0300
+
+    adicionado dialog na pagina de produtos
+
+[33mcommit 3ec3f8f3088e1673df2c4242c3e1741033d352bf[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 22:11:41 2023 -0300
+
+    adicionado swetAlert no login
+
+[33mcommit 7ecce754f295d561e3dd4f69f769c55d5992675f[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 22:04:52 2023 -0300
+
+    adicioando páginas faltantes
+
+[33mcommit 08ea4e8ce0a425dc6f49f8b81fa0a996504f10c9[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 21:52:07 2023 -0300
+
+    conflito no merge resolvido
+
+[33mcommit 860c9ac121632be9cdbeb303132bebc6429feb02[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 21:49:20 2023 -0300
+
+    produtos
+
+[33mcommit 5b0770c18ea247c7ea847cbabbf363b3934be3e6[m
+Merge: a93f279 4550a07
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 21:34:40 2023 -0300
+
+    adicionado verificação de senha na pagina de cadastro
+
+[33mcommit a93f2793231ef26c0094ce559b87ee1802a8568a[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 26 21:27:20 2023 -0300
+
+    adicionado verificação de senha na pagina de cadastro
+
+[33mcommit 4550a07c42d2b014a4bdd394bf92860596f3dc3d[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Mon Sep 25 22:36:28 2023 -0300
+
+    carrinho adiconando itens e somando
+
+[33mcommit fd3b5c2e670ee9ab1ac767bed7d3adfd041b87aa[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Mon Sep 25 20:32:12 2023 -0300
+
+    carrinho teste de adicionar produto
+
+[33mcommit 9700e63c5e821eda635e008ea9e3352852282828[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Mon Sep 25 20:05:43 2023 -0300
+
+    tamanho do botão compre agora
+
+[33mcommit 6c38daac13589f09b35b97b424cfc1fd88945813[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Sun Sep 24 11:47:48 2023 -0300
+
+    dialog dp carrinho criado
+
+[33mcommit 01d24424d1e55b1ddc00a80ee88cafd123969b92[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Sun Sep 24 10:14:55 2023 -0300
+
+    teste carrinho
+
+[33mcommit 26069f5ebd0074331cecd2ac7bf510e5cebf2711[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sat Sep 23 22:48:12 2023 -0300
+
+    refatorando códigos no script do cadastro
+
+[33mcommit 0f10bdfcf7225661ae8e22a4407e2960eb0fedf4[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sat Sep 23 22:38:43 2023 -0300
+
+    adicionado códigos na script principal
+
+[33mcommit 0acfee762b988dbd816f47c9f2dff01e45bd0b00[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sat Sep 23 20:38:42 2023 -0300
+
+    resolvido problema olá null index
+
+[33mcommit e3aeb3733ffe9072477eca1ae77ba18d95090dbd[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sat Sep 23 20:24:53 2023 -0300
+
+    resolvido problema do Olá , null da página inicial
+
+[33mcommit 0ab3e9e0f9e7d63f8e2c9c9031e9ee395547f840[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Wed Sep 20 00:41:26 2023 -0300
+
+    alterações nos layouta da dialog da tela de login.
+
+[33mcommit 93020c8723e585159fdc272f7acf4e40741eb0eb[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 19 22:49:48 2023 -0300
+
+    modificado cadastro para nome e sobrenome e para aparecer apenas o primeiro nome após o login
+
+[33mcommit 3146135626ce2e0e84156b3efe3bc7bca1057d45[m
+Author: Breno Santos de Alcântara <brenoalcantara.dev@gmail.com>
+Date:   Tue Sep 19 21:06:34 2023 -0300
+
+    Atualizacao
+
+[33mcommit 2bb7f284eab471a7a97173c1bc0d6bb6a4296b10[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Tue Sep 19 20:55:55 2023 -0300
+
+    commit
+
+[33mcommit 78aa4fce3fe1c2a7a0c919766552b210ffc41d25[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Tue Sep 19 20:25:28 2023 -0300
+
+    limpando arquivos
+
+[33mcommit 795e8c1205e0aab346e6e8dc032d3d30619d2737[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Tue Sep 19 20:23:45 2023 -0300
+
+    atualizar o carrinho
+
+[33mcommit 1450f3ba1f45f99ed434acfa2c3b3b15a8e0d297[m
+Merge: 6149df9 c38c403
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Tue Sep 19 20:13:42 2023 -0300
+
+    Merge branch 'main' of https://github.com/ArthurBBotelho/projeto-final-javascript
+
+[33mcommit 6149df92e27449a5f828c6f01c1d24fb061a766b[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Tue Sep 19 20:13:16 2023 -0300
+
+    icone usuário atualizado
+
+[33mcommit c38c4037ada1a613d5b820ffea0a3d895f694ecd[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Tue Sep 19 20:08:36 2023 -0300
+
+    atualizado o dialog do login na pagina inicial
+
+[33mcommit 26d6831512a4a856a2b9caa27aa1f991f02092e4[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 01:55:25 2023 -0300
+
+    alterado font da página de cadastro
+
+[33mcommit 78dfb294bc2a695e9f40f7d7cd326f2253972175[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 01:53:05 2023 -0300
+
+    alterado layout da página de login
+
+[33mcommit 50264f0005e7a7a3c98f49139baaec7be9967696[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 01:28:34 2023 -0300
+
+    alterado style da página de cadastro.
+
+[33mcommit 83adc73dbf22972faeca24dabc8ceb0aacfd5f7a[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:56:37 2023 -0300
+
+    atualizado link e página sobre
+
+[33mcommit 4bd63782e8cbe26da3527b3e419f4d5cf982b847[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:39:03 2023 -0300
+
+    página de cadastro direcionando diretamente para a index como o nome do usuário.
+
+[33mcommit 3a52dbea5effdae77765b3776151c5b1534cfe38[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:27:55 2023 -0300
+
+    atualização de nome do usuario na index
+
+[33mcommit 5131bf31a60cae89347b837253c5282225bc1d25[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:20:22 2023 -0300
+
+    atualização de nome do usuario na index
+
+[33mcommit b3cd2787c6a0b2f1654e23cfffd7b46f39dee0f5[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:16:37 2023 -0300
+
+    atualização da pagina de cadastro com swetAlert
+
+[33mcommit 585eca0b08dc59fca817ee540e465335d627ac80[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:14:45 2023 -0300
+
+    validação de login acrescentada e funcionante.
+
+[33mcommit 5c8e1514533ed3a1af212e1febd383420a636c88[m
+Merge: db13c17 319507f
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:06:05 2023 -0300
+
+    Merge branch 'main' of https://github.com/ArthurBBotelho/projeto-final-javascript
+
+[33mcommit db13c1742dd8eceb644e5eea692b81b258bac0dc[m
+Author: Emily Comin <108775557+emilycomin@users.noreply.github.com>
+Date:   Sun Sep 17 00:05:01 2023 -0300
+
+    validação de login acrescentada e funcionante.
+
+[33mcommit 319507f69afcb209fc46514935877587d1bf2f45[m
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Sat Sep 16 18:58:30 2023 -0300
+
+    JS do carrinho separado
+
+[33mcommit 3bee249ba81c3cd25c50c5bc17136f3bb14ad529[m
+Merge: bdb3f1c 4c48d81
+Author: Arthur Botelho <emilioarthur19@gmail.com>
+Date:   Sat Sep 16 15:39:01 2023 -0300
+
+    Merge branch 'main' of https://github.com/ArthurBBotelho/projeto-fina
