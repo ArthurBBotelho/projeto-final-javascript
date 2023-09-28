@@ -27,22 +27,26 @@
                 <a class="iconeEntrada"><img src=""></a>
                 <a class="iconeEntrada" href="paginaLogin.html"><img src="../imagem/icones/user.png"></a>
                 <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
-                <a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
+                <div id="nomeUsuario"></div><a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
             </div>
         </header>
         
         <div class="containerPC">
             <div class="container-cadastro">
                 <form>
+                    <div id="divPrimeiroNome">
+                        <input type="text" id="primeiroNome" class="input-cadastro-nome" placeholder="Primeiro Nome"></div>
                     <div>
-                        <input type="text" id="nomeCompleto" class="input-cadastro-nome" placeholder="Nome Completo"></div>
-                    <div>
+                    <div id="divSegundoNome">
+                        <input type="text" id="segundoNome" class="input-cadastro-nome" placeholder="Sobrenome"></div>
+                    <div id="divEmail">
                         <input type="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
-                    <div>
+                    <div id="divTelefone">
                         <input type="tel" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
-                    <div>
+                    <div id="divEndereco">
                         <input type="text" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
-                    <div>
+                    <div id="divSenha">
+                        <p>Sua senha deve conter no mínimo 5 números</p>
                         <input type="password" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
                 </form>
 
@@ -55,9 +59,8 @@
         </div>
 
         
-    <script src="/javaScript/scriptPaginaCadastro.js"></script>
+    <script src="../javaScript/scriptPaginaCadastro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../javaScript/scryptPaginaLogin.js"></script>
 
 </body>
 </html>

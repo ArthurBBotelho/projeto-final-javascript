@@ -1,4 +1,3 @@
-
 const produtos = [{
     id: 1,
     imagem: '<img src="../produtos/cadeira-comfy/imagem/cadeira-comfy.png">',
@@ -97,20 +96,80 @@ for (const produto of produtos) {
 
     container.innerHTML = `<h3>${produto.nome}</h3>
                             <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
-                            <p> $ ${produto.price}</p>
-                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p> 
-                            <button id="adicionarCarrinho">Adicionar ao carrinho</button>`;
+                            <p>${produto.price}</p>
+                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
+                            <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
+                            <button id="comprarAgora">Comprar Agora</button>`;
     document.body.appendChild(container);
+
 }
 
+// função para criar um novo elemento genérico 
+/* const createCustomElement = (element, id, innerText, href) => {
+    const e = document.createElement(element);
+    e.id = id;
+    e.innerText = innerText;
+    if (element == 'button') {
+      e.addEventListener('click', addProductsToCart);
+    }
+    return e;
+  };
+*/
 // --------------------------------------------------------------- CARRINHO
 
-let carrinho = []
+const carrinho = []
 
-let adicionarCarrinho = document.getElementById("adicionarCarrinho")
-adicionarCarrinho.addEventListener('click', adicionarProduto())
+let arrayCarrinho = document.querySelectorAll("#adicionarCarrinho")
+console.log(arrayCarrinho)
+let dialogCarrinho = document.querySelector("#carrinhoModal")
+
 
 function adicionarProduto() {
+    const nome = this.parentElement.childNodes[0].innerText
+
+    const price = this.parentElement.childNodes[4].innerText
+
+    carrinho.push({ nome, price })
+    console.log(carrinho)
+
+    let nomeProduto = document.createElement("span")
+    nomeProduto.innerHTML = `<p>${nome}<p/>`
+    dialogCarrinho.appendChild(nomeProduto)
+
+    somaCarrinho()
+}
+
+function somaCarrinho() {
+    let resultadoCarrinho = 0
+
+    for (const price of carrinho) {
+        resultadoCarrinho += parseInt(price.price)
+    }
+    console.log("Valor do Carrinho: " + resultadoCarrinho)
 
 }
 
+for (i = 0; i < arrayCarrinho.length; i++) {
+    arrayCarrinho[i].addEventListener('click', adicionarProduto)
+}
+
+let carrinhoModal = document.getElementById('carrinho')
+
+document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
+    e.preventDefault()
+    console.log("Usuário abriu carrinho")
+    carrinhoModal.showModal();
+    //pegando o botão fechar de dentro do dialog e fechando com o onclick
+    document.getElementById('btnFechar').onclick = function botaoFechar(e) {
+        e.preventDefault()
+        console.log("fechar")
+        carrinhoModal.close();
+    }
+}
+// let fazerLogin = document.getElementById('fazerLogin')
+// //pegando o botão e abrindo o dialog com o onclick
+// document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
+//     e.preventDefault()
+//     console.log("hello")
+//     fazerLogin.showModal();
+// }
