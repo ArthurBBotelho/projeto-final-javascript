@@ -146,14 +146,16 @@ function adicionarProduto() {
 
     let nomeProduto = document.createElement("div")
     nomeProduto.classList.add("produtosCarrinho")
+    let carrinhoVazio = document.getElementById('carrinhoVazio')
 
     nomeProduto.innerHTML = `
-    <h1>CARRINHO</h1>
+    
     <p>${nome}</p>
     <p>Preço: ${price}</p>
     <p>${imagem}</p>
     <hr>
-    <p>Valor do Carrinho: ${resultadoCarrinho}</p>`
+    <p>Valor do Carrinho: ${resultadoCarrinho}</p>
+    `
     dialogCarrinho.appendChild(nomeProduto)
 }
 
