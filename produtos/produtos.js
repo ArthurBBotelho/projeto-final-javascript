@@ -95,12 +95,12 @@ for (const produto of produtos) {
     container.classList.add("produtosLayout")
 
     container.innerHTML = `<h3>${produto.nome}</h3>
-                            <a href="${produto.link}/${produto.link}.html">${produto.imagem}</a>
-                            <p id="price">R$ ${produto.price}</p>
+                            <a>${produto.imagem}</a>
+                            <p>${produto.price}</p>
                             <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
                             <button id="comprarAgora">Comprar Agora</button>`;
-    document.getElementById("produtos").appendChild(container);
+    document.body.appendChild(container);
 
 }
 
@@ -123,6 +123,7 @@ let arrayCarrinho = document.querySelectorAll("#adicionarCarrinho")
 console.log(arrayCarrinho)
 let dialogCarrinho = document.querySelector("#carrinhoModal")
 
+// --------------------------------------------------------------------- FUNÇÃO ADICIONAR PRODUTOS NO CARRINHO
 
 function adicionarProduto() {
     const nome = this.parentElement.childNodes[0].innerText
@@ -132,12 +133,14 @@ function adicionarProduto() {
     carrinho.push({ nome, price })
     console.log(carrinho)
 
-    // let nomeProduto = document.createElement("span")
-    // nomeProduto.innerHTML = `<p>${nome}<p/>`
-    // dialogCarrinho.appendChild(nomeProduto)
+    let nomeProduto = document.createElement("span")
+    nomeProduto.innerHTML = `<p>${nome}<p/>`
+    dialogCarrinho.appendChild(nomeProduto)
 
     somaCarrinho()
 }
+
+// --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
 
 function somaCarrinho() {
     let resultadoCarrinho = 0
@@ -146,51 +149,18 @@ function somaCarrinho() {
         resultadoCarrinho += parseInt(price.price)
     }
     console.log("Valor do Carrinho: " + resultadoCarrinho)
-
 }
 
 for (i = 0; i < arrayCarrinho.length; i++) {
     arrayCarrinho[i].addEventListener('click', adicionarProduto)
 }
 
-let carrinhoModal = document.getElementById('carrinho')
+// --------------------------------------------------------------------- ABRIR O CARRINHO
+
+let carrinhoModal = document.getElementById("carrinhoModal")
 
 document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
     e.preventDefault()
     console.log("Usuário abriu carrinho")
     carrinhoModal.showModal();
-    //pegando o botão fechar de dentro do dialog e fechando com o onclick
-    document.getElementById('btnFechar').onclick = function botaoFechar(e) {
-        e.preventDefault()
-        console.log("fechar")
-        carrinhoModal.close();
-        for (i = 0; i < carrinho.length; i++) {
-            console.log("hello")
-        }
-
-    }
-}
-// let fazerLogin = document.getElementById('fazerLogin')
-// //pegando o botão e abrindo o dialog com o onclick
-// document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
-//     e.preventDefault()
-//     console.log("hello")
-//     fazerLogin.showModal();
-// }
-
-//------------------------------------------------------SCRIPT DIALOG LOGIN
-//div onde está o html do dialog
-let fazerLogin = document.getElementById('fazerLogin')
-//pegando o botão e abrindo o dialog com o onclick
-document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
-    e.preventDefault()
-    console.log("hello")
-    fazerLogin.showModal();
-}
-
-//pegando o botão fechar de dentro do dialog e fechando com o onclick
-document.getElementById('btnFechar').onclick = function botaoFechar(e) {
-    e.preventDefault()
-    console.log("fechar")
-    fazerLogin.close();
 }
