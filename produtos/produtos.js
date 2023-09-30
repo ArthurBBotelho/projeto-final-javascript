@@ -100,7 +100,7 @@ for (const produto of produtos) {
                             <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
                             <button id="comprarAgora">Comprar Agora</button>`;
-    document.body.appendChild(container);
+    document.getElementById("produtos").appendChild(container);
 
 }
 
