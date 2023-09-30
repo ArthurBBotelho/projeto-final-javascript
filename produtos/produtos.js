@@ -130,32 +130,41 @@ function adicionarProduto() {
 
     const price = this.parentElement.childNodes[4].innerText
 
-    carrinho.push({ nome, price })
+    const imagem = this.parentElement.childNodes[2].innerHTML
+
+    carrinho.push({ nome, price, imagem })
     console.log(carrinho)
 
-    let nomeProduto = document.createElement("span")
-    nomeProduto.innerHTML = `<p>${nome}<p/>`
-    dialogCarrinho.appendChild(nomeProduto)
-
-    somaCarrinho()
-}
-
-// --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
-
-function somaCarrinho() {
     let resultadoCarrinho = 0
 
     for (const price of carrinho) {
         resultadoCarrinho += parseInt(price.price)
     }
     console.log("Valor do Carrinho: " + resultadoCarrinho)
+
+    //---------------------------------------------------------------------- CONTEÚDO QUE SERÁ EXIBIDO DENTRO DO DIALOG CARRINHO
+
+    let nomeProduto = document.createElement("div")
+    nomeProduto.classList.add("produtosCarrinho")
+
+    nomeProduto.innerHTML = `
+    <h1>CARRINHO</h1>
+    <p>${nome}</p>
+    <p>Preço: ${price}</p>
+    <p>${imagem}</p>
+    <hr>
+    <p>Valor do Carrinho: ${resultadoCarrinho}</p>`
+    dialogCarrinho.appendChild(nomeProduto)
 }
+
+// --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
+
 
 for (i = 0; i < arrayCarrinho.length; i++) {
     arrayCarrinho[i].addEventListener('click', adicionarProduto)
 }
 
-// --------------------------------------------------------------------- ABRIR O CARRINHO
+// --------------------------------------------------------------------- ABRIR O MODAL CARRINHO
 
 let carrinhoModal = document.getElementById("carrinhoModal")
 
@@ -163,4 +172,12 @@ document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
     e.preventDefault()
     console.log("Usuário abriu carrinho")
     carrinhoModal.showModal();
+}
+
+// --------------------------------------------------------------------- FECHAR O MODAL CARRINHO
+
+document.getElementById('btnFechar').onclick = function botaoFechar(e) {
+    e.preventDefault()
+    console.log("fechar")
+    carrinhoModal.close();
 }

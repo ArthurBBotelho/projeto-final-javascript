@@ -125,14 +125,13 @@
 
 /* ------------------------------------------------------MODAL CARRINHO */
 #carrinhoModal {
-    left: 77%;
-    width: 265px;
-    top: 10%;
-    height: 399px;
+    width: 500px;
+    height: 500px;
     position: relative;
-    border-radius: 20px;
+    border-style: solid 3px var(--text-color);
     background-color: var(--primary-color);
-
+    left: 5em;
+    top: 5em;
 }
 
 #carrinhoModal .btnFechar {
@@ -142,11 +141,19 @@
     left: 85%;
     cursor: pointer;
     background-color: transparent;
-
 }
 
 #carrinhoModal .btnFechar img {
     height: 18px;
     width: 18px;
     border: none;
+}
+
+.produtosCarrinho {
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.produtosCarrinho img {
+    height: 100px;
 }
