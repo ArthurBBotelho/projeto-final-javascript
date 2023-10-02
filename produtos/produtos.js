@@ -98,8 +98,7 @@ for (const produto of produtos) {
                             <a>${produto.imagem}</a>
                             <p>${produto.price}</p>
                             <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
-                            <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
-                            <button id="comprarAgora">Comprar Agora</button>`;
+                            <button id="adicionarCarrinho">Adicionar ao Carrinho</button>`;
     document.getElementById("produtos").appendChild(container);
 
 }
