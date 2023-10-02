@@ -37,6 +37,7 @@
 
 .tituloDhouse {
     grid-area: tituloDhouse;
+    position: fixed;
 }
 
 .tituloDhouse a {
@@ -155,13 +156,13 @@
 .destaquesNome {
     font-size: 54px;
     font-weight: 900;
-    color: var(--secundary-color);
+    color: var(--terciary-color);
 }
 
 .destaquesNome1 {
     font-size: 54px;
     font-weight: 900;
-    color: var(--terciary-color);
+    color: var(--secundary-color);
 }
 
 .destaquesNome2 {
@@ -243,6 +244,7 @@ main {
 
 .infoDestaqueComfy button:hover {
     border-radius: 50px;
+    cursor: pointer;
 }
 
 /* -------------------------------------------------------QUAD */
@@ -304,6 +306,7 @@ main {
 
 .infoDestaqueQuad button:hover {
     border-radius: 50px;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------NEWSLETTER */
@@ -354,27 +357,32 @@ main {
 }
 
 #camposNewsLetter input {
+    color: var(--text-color);
     margin-top: 5px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
     width: 200px;
-    height: 30px;
+    height: 50px;
     border: solid 2px var(--text-color);
+    transition: border-radius 1s;
+    font-weight: 600;
+}
+
+#camposNewsLetter input:hover {
+    border-radius: 50px;
 }
 
 #buttonNewsLetter {
-    margin: 10px 10px 0px 0px;
-    font-family: 'Inter', sans-serif;
-    width: 204px;
-    height: 50px;
     color: var(--text-color);
     font-weight: 900;
     font-size: 20px;
     background-color: transparent;
-    transition: background-color 1s;
 }
 
 #buttonNewsLetter:hover {
-    background-color: var(--quarter-color)
+    background-color: var(--quarter-color);
+    cursor: pointer;
 }
 
 #buttonNewsLetter:active {
