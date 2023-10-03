@@ -110,13 +110,18 @@
 }
 
 .produtosLayout h3 {
-    font-size: 24px;
-    display: flex;
-    justify-content: flex-start;
+    font-size: 32px;
+    margin: 5px;
+    color: var(--text-color);
 }
 
 .produtosLayout img {
     height: 400px;
+    transition: opacity 1s
+}
+
+.produtosLayout img:hover {
+    opacity: 70%;
 }
 
 .produtosLayout button {
@@ -135,9 +140,10 @@
     cursor: pointer;
 }
 
-.produtosLayout #price {
-    text-color: #46725d;
+.price {
+    font-size: 24px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 
@@ -164,7 +170,7 @@
 #carrinhoModal .btnFechar img {
     height: 18px;
     width: 18px;
-    border: none;
+    background-color: transparent;
 }
 
 .produtosCarrinho {

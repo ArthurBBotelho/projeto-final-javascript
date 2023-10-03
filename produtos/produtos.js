@@ -96,7 +96,7 @@ for (const produto of produtos) {
 
     container.innerHTML = `<h3>${produto.nome}</h3>
                             <a>${produto.imagem}</a>
-                            <p>${produto.price}</p>
+                            <p class="price">${produto.price}</p>
                             <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>`;
     document.getElementById("produtos").appendChild(container);
@@ -156,6 +156,20 @@ function adicionarProduto() {
     <p>Valor do Carrinho: ${resultadoCarrinho}</p>
     `
     dialogCarrinho.appendChild(nomeProduto)
+}
+
+//---------------------------------------------------------------------- ADICIONAR LOCAL STORAGE
+
+let salvarCarrinho = document.getElementById("salvarCarrinho")
+
+salvarCarrinho.addEventListener('click', armazenarCarrinho)
+
+function armazenarCarrinho() {
+    const sotrageCarrinho = (chave, valor) => { localStorage.setItem(chave, valor) }
+
+    for (const produto of carrinho) {
+        sotrageCarrinho(produto.nome, JSON.stringify(produto))
+    }
 }
 
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
