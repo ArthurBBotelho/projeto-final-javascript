@@ -63,20 +63,20 @@ function validEmail(email) {
 //     vendido: false
 // }];
 
-function organizaProdutos() {
-    produtos.sort((a, b) => {
-        if (a.produto > b.produto) {
-            return 1;
-        }
-        if (a.produto < b.produto) {
-            return -1;
-        }
-        return 0;
-    })
-    console.log(produtos)
-}
+// function organizaProdutos() {
+//     produtos.sort((a, b) => {
+//         if (a.produto > b.produto) {
+//             return 1;
+//         }
+//         if (a.produto < b.produto) {
+//             return -1;
+//         }
+//         return 0;
+//     })
+//     console.log(produtos)
+// }
 
-organizaProdutos()
+// organizaProdutos()
 
 // ------------------------------------------------------------------SEARCH
 

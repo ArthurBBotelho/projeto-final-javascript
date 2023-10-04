@@ -18,40 +18,41 @@
   
 #fazerLogin {
     margin: 106px 291px;
-    width: 503px;
-    height: 369px;
+    width: 100vh;
+    height: 70vh;
+    min-width: 300px;
     position: relative;
     border-color: #c1c2b6;
     border-radius: 20px;
     background-color:  var(--primary-color);
-    backdrop-filter: blur(5px);
+    padding-top: 50px;
 }
 .btnFechar {
     border: none;
-    position: relative;
+    position: absolute;
     cursor: pointer;
-    height: 18px;
-    width: 18px;
-    top: 4%;
-    left: 90%;
-    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    top: -30px;
+    right: 0px;
+    font-size: large;
+    background-color: #e07a5f;
+    color: white;
+    border-radius: 50%;
 }
 
-.btnFechar img{
-    height: 18px;
-    width: 18px;
-}
 
 .container-login{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
     color: var(--terciary-color);
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-variant-caps: titling-caps;
 }
 
