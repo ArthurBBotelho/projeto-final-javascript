@@ -55,10 +55,7 @@
     color: white;
     border-radius: 50%;
 }
-h1 {
-    margin-bottom: 50px;
-    font-variant-caps: titling-caps;
-}
+
 input{
     border-bottom: var(--terciary-color) solid 2px;
     border-top: none;

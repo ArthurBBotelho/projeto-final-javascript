@@ -17,77 +17,72 @@
   
   /* ------------------------------------------------------HEADER */
   
-  #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    background-color: var(--primary-color);
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 50px;
+	background-color: var(--primary-color);
   }
   
   
   .tituloDhouse {
-    grid-area: tituloDhouse;
+	grid-area: tituloDhouse;
   }
   
   .tituloDhouse a {
-    display: flex;
-    flex-wrap: nowrap;
-    color: var(--secundary-color);
-    transition: color 1s;
-    font-size: 36px;
+	display: flex;
+	flex-wrap: nowrap;
+	color: var(--secundary-color);
+	transition: color 1s;
+	font-size: 36px;
   }
   
   .tituloDhouse a:hover {
-    color: var(--terciary-color);
+	color: var(--terciary-color);
   }
   
   .navLink {
-    grid-area: navLink;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
   }
   
   .navLink ul {
-    display: flex;
-    padding: 12px;
+	display: flex;
+	padding: 12px;
   }
   
   .navLink a {
-    color: var(--secundary-color);
-    transition: color 1s;
-    padding: 12px;
-    font-size: 20px;
-    font-weight: 900;
+	color: var(--secundary-color);
+	transition: color 1s;
+	padding: 12px;
+	font-size: 20px;
+	font-weight: 900;
   }
   
   .navLink a:hover {
-    color: var(--terciary-color);
+	color: var(--terciary-color);
   }
   
   .navIcones {
-    grid-area: navIcones;
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
   }
   .navIcones div{
-    margin-top: 18px;
-    font-weight: 700;
+	margin-top: 18px;
+	font-weight: 700;
   }
-  img {
-    width: 24px;
-    opacity: 0.6;
-    padding: 10px;
+  
+  .navIcones img {
+	width: 24px;
+	opacity: 0.6;
+	padding: 10px;
   }
   .iconeEntrada img:hover {
-    border-bottom: solid 3px;
-    color: black;
+	border-bottom: solid 3px;
+	color: black;
   }
 
   /* --- FROM HERE ----*/

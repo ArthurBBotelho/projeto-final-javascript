@@ -15,77 +15,6 @@
   text-decoration: none;
 }
 
-/* ------------------------------------------------------HEADER */
-
-#header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
-  background-color: var(--primary-color);
-}
-
-
-.tituloDhouse {
-  grid-area: tituloDhouse;
-}
-
-.tituloDhouse a {
-  display: flex;
-  flex-wrap: nowrap;
-  color: var(--secundary-color);
-  transition: color 1s;
-  font-size: 36px;
-}
-
-.tituloDhouse a:hover {
-  color: var(--terciary-color);
-}
-
-.navLink {
-  grid-area: navLink;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-.navLink ul {
-  display: flex;
-  padding: 12px;
-}
-
-.navLink a {
-  color: var(--secundary-color);
-  transition: color 1s;
-  padding: 12px;
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.navLink a:hover {
-  color: var(--terciary-color);
-}
-
-.navIcones {
-  grid-area: navIcones;
-  display: flex;
-  justify-content: flex-end;
-}
-.navIcones div{
-  margin-top: 18px;
-  font-weight: 700;
-}
-
-.navIcones img {
-  width: 24px;
-  opacity: 0.6;
-  padding: 10px;
-}
-.iconeEntrada img:hover {
-  border-bottom: solid 3px;
-  color: black;
-}
 /* ------------------------------------------------------BODY */
 
 body{
@@ -124,11 +53,10 @@ body{
   display: flex;
  flex-direction: column;
 }
-h1{
-  margin-bottom: 30px;
-  font-variant-caps: titling-caps;
-}
 
+.container-form h1{
+  margin: 30px;
+}
 input{
   border-bottom: #313349 solid 1px;
   border-top: none;
@@ -190,12 +118,12 @@ button:hover {
 
 .ri-mail-open-line {
   left: 305px;
-    top: 2px;
+    top: -12px;
   position: relative;
 }
 
 .ri-lock-password-line{
   left: 305px;
-    top: 2px;
+    top: -12px;
   position: relative;
 }
