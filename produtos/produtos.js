@@ -134,29 +134,51 @@ function adicionarProduto() {
     carrinho.push({ nome, price, imagem })
     console.log(carrinho)
 
+    renderCarrinho(nome, price, imagem)
+    somaResultado()
+}
+
+//---------------------------------------------------------------------- CONTEÚDO QUE SERÁ EXIBIDO DENTRO DO DIALOG CARRINHO
+
+function renderCarrinho(nome, price, imagem) {
+    let nomeProduto = document.createElement("div")
+    nomeProduto.classList.add("produtosCarrinho")
+    let carrinhoVazio = document.getElementById('carrinhoVazio')
+
+    nomeProduto.innerHTML = `
+    <p>${nome}</p>
+    <p>Preço: ${price}</p>
+    <p>${imagem}</p>
+    <hr>
+    `
+    // <p>Valor do Carrinho: ${resultadoCarrinho}</p>
+    if (carrinhoVazio) {
+        carrinhoVazio.remove()
+    }
+    dialogCarrinho.appendChild(nomeProduto)
+}
+
+function somaResultado() {
     let resultadoCarrinho = 0
+    let resultadoCarrinhoFeito = document.querySelector(".resultadoCarrinhoRender")
+
+    if (resultadoCarrinhoFeito) {
+        resultadoCarrinhoFeito.remove()
+    }
 
     for (const price of carrinho) {
         resultadoCarrinho += parseInt(price.price)
     }
     console.log("Valor do Carrinho: " + resultadoCarrinho)
 
-    //---------------------------------------------------------------------- CONTEÚDO QUE SERÁ EXIBIDO DENTRO DO DIALOG CARRINHO
+    let resultadoCarrinhoRender = document.createElement("div")
+    resultadoCarrinhoRender.classList.add("resultadoCarrinhoRender")
+    resultadoCarrinhoRender.innerHTML = `
+    <p>${resultadoCarrinho}</p>`
 
-    let nomeProduto = document.createElement("div")
-    nomeProduto.classList.add("produtosCarrinho")
-    let carrinhoVazio = document.getElementById('carrinhoVazio')
-
-    nomeProduto.innerHTML = `
-    
-    <p>${nome}</p>
-    <p>Preço: ${price}</p>
-    <p>${imagem}</p>
-    <hr>
-    <p>Valor do Carrinho: ${resultadoCarrinho}</p>
-    `
-    dialogCarrinho.appendChild(nomeProduto)
+    dialogCarrinho.appendChild(resultadoCarrinhoRender)
 }
+
 
 //---------------------------------------------------------------------- ADICIONAR LOCAL STORAGE
 
@@ -167,11 +189,19 @@ salvarCarrinho.addEventListener('click', armazenarCarrinho)
 function armazenarCarrinho() {
     const sotrageCarrinho = (chave, valor) => { localStorage.setItem(chave, valor) }
 
-    for (const produto of carrinho) {
-        sotrageCarrinho(produto.nome, JSON.stringify(produto))
-    }
+    sotrageCarrinho("carrinhoSalvo", JSON.stringify(carrinho))
 }
 
+function carregarCarrinho() {
+    const armazenados = JSON.parse(localStorage.getItem("carrinhoSalvo"));
+    console.log(armazenados)
+
+    for (const produtos of armazenados) {
+        renderCarrinho(produtos.nome, produtos.price, produtos.imagem)
+        carrinho.push({ nome: produtos.nome, price: produtos.price, imagem: produtos.imagem })
+    }
+    somaResultado()
+}
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
 
 
@@ -195,4 +225,8 @@ document.getElementById('btnFechar').onclick = function botaoFechar(e) {
     e.preventDefault()
     console.log("fechar")
     carrinhoModal.close();
+}
+
+window.onload = () => {
+    carregarCarrinho()
 }
