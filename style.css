@@ -37,7 +37,6 @@
 
 .tituloDhouse {
     grid-area: tituloDhouse;
-    position: fixed;
 }
 
 .tituloDhouse a {

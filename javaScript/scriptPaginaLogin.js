@@ -11,12 +11,12 @@ console.log(cadastroUsuario)
 document.getElementById("buttonLogin").onclick = function getLogin(e) {
     e.preventDefault();
     //pegando elementos do HTML
-    let inputUserName = document.getElementById("inputUserName").value;
-    let inputPassword = document.getElementById("inputPassword").value;
+    let inputUserName = document.getElementById("inputUserName");
+    let inputPassword = document.getElementById("inputPassword");
     let loginOk = false
 //percorre o array de objetos procurando o mesmo texto do input
 for (let  dados of cadastroUsuario) {
-    if (inputUserName == dados.email && inputPassword == dados.senha) {
+    if (inputUserName.value == dados.email && inputPassword.value == dados.senha) {
         loginOk = true
         //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
         localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));
@@ -32,7 +32,6 @@ for (let  dados of cadastroUsuario) {
             timer: 1000,
             showConfirmButton: false,
             })
-
             setTimeout( () =>{
                 window.location.href = "../index.html"
             }, 1000)

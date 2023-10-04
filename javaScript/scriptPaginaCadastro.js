@@ -4,6 +4,7 @@
     let email = document.getElementById('email');
     let endereco = document.getElementById('endereco');
     let senha = document.getElementById('senha');
+    let cep = document.getElementById('cep');
 
     //validando o que o usuário está digitando está correto
     senha.addEventListener("keyup", () => {
@@ -14,6 +15,14 @@
             senha.setAttribute("style", "border-color: #46725d")
         }
     })
+    cep.addEventListener("keyup", () => {
+        if (cep.value.length < 8 ) {
+            cep.setAttribute("style", "border-color: #e07a5f")
+        } else {
+            cep.setAttribute("style", "border-color: #46725d")
+        }
+    })
+
 //função com evento de clique de botão 
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     e.preventDefault();
@@ -61,3 +70,15 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
        window.location.href = "../index.html"
    }, 1000)
 }
+
+
+//função para limpar formulário do cadastro
+// function limpa_formulário_cep() {
+//     // Limpa valores do formulário de cep.
+//     $("#primeiroNome").val("");
+//     $("#segundoNome").val("");
+//     $("#email").val("");
+//     $("#telefone").val("");
+//     $("#endereco").val("");
+//     $("#senha").val("");
+// }

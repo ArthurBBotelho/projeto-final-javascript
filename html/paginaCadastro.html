@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
         <link href="../css/stylePaginaCadastro.css" rel="stylesheet">
+        
     </head>
     <body>
         <header id="header">
@@ -35,19 +36,22 @@
             <div class="container-cadastro">
                 <form>
                     <div id="divPrimeiroNome">
-                        <input type="text" id="primeiroNome" class="input-cadastro-nome" placeholder="Primeiro Nome"></div>
-                    <div>
+                        <input type="text" name="primeiroNome" id="primeiroNome" class="input-cadastro-nome" placeholder="Primeiro Nome"></div>
                     <div id="divSegundoNome">
-                        <input type="text" id="segundoNome" class="input-cadastro-nome" placeholder="Sobrenome"></div>
+                        <input type="text" name="segundoNome" id="segundoNome" class="input-cadastro-nome" placeholder="Sobrenome"></div>
                     <div id="divEmail">
-                        <input type="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
+                        <input type="email" name="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
                     <div id="divTelefone">
-                        <input type="tel" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
+                        <input type="tel" name="telefone" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
+                    <div id="divCep">
+                        <input type="text" name="cep" id="cep" class="input-cadastro-cep" placeholder="CEP"></div>
                     <div id="divEndereco">
-                        <input type="text" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
+                        <input type="text" name="endereco" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
+                    <div id="divNumero">
+                        <input type="number" name="numero" id="numero" class="input-cadastro-nome" placeholder="número"></div>
                     <div id="divSenha">
                         <p>Sua senha deve conter no mínimo 5 números</p>
-                        <input type="password" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
+                        <input type="password" name="senha" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
                 </form>
 
                 <div class="btn">
@@ -61,6 +65,10 @@
         
     <script src="../javaScript/scriptPaginaCadastro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- script da API dos correios -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
 
 </body>
 </html>

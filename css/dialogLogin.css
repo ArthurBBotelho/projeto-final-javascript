@@ -17,45 +17,48 @@
   }
   
 #fazerLogin {
-    margin: 106px 291px;
-    width: 100vh;
+    width: 50%;
     height: 70vh;
-    min-width: 300px;
-    position: relative;
+    left: 25%;
+    top: 10%;
     border-color: #c1c2b6;
     border-radius: 20px;
     background-color:  var(--primary-color);
-    padding-top: 50px;
+    padding-top: 30px;
 }
+
+/* #fazerLogin::backdrop{
+    backdrop-filter: blur(5px);
+} */
+.container-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: var(--terciary-color);
+    position: relative;
+    border: red 2px solid;
+    width: 95%;
+    height: 90%;
+}
+
 .btnFechar {
     border: none;
     position: absolute;
     cursor: pointer;
     height: 50px;
     width: 50px;
-    top: -30px;
-    right: 0px;
+    top: -29px;
+    right: 26px;
     font-size: large;
     background-color: #e07a5f;
     color: white;
     border-radius: 50%;
 }
-
-
-.container-login{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    color: var(--terciary-color);
-}
-
 h1 {
     margin-bottom: 50px;
     font-variant-caps: titling-caps;
 }
-
 input{
     border-bottom: var(--terciary-color) solid 2px;
     border-top: none;
@@ -114,6 +117,7 @@ input:focus::-webkit-input-placeholder {
     transition: border-radius 1s;
     margin-bottom: 15px;
  }
+ 
 #buttonLogin:hover{
     border-radius: 50px;
     cursor: pointer;

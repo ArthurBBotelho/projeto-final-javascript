@@ -81,11 +81,11 @@ function validEmail(email) {
 // ------------------------------------------------------------------SEARCH
 
 
-function search() {
-    let buscaUser = prompt("Faça sua busca: ")
-    const buscaProduto = produtos.filter((o) => o.produto.toUpperCase().includes(buscaUser.toUpperCase()))
-    console.log(buscaProduto)
-}
+// function search() {
+//     let buscaUser = prompt("Faça sua busca: ")
+//     const buscaProduto = produtos.filter((o) => o.produto.toUpperCase().includes(buscaUser.toUpperCase()))
+//     console.log(buscaProduto)
+// }
 
 //---------------------------------------------------------------NOME DE USUÁRIO LOGADO
 let pegaNomeUsuario = JSON.parse(localStorage.getItem("salvarNomeUsuario"));
@@ -100,16 +100,16 @@ if (pegaNomeUsuario == null) {
 //-----------------------------------------------------------------abrir e fechar DIALOG
 //div onde está o html do dialog
 let fazerLogin = document.getElementById('fazerLogin')
-//pegando o botão e abrindo o dialog com o onclick
-document.getElementById('iconeLogin').onclick = function botaoLogin(e) {
-    e.preventDefault()
-    console.log("hello")
+
+// pegando o botão e abrindo o dialog com o onclick
+document.getElementById('iconeLogin').onclick = function abrirModal(e) {
+    e.preventDefault();
+    console.log("abriu")
     fazerLogin.showModal();
 }
-
 //pegando o botão fechar de dentro do dialog e fechando com o onclick
 document.getElementById('btnFechar').onclick = function botaoFechar(e) {
-    e.preventDefault()
+    e.preventDefault();
     console.log("fechar")
     fazerLogin.close();
 }
