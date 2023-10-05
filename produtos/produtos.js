@@ -174,7 +174,7 @@ function somaResultado() {
     let resultadoCarrinhoRender = document.createElement("div")
     resultadoCarrinhoRender.classList.add("resultadoCarrinhoRender")
     resultadoCarrinhoRender.innerHTML = `
-    <p>${resultadoCarrinho}</p>`
+    <p>Valor do Carrinho: ${resultadoCarrinho}</p>`
 
     dialogCarrinho.appendChild(resultadoCarrinhoRender)
 }

@@ -6,11 +6,7 @@
     align-items: center;
     padding: 10px 50px;
     background-color: var(--primary-color);
-  }
-  
-  div{
-    display: flex;
-    align-items: center;
+    height: 50px;
   }
   .tituloDhouse {
     display: flex;
@@ -54,6 +50,7 @@
   .navIcones {
     display: flex;
     justify-content: flex-end;
+    height: 50px;
   }
   .navIcones div{
     margin-top: 18px;
@@ -62,8 +59,10 @@
   
   .navIcones img {
     width: 24px;
+    height: 24px;
     opacity: 0.6;
     padding: 10px;
+
   }
   .iconeEntrada img:hover {
     border-bottom: solid 3px;
