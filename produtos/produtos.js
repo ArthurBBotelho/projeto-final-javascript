@@ -202,8 +202,18 @@ function carregarCarrinho() {
     }
     somaResultado()
 }
-// --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
 
+// --------------------------------------------------------------------- FUNÇÃO LIMPAR STORAGE
+
+let limparCarrinho = document.getElementById("limparCarrinho")
+
+limparCarrinho.addEventListener('click', limparProdutos)
+
+function limparProdutos() {
+    removeItem("carrinhoSalvo")
+}
+
+// --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
 
 for (i = 0; i < arrayCarrinho.length; i++) {
     arrayCarrinho[i].addEventListener('click', adicionarProduto)
