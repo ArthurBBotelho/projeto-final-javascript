@@ -1,27 +1,24 @@
-
-//pegar os dados salvos no localstorage e fazer verificação se o usuário existe e validar.
-//Aula 10
-
-
-// pega o array de objetos do localStoreage
-
+// pega o array de objetos do localStoreage - aula 10
 let cadastroUsuario = JSON.parse(localStorage.getItem("cadastroUsuario"))
 console.log(cadastroUsuario)
 
 document.getElementById("buttonLogin").onclick = function getLogin(e) {
     e.preventDefault();
     //pegando elementos do HTML
-    let inputUserName = document.getElementById("inputUserName").value;
+    let inputUsername = document.getElementById("inputUsername").value;
     let inputPassword = document.getElementById("inputPassword").value;
     let loginOk = false
-    console.log(e.target)
+    
 //percorre o array de objetos procurando o mesmo texto do input
-for (let  dados of cadastroUsuario) {
-    if (inputUserName == dados.email && inputPassword == dados.senha) {
+for (let  dados in cadastroUsuario) {
+    if (inputUsername == dados.email && inputPassword == dados.senha) {
         loginOk = true
         //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
         localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));   
     }
+   if(inputUsername != dados.email){
+    alert("você não possui Cadastro")
+   }
 }
     if (loginOk == true) {
         Swal.fire({
