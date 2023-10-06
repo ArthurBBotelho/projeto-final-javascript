@@ -15,13 +15,6 @@
             senha.setAttribute("style", "border-color: #46725d")
         }
     })
-    cep.addEventListener("keyup", () => {
-        if (cep.value.length < 8 ) {
-            cep.setAttribute("style", "border-color: #e07a5f")
-        } else {
-            cep.setAttribute("style", "border-color: #46725d")
-        }
-    })
 
 //função com evento de clique de botão 
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
