@@ -83,16 +83,21 @@ document.getElementById('indicators').addEventListener('click',clickIndicators);
 // GOOGLE MAP //
 
 let map;
-const portoAlegre = { lat: -30.02307, lng: --51.20112 };
+const portoAlegre = { lat: 41.85, lng: -87.65 };
+
+/**
+ * Creates a control that recenters the map on Chicago.
+ */
 
 function createCenterControl(map) {
   const controlButton = document.createElement("button");
 
+  // Set CSS for the control.
   controlButton.classList.add('buttonStyle');
   controlButton.textContent = "Center Map";
   controlButton.title = "Click to recenter the map";
   controlButton.type = "button";
-
+  // Setup the click event listeners: simply set the map to Chicago.
   controlButton.addEventListener("click", () => {
     map.setCenter(chicago);
   });
@@ -110,10 +115,12 @@ function initMap() {
   });
   georssLayer.setMap(map);
 
+  // Create the DIV to hold the control.
   const centerControlDiv = document.createElement("div");
-
+  // Create the control.
   const centerControl = createCenterControl(map);
 
+  // Append the control to the DIV.
   centerControlDiv.appendChild(centerControl);
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(
     centerControlDiv
