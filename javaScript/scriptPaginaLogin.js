@@ -11,19 +11,19 @@ console.log(cadastroUsuario)
 document.getElementById("buttonLogin").onclick = function getLogin(e) {
     e.preventDefault();
     //pegando elementos do HTML
-    let inputUserName = document.getElementById("inputUserName");
-    let inputPassword = document.getElementById("inputPassword");
+    let inputUserName = document.getElementById("inputUserName").value;
+    let inputPassword = document.getElementById("inputPassword").value;
     let loginOk = false
+    console.log(e.target)
 //percorre o array de objetos procurando o mesmo texto do input
 for (let  dados of cadastroUsuario) {
-    if (inputUserName.value == dados.email && inputPassword.value == dados.senha) {
+    if (inputUserName == dados.email && inputPassword == dados.senha) {
         loginOk = true
         //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
-        localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));
-        break
-    } 
+        localStorage.setItem("salvarNomeUsuario", JSON.stringify(dados.primeiroNome));   
+    }
 }
-    if (loginOk == true ) {
+    if (loginOk == true) {
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -37,14 +37,7 @@ for (let  dados of cadastroUsuario) {
             }, 1000)
     }
     else {
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Verifique seus dados',
-            timer: 1000,
-            background: '#f1f4de',
-            showConfirmButton: false,
-       })
+       document.getElementById("erroCadastro").innerHTML = "verifique e-mail e senha"
     }
 }
 
