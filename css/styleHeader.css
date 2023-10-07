@@ -9,6 +9,11 @@
     height: 50px;
     text-decoration: none;
   }
+
+li::marker {
+  content: ' ';
+}
+
   .tituloDhouse {
     display: flex;
   }
