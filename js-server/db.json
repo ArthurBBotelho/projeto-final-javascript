@@ -1,0 +1,18 @@
+{
+  "cadastroUsuarios": [
+    {
+      "primeiroNome": "Emily",
+      "segundoNome": "Comin",
+      "email": "emilycomin@hotmail.com" ,
+      "telefone": 999809099,
+      "endereco": "rua aventura, 02",
+      "senha": 12345,
+  }
+],
+
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  
+  "profile": { "name": "typicode" }
+}

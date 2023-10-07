@@ -43,7 +43,7 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     // )
 
     //Usanso API JSONPlaceholder
-    fetch('https://my-json-server.typicode.com/ArthurBBotelho/projeto-final-javascript/profile', { 
+    fetch('https://my-json-server.typicode.com/ArthurBBotelho/projeto-final-javascript/db.json/profile', { 
         method: 'PUT',
         body: JSON.stringify({
            primeiroNome: primeiroNome.value,
