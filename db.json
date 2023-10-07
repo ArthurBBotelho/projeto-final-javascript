@@ -1,7 +1,13 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
+  "cadastroUsuarios": [{
+    "primeiroNome": "Emily",
+    "segundoNome": "Comin",
+    "email": "emilycomin@hotmail.com" ,
+    "telefone": 999809099,
+    "endereco": "rua aventura, 02",
+    "senha": 12345,
+  }],
+  
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
