@@ -27,23 +27,41 @@
 //função com evento de clique de botão 
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     e.preventDefault();
+
     //cria a variavel cadastro e nela pega o cadastro do localstorage ou se não tiver cria um novo
-    let cadastro = JSON.parse(localStorage.getItem("cadastroUsuario") || '[]')
+    // let cadastro = JSON.parse(localStorage.getItem("cadastroUsuario") || '[]')
     //salvar a pessoa no array
-    cadastro.push(
-        {
-        primeiroNome: primeiroNome.value,
-        segundoNome: segundoNome.value,
-        email: email.value,
-        telefone: telefone.value,
-        endereco: endereco.value,
-        senha: senha.value
-        }
-    )
-    //mostrando a nova pessoa adicionada no cadastro
-    console.log(cadastro)
-    //salvar esse array no localstorage
-    localStorage.setItem("cadastroUsuario", JSON.stringify(cadastro));
+    // cadastro.push(
+    //     {
+    //     primeiroNome: primeiroNome.value,
+    //     segundoNome: segundoNome.value,
+    //     email: email.value,
+    //     telefone: telefone.value,
+    //     endereco: endereco.value,
+    //     senha: senha.value
+    //     }
+    // )
+
+    //Usanso API JSONPlaceholder
+    fetch('https://my-json-server.typicode.com/ArthurBBotelho/projeto-final-javascript/profile', { 
+        method: 'PUT',
+        body: JSON.stringify({
+           primeiroNome: primeiroNome.value,
+           segundoNome: segundoNome.value,
+           email: email.value,
+           telefone: telefone.value,
+           endereco: endereco.value,
+           senha: senha.value
+       }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+    // //salvar esse array no localstorage
+    // localStorage.setItem("cadastroUsuario", JSON.stringify(cadastro));
     
     //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
     if (primeiroNome && segundoNome && email && telefone && endereco && senha != "") {
@@ -72,4 +90,6 @@ document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
    setTimeout( () =>{
        window.location.href = "../index.html"
    }, 1000)
+  
 }
+

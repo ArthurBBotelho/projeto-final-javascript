@@ -55,7 +55,7 @@ input{
 }
 
 input:hover{
-  border-bottom: #313349 solid 2px;
+  border-bottom: rgb(233, 12, 30) solid 2px;
   border-top: none;
   border-left: none;
   border-right: none; 

@@ -10,7 +10,7 @@ document.getElementById("buttonLogin").onclick = function getLogin(e) {
     let loginOk = false
     
 //percorre o array de objetos procurando o mesmo texto do input
-for (let  dados in cadastroUsuario) {
+for (let  dados of cadastroUsuario) {
     if (inputUsername == dados.email && inputPassword == dados.senha) {
         loginOk = true
         //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
