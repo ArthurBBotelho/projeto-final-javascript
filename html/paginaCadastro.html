@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="" type="image/x-icon">
-        <title>D-House | Cadastro</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
-        <link href="../css/stylePaginaCadastro.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/styleHeader.css">
-        
-    </head>
-    <body>
-        <header id="header">
-            <div class="tituloDhouse">
-                <h1><a href="/index.html">D-house</a></h1>
-            </div>
-            <div class="navLink">
-                <ul>
-                    <li><a href="./paginaSobre.html">Sobre</a></li>
-                    <li><a href="../produtos/produtos.html">Produtos</a></li>
-                    <li><a href="./paginaLogin.html">Login</a></li>
-                </ul>
-            </div>
-            <div class="navIcones">
-                <a class="iconeEntrada"><img src=""></a>
-                <a class="iconeEntrada" href="paginaLogin.html"><img src="../imagem/icones/user.png"></a>
-                <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
-                <div id="nomeUsuario"></div><a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
-            </div>
-        </header>
-        
-        <div class="containerPC">
-            <div class="container-cadastro">
-                <form>
-                    <div id="divPrimeiroNome">
-                        <input type="text" name="primeiroNome" id="primeiroNome" class="input-cadastro-nome" placeholder="Primeiro Nome"></div>
-                    <div id="divSegundoNome">
-                        <input type="text" name="segundoNome" id="segundoNome" class="input-cadastro-nome" placeholder="Sobrenome"></div>
-                    <div id="divEmail">
-                        <input type="email" name="email" id="email" class="input-cadastro-nome" placeholder="E-mail"></div>
-                    <div id="divTelefone">
-                        <input type="tel" name="telefone" id="telefone" class="input-cadastro-nome" placeholder="Telefone"></div>
-                    <div id="divCep">
-                        <input type="text" name="cep" id="cep" class="input-cadastro-cep" placeholder="CEP"></div>
-                    <div id="divEndereco">
-                        <input type="text" name="endereco" id="endereco" class="input-cadastro-nome" placeholder="Endereço"></div>
-                    <div id="divNumero">
-                        <input type="number" name="numero" id="numero" class="input-cadastro-nome" placeholder="número"></div>
-                    <div id="divSenha">
-                        <p>Sua senha deve conter no mínimo 5 números</p>
-                        <input type="password" name="senha" id="senha" class="input-cadastro-nome" placeholder="Senha"></div>
-                </form>
 
-                <div class="btn">
-                    <button  id="enviarCadastro">Cadastrar</button>
-                </div>
-                <a href="./paginaLogin.html">Já tem uma conta? Login</a><br>
-            </div>
-                <div id="cadastrado"> </div>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>D-House | Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+    <link href="../css/stylePaginaCadastro.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styleHeader.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="tituloDhouse">
+            <h1><a href="/index.html">D-house</a></h1>
         </div>
+        <div class="navLink">
+            <ul>
+                <li><a href="./paginaSobre.html">Sobre</a></li>
+                <li><a href="../produtos/produtos.html">Produtos</a></li>
+                <li><a href="./paginaLogin.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="navIcones">
 
-        
+            <a class="iconeEntrada" href="paginaLogin.html"><img src="../imagem/icones/user.png"></a>
+            <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
+            <div id="nomeUsuario"></div><a class="iconeEntrada"><img src="../imagem/icones/shopping.png"></a>
+        </div>
+    </header>
+
+    <div class="containerPC">
+        <div class="container-cadastro">
+            <form>
+                <div id="divPrimeiroNome">
+                    <input type="text" name="primeiroNome" id="primeiroNome" class="input-cadastro-nome"
+                        placeholder="Primeiro Nome">
+                </div>
+                <div id="divSegundoNome">
+                    <input type="text" name="segundoNome" id="segundoNome" class="input-cadastro-nome"
+                        placeholder="Sobrenome">
+                </div>
+                <div id="divEmail">
+                    <input type="email" name="email" id="email" class="input-cadastro-nome" placeholder="E-mail">
+                </div>
+                <div id="divTelefone">
+                    <input type="tel" name="telefone" id="telefone" class="input-cadastro-nome" placeholder="Telefone">
+                </div>
+                <div id="divCep">
+                    <input type="text" name="cep" id="cep" class="input-cadastro-cep" placeholder="CEP">
+                </div>
+                <div id="divEndereco">
+                    <input type="text" name="endereco" id="endereco" class="input-cadastro-nome" placeholder="Endereço">
+                </div>
+                <div id="divNumero">
+                    <input type="number" name="numero" id="numero" class="input-cadastro-nome" placeholder="número">
+                </div>
+                <div id="divSenha">
+                    <p>Sua senha deve conter no mínimo 5 números</p>
+                    <input type="password" name="senha" id="senha" class="input-cadastro-nome" placeholder="Senha">
+                </div>
+            </form>
+
+            <div class="btn">
+                <button id="enviarCadastro">Cadastrar</button>
+            </div>
+            <a href="./paginaLogin.html">Já tem uma conta? Login</a><br>
+        </div>
+        <div id="cadastrado"> </div>
+    </div>
+
+
     <script src="../javaScript/scriptPaginaCadastro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- script da API dos correios -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous"></script>
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
