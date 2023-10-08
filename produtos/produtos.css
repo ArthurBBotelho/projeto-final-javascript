@@ -40,6 +40,7 @@
 }
 
 .produtosLayout img {
+    border-radius: 10px;
     height: 400px;
     transition: opacity 1s
 }
@@ -65,7 +66,8 @@
 }
 
 .price {
-    font-size: 24px;
+    padding: 10px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--text-color);
 }

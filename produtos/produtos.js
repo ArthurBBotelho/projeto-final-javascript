@@ -97,7 +97,6 @@ for (const produto of produtos) {
     container.innerHTML = `<h3>${produto.nome}</h3>
                             <a>${produto.imagem}</a>
                             <p class="price">${produto.price}</p>
-                            <p> Restam apenas ${produto.estoque} unidades deste produto!</p>
                             <button id="adicionarCarrinho">Adicionar ao Carrinho</button>`;
     document.getElementById("produtos").appendChild(container);
 
@@ -174,7 +173,9 @@ function somaResultado() {
     let resultadoCarrinhoRender = document.createElement("div") // Cria a div que recebe o valor do carrinho com a class resultadoCarrinhoRender
     resultadoCarrinhoRender.classList.add("resultadoCarrinhoRender")
     resultadoCarrinhoRender.innerHTML = `
-    <h3>Valor do Carrinho: ${resultadoCarrinho}</h3>`
+    <h3>Valor do Carrinho: ${resultadoCarrinho}</h3>
+    <button id="salvarCarrinho">Salvar Carrinho</button>
+    <button id="limparCarrinho">Limpar Carrinho</button>`
 
     dialogCarrinho.appendChild(resultadoCarrinhoRender) // Renderiza o resultado da soma do carrinho para o HTML 
 }
@@ -199,7 +200,7 @@ function carregarCarrinho() {
     somaResultado()
 }
 
-// --------------------------------------------------------------------- FUNÇÃO LIMPAR STORAGE
+// --------------------------------------------------------------------- FUNÇÃO LIMPAR STORAGE E ITENS NO CARRINHO
 
 let limparCarrinho = document.getElementById("limparCarrinho")
 
@@ -209,7 +210,7 @@ function limparProdutos() {
     localStorage.removeItem("carrinhoSalvo")
 
     document.querySelector("#produtosCarrinho").remove()
-
+    document.querySelector("#resultadoCarrinhoRender").remove()
 }
 
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
