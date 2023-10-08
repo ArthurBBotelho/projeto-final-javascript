@@ -16,7 +16,7 @@ const containerIndicators = document.querySelector('.indicators');
 
 const createIndicators = (images, container) => {
     images.forEach ( image => {
-        container.innerHTML += `<span data-number=${image.id}>${image.id}</span>`
+        container.innerHTML += `<span class='number' data-number=${image.id}>${image.id}</span>`
     })
 }
 
@@ -80,34 +80,32 @@ document.querySelector('#previous').addEventListener('click', previous);
 document.querySelector('#next').addEventListener('click', next);
 document.getElementById('indicators').addEventListener('click',clickIndicators);
 
-// GOOGLE MAP //
+// GOOGLE MAPS
 
 let map;
-const portoAlegre = { lat: 41.85, lng: -87.65 };
+const portoAlegre = { lat: -30.02407, lng: -51.20750 };
 
-/**
- * Creates a control that recenters the map on Chicago.
- */
 
 function createCenterControl(map) {
   const controlButton = document.createElement("button");
 
-  // Set CSS for the control.
+  // CSS control.
   controlButton.classList.add('buttonStyle');
   controlButton.textContent = "Center Map";
   controlButton.title = "Click to recenter the map";
   controlButton.type = "button";
-  // Setup the click event listeners: simply set the map to Chicago.
+
+  // Setup the click event listeners: simply set the map to Porto Alegre.
   controlButton.addEventListener("click", () => {
-    map.setCenter(chicago);
+    map.setCenter(portoAlegre);
   });
   return controlButton;
 }
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: { lat: 49.496675, lng: -102.65625 },
+    zoom: 10,
+    center: { lat: -30.02407, lng: -51.20750 },
   });
 
   let georssLayer = new google.maps.KmlLayer({
@@ -117,6 +115,7 @@ function initMap() {
 
   // Create the DIV to hold the control.
   const centerControlDiv = document.createElement("div");
+
   // Create the control.
   const centerControl = createCenterControl(map);
 

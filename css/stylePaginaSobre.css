@@ -10,19 +10,199 @@
     font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
-	text-decoration: none; 
-  }
-  ul{
 	text-decoration: none;
+ 
   }
+
+  /* ---  START DESCRIPTION  --- */
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	align-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--terciary-color);
+}
+
+.sobre{ 
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(./../imagem//pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: var(--primary-color);
+	height: 550px;
+	padding: 50px 150px;
+}
+
+.titleDescriptionH2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: #d66140;
+}
+
+.introduction{
+	text-align: center;
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.cardsBox{
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 150px;
+	gap: 20px;
+}
+
+.box-description{
+	margin: auto;
+	border: 2px solid var(--text-color);
+	text-align: justify;
+	border-radius: 10px;
+	height: 230px;
+	box-shadow: 0 5px 10px #00000088;
+}
+
+.titleDescriptionH4{
+    margin: 20px;
+	text-align: center;
+    color: var(--secundary-color);
+    font-size: 24px;
+}
+
+.titleDescriptonP {
+    font-size: 20px;
+    color: var(--text-color);
+    margin: 0px 50px 10px 50px;
+}
+
+/* --- CARROSSEL  --- */
+
+ .container-slide{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	margin: 10px auto;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px #00000088;	
+}
+
+.container-items{
+	position: absolute;
+	display: flex;
+	width: 1000px;
+	height: 500px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.item{
+	width: 1000px;
+	height: 550px;
+	transition: all 1.5s;
+}
+
+.item:first-child{
+	margin-left: -100%;
+}
+
+.item img{
+	width: 1000px;
+	height: 500px;
+	border-radius: 10px;
+}
+
+.number{
+	font-size: 13px;
+	font-family: sans-serif;
+}
+
+.action-button{
+	font: bold 50px sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #120ecf00;
+	user-select: none;
+	width: 50%;
+	z-index: 1;
+}
+
+.action-button:hover{
+	color: black;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+#previous{
+	border-radius: 10px 0px 0px 10px;
+}
+
+#next{
+	border-radius: 0px 10px 10px 0px;
+	margin-right: -479px;
+}
+
+.indicators {
+    position: relative;
+    color: white;
+    top: 101%;
+	margin-right: 22.5%;
+	height: 40px;
+    transform: translate(-50%);
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 7px;
+}
+
+.indicators span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: var(--secundary-color);
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+	font-weight: 600;
+	border: solid 1px var(--secundary-color);
+}
+
+.indicators span:hover {
+    background-color: var(--terciary-color);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px black;
+	font-weight: 1000;
+}
+
+.indicators .selected {
+    background-color: var(--terciary-color);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px black;
+}
+
   /* --- START MIDDLE ---*/
 
   .middle{
+	width: 85%;
 	display: grid;
-	grid-template-columns: 60% 40%;
+	grid-template-columns: 50% 50%;
 	justify-content: center;
 	align-content: center;
-	align-items: center;
   }
 
   /* --- STAR FORM ----*/
@@ -31,8 +211,8 @@
     display: flex;
     gap: 5px;
     flex-direction: column;
-    margin: 100px 50px 50px 50px;
-	width: 90%;
+    margin: 70px 50px 50px 50px;
+	width: 95%;
 }
 
 .textLabel {
@@ -106,22 +286,18 @@
 /* ---  START MAPS  --- */
 
 #map{
-	height: 50%;
-	border: solid 5px blue;
+	width: 85%;
 	border-radius: 10px;
-	margin: 150px 100px 50px 50px;
+	margin: 100px 100px 50px 50px;
 }
 
 .custom-map-control-button{
 	background-color: #fff;
-	border: 0;
+	border: 1px solid var(--text-color);
 	border-radius: 5px;
 	box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-	margin: 10px;
-	padding: 0 0.5em;
 	font: 500 18px Roboto, Arial, sans-serif;
 	overflow: hidden;
-	height: 40px;
 	cursor: pointer;
 }
 
@@ -129,184 +305,23 @@
 	background-color: rgb(235, 235, 235);
 }
 
-/* ---  START DESCRIPTION  --- */
-
-.description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-	margin-bottom: 100px;
-    gap: 20px;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--terciary-color);
-}
-
-.sobre{ 
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(./../imagem//pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--primary-color);
-  height: 550px;
-  padding: 50px;
-}
-
-.titleDescriptionH2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #d66140;
-}
-
-.introduction{
-    font-size: 32px;
-    color: var(--text-color);
-}
-
-.titleDescriptionH4{
-    margin: 20px;
-    color: var(--secundary-color);
-    margin: 10px 50px 10px 50px;
-    font-size: 24px;
-}
-
-.titleDescriptonP {
-    font-size: 20px;
-    color: var(--text-color);
-     margin: 0px 50px 10px 50px;
-}
-
-/* --- CARROSSEL  --- */
-
- .container-slide{
-	display: flex;
-	justify-content: space-between;
-	width: 1000px;
-	height: 500px;
-	margin: 30px auto;
-	border-radius: 10px;
-	box-shadow: 0 20px 30px #00000088;	
-}
-
-.container-items{
-	position: absolute;
-	display: flex;
-	width: 1000px;
-	height: 500px;
-	border-radius: 10px;
-	overflow: hidden;
-
-}
-
-.item{
-	width: 1000px;
-	height: 550px;
-	transition: all 1.5s;
-}
-
-.item:first-child{
-	margin-left: -100%;
-}
-
-.item img{
-	width: 1000px;
-	height: 500px;
-	border-radius: 10px;
-}
-
-.action-button{
-	font: bold 50px sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #120ecf00;
-	user-select: none;
-	width: 50%;
-}
-
-.action-button:hover{
-	color: var(--secundary-color);
-	cursor: pointer;
-	border-radius: 10px;
-	transition: all 1s;
-}
-
-#previous{
-	border-radius: 10px 0px 0px 10px;
-}
-
-#next{
-	border-radius: 0px 10px 10px 0px;
-	margin-right: -510px;
-}
-
-.indicators {
-    position: relative;
-    color: white;
-    top: 106%;
-	margin-right: 120px;
-	height: 40px;
-    transform: translate(-50%);
-    display: flex;
-	justify-content: center;
-    gap: 5px;
-}
-
-.indicators span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-color: var(--secundary-color);
-    border-radius: 50%;
-    user-select: none;
-    cursor: pointer;
-	border: solid 5px var(--secundary-color);
-}
-
-.indicators span:hover {
-    background-color: var(--terciary-color);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 3px black;
-}
-
-.indicators .selected {
-    background-color: var(--terciary-color);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 3px black;
-}
-
 /* FOOTER */
 
 .footer-container {
 	display: grid;
-	grid-template-columns: 45% 55%;
+	grid-template-columns: 40% 60%;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
 	background: linear-gradient(
 		180deg,
 		rgba(4, 112, 107, 0.986) 0%,
 		hsla(42, 36%, 78%, 1) 90%
 	);
-	box-shadow: inset 0 0.5rem 2rem #46725d(0, 0, 0, 0.6);
 }
 
 .tituloDhouse{
-  color: var(--primary-color);
-  margin: 20px 50px;
-}
-
-.footer-left p {
-	width: 80%;
-	font-weight: 600;
-	color: var(--text-color);
-	margin: 20px 50px;
+  margin: 20px 150px;
 }
 
 .footer-wotc-terms {
@@ -314,16 +329,17 @@
 	align-items: center;
 	justify-content: flex-start;
 	gap: 1rem;
-	font-weight: 700;
-	margin: 20px 50px;
+	font-size: 15px;
+	font-weight: 600;
+	margin: 20px 150px;
 }
 
 .footer-wotc-social {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin: 20px 50px;
-	gap: 2rem;
+	margin: 20px 150px;
+	gap: 3rem;
 	font-size: 1.2rem;
 }
 
@@ -390,24 +406,6 @@
 
 .dev-socials a:hover {
 	color: var(--color-orange);
-}
-
-.footer-copyright {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	padding: 1.5rem 3rem;
-	font-size: 0.9rem;
-	font-weight: 200;
-	color: var(--color-gold-100);
-	text-align: center;
-}
-
-.footer-copyright-left {
-	text-align: left;
-}
-
-.footer-copyright-right {
-	text-align: right;
 }
 
 /* media queries */
