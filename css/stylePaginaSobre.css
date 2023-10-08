@@ -309,7 +309,7 @@
 
 .footer-container {
 	display: grid;
-	grid-template-columns: 45% 55%;
+	grid-template-columns: 40% 60%;
 	align-items: center;
 	justify-content: center;
 	background: linear-gradient(
@@ -318,11 +318,16 @@
 		hsla(42, 36%, 78%, 1) 90%
 	);
 	box-shadow: inset 0 0.5rem 2rem #46725d(0, 0, 0, 0.6);
-	border: rgb(230, 16, 219) solid 5px;
+	padding: 0px 100px 0 20px;
+	width: 100%;
+    box-sizing: border-box;
 }
 
-.tituloDhouse{
-  margin: 20px 150px;
+.tituloDhouse-footer{
+
+  color: var(--secundary-color);
+  width: 80%;
+
 }
 
 .footer-wotc-terms {
