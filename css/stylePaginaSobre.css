@@ -309,15 +309,16 @@
 
 .footer-container {
 	display: grid;
-	grid-template-columns: 40% 60%;
+	grid-template-columns: 45% 55%;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
 	background: linear-gradient(
 		180deg,
 		rgba(4, 112, 107, 0.986) 0%,
 		hsla(42, 36%, 78%, 1) 90%
 	);
+	box-shadow: inset 0 0.5rem 2rem #46725d(0, 0, 0, 0.6);
+	border: rgb(230, 16, 219) solid 5px;
 }
 
 .tituloDhouse{
@@ -328,17 +329,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 1rem;
-	font-size: 15px;
-	font-weight: 600;
-	margin: 20px 150px;
+	gap: 1rem; 
+	font-size: 12px;
+	font-weight: 700;
+	margin: 50px 0px 0px 150px;
 }
 
 .footer-wotc-social {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin: 20px 150px;
+	margin: 10px 0px 0px 150px;
 	gap: 3rem;
 	font-size: 1.2rem;
 }
@@ -351,7 +352,7 @@
 
 .footer-wotc-terms a:hover,
 .footer-wotc-social a:hover {
-	color: var(--color-orange);
+	color: var(--secundary-color);
 }
 
 .footer-right {
@@ -360,7 +361,7 @@
 
 .dev-info-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1.5fr);
 	align-content: center;
 	justify-content: center;
 	margin: 20px 70px;
@@ -370,21 +371,21 @@
 .dev-info h3 {
 	margin-bottom: 0.5rem;
 	font-size: 1.5rem;
-	color: var(--color-gold-300);
+	color: var(--text-color);
 }
 
 .dev-info h4 {
 	margin-bottom: 1.5rem;
 	font-weight: 400;
 	font-size: 1rem;
-	color: var(--color-darker);
+	color: var(--text-color);
 }
 
 .dev-contact {
 	margin-bottom: 1.5rem;
 	font-weight: 300;
 	font-size: 1rem;
-	color: var(--color-gold-300);
+	color: var(--text-color);
 }
 
 .dev-contact li i {
@@ -400,12 +401,12 @@
 
 .dev-socials a {
 	font-size: 1.2rem;
-	color: var(--color-gold-300);
+	color: var(--text-color);
 	transition: var(--transition);
 }
 
 .dev-socials a:hover {
-	color: var(--color-orange);
+	color: var(--text-color);
 }
 
 /* media queries */
@@ -427,25 +428,6 @@
 		font-size: 0.8rem;
 	}
 
-	.upcoming-sets {
-		margin-top: -8rem;
-	}
-
-	.upcoming-card-info-img img {
-		bottom: 5rem;
-	}
-
-	.upcoming-card-info p {
-		margin: 2.3rem 1rem 2rem;
-		font-weight: 300;
-		font-size: 0.9rem;
-	}
-
-	.mom-btn,
-	.lotr-btn,
-	.masters-btn {
-		margin-bottom: 1rem;
-	}
 
 	.footer-container {
 		padding: 3rem 6rem;
@@ -588,11 +570,6 @@
 		justify-content: center;
 	}
 
-	.footer-left img {
-		width: 20%;
-		margin-bottom: 1rem;
-	}
-
 	.footer-left p {
 		width: 60%;
 		margin-bottom: 1.5rem;
@@ -631,30 +608,10 @@
 		font-size: 1.5rem;
 	}
 
-	.upcoming-card-info-img img {
-		bottom: 6rem;
-		margin-bottom: 2rem;
-	}
-
-	.upcoming-card-info p {
-		font-size: 1rem;
-	}
-
 	.connect-wotc-social {
 		gap: 5rem;
 	}
 
-	.database-call-info h3 {
-		font-size: 1.5rem;
-	}
-
-	.database-call-info p {
-		font-size: 0.8rem;
-	}
-
-	.database-call-info a {
-		font-size: 0.9rem;
-	}
 }
 
 @media screen and (max-width: 440px) {
