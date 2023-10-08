@@ -145,9 +145,9 @@ function renderCarrinho(nome, price, imagem) {
     let carrinhoVazio = document.getElementById('carrinhoVazio')
 
     nomeProduto.innerHTML = `
+    <p>${imagem}</p>
     <p>${nome}</p>
     <p>Preço: ${price}</p>
-    <p>${imagem}</p>
     <hr>
     `
 
@@ -174,10 +174,9 @@ function somaResultado() {
     resultadoCarrinhoRender.classList.add("resultadoCarrinhoRender")
     resultadoCarrinhoRender.innerHTML = `
     <h3>Valor do Carrinho: ${resultadoCarrinho}</h3>
-    <button id="salvarCarrinho">Salvar Carrinho</button>
-    <button id="limparCarrinho">Limpar Carrinho</button>`
+    `
 
-    dialogCarrinho.appendChild(resultadoCarrinhoRender) // Renderiza o resultado da soma do carrinho para o HTML 
+    document.getElementById("produtosCarrinho").appendChild(resultadoCarrinhoRender) // Renderiza o resultado da soma do carrinho para o HTML 
 }
 
 //---------------------------------------------------------------------- ADICIONAR LOCAL STORAGE
@@ -185,8 +184,8 @@ function somaResultado() {
 let salvarCarrinho = document.getElementById("salvarCarrinho")
 
 salvarCarrinho.addEventListener('click', armazenarCarrinho => {
-    const sotrageCarrinho = (chave, valor) => { localStorage.setItem(chave, valor) }
-    sotrageCarrinho("carrinhoSalvo", JSON.stringify(carrinho))
+    const storageCarrinho = (chave, valor) => { localStorage.setItem(chave, valor) }
+    storageCarrinho("carrinhoSalvo", JSON.stringify(carrinho))
 })
 
 function carregarCarrinho() {
@@ -210,7 +209,6 @@ function limparProdutos() {
     localStorage.removeItem("carrinhoSalvo")
 
     document.querySelector("#produtosCarrinho").remove()
-    document.querySelector("#resultadoCarrinhoRender").remove()
 }
 
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
@@ -233,7 +231,7 @@ document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
 
 document.getElementById('btnFechar').onclick = function botaoFechar(e) {
     e.preventDefault()
-    console.log("fechar")
+    console.log("Usuário fechou carrinho")
     carrinhoModal.close();
 }
 

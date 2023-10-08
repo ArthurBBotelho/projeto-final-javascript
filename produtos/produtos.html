@@ -44,17 +44,18 @@
     </main>
 
     <dialog id="carrinhoModal">
-        <div>
+        <div id="carrinhoSuperior">
             <h1>CARRINHO</h1>
-            <button id="btnFechar" class="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
+            <button id="btnFechar"> <img src="/imagem/icones/fechar.png" alt="Fechar"></button>
         </div>
 
-        <div id="carrinhoVazio">
+        <div class="positionCarrinho" id="carrinhoVazio">
             <span>Seu Carrinho Encotra-se vazio no momento!</span>
         </div>
 
-        <div>
-
+        <div class="positionCarrinho">
+            <button id="salvarCarrinho">Salvar Carrinho</button>
+            <button id="limparCarrinho">Limpar Carrinho</button>
         </div>
         <div id="produtosCarrinho"></div>
     </dialog>
