@@ -1,34 +1,34 @@
 :root {
-    --primary-color: #f1f4de;
-    --secundary-color: #e07a5f;
-    --terciary-color: #46725d;
-    --text-color: #313349;
-    --quarter-color: #f2cc8f;
-  }
-  
-  * {
-    font-family: 'Inter', sans-serif;
-    padding: 0;
-    margin: 0;
-	text-decoration: none;
- 
-  }
-
-  /* ---  START DESCRIPTION  --- */
-
-.description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	align-content: center;
-    flex-flow: column wrap;
-    gap: 20px;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--terciary-color);
+	--primary-color: #f1f4de;
+	--secundary-color: #e07a5f;
+	--terciary-color: #46725d;
+	--text-color: #313349;
+	--quarter-color: #f2cc8f;
 }
 
-.sobre{ 
+* {
+	font-family: 'Inter', sans-serif;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+
+}
+
+/* ---  START DESCRIPTION  --- */
+
+.description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: column wrap;
+	gap: 20px;
+	font-size: 28px;
+	font-weight: 600;
+	color: var(--terciary-color);
+}
+
+.sobre {
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(./../imagem//pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -38,23 +38,23 @@
 	padding: 50px 150px;
 }
 
-.titleDescriptionH2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    font-size: 50px;
-    margin-bottom: 100px;
-    color: #d66140;
+.titleDescriptionH2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	font-size: 50px;
+	margin-bottom: 100px;
+	color: #d66140;
 }
 
-.introduction{
+.introduction {
 	text-align: center;
-    font-size: 32px;
-    color: var(--text-color);
+	font-size: 32px;
+	color: var(--text-color);
 }
 
-.cardsBox{
+.cardsBox {
 	display: grid;
 	grid-template-columns: auto auto;
 	align-items: center;
@@ -63,31 +63,31 @@
 	gap: 20px;
 }
 
-.box-description{
+.box-description {
 	margin: auto;
 	border: 2px solid var(--text-color);
 	text-align: justify;
 	border-radius: 10px;
 	height: 230px;
-	box-shadow: 0 5px 10px #00000088;
+
 }
 
-.titleDescriptionH4{
-    margin: 20px;
+.titleDescriptionH4 {
+	margin: 20px;
 	text-align: center;
-    color: var(--secundary-color);
-    font-size: 24px;
+	color: var(--secundary-color);
+	font-size: 24px;
 }
 
 .titleDescriptonP {
-    font-size: 20px;
-    color: var(--text-color);
-    margin: 0px 50px 10px 50px;
+	font-size: 20px;
+	color: var(--text-color);
+	margin: 0px 50px 10px 50px;
 }
 
 /* --- CARROSSEL  --- */
 
- .container-slide{
+.container-slide {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -95,10 +95,10 @@
 	height: 500px;
 	margin: 10px auto;
 	border-radius: 10px;
-	box-shadow: 0 1px 3px #00000088;	
+	box-shadow: 0 1px 3px #00000088;
 }
 
-.container-items{
+.container-items {
 	position: absolute;
 	display: flex;
 	width: 1000px;
@@ -107,28 +107,28 @@
 	overflow: hidden;
 }
 
-.item{
+.item {
 	width: 1000px;
 	height: 550px;
 	transition: all 1.5s;
 }
 
-.item:first-child{
+.item:first-child {
 	margin-left: -100%;
 }
 
-.item img{
+.item img {
 	width: 1000px;
 	height: 500px;
 	border-radius: 10px;
 }
 
-.number{
+.number {
 	font-size: 13px;
 	font-family: sans-serif;
 }
 
-.action-button{
+.action-button {
 	font: bold 50px sans-serif;
 	display: flex;
 	justify-content: center;
@@ -139,144 +139,144 @@
 	z-index: 1;
 }
 
-.action-button:hover{
+.action-button:hover {
 	color: black;
 	cursor: pointer;
 	border-radius: 10px;
 	transition: all 0.5s;
 }
 
-#previous{
+#previous {
 	border-radius: 10px 0px 0px 10px;
 }
 
-#next{
+#next {
 	border-radius: 0px 10px 10px 0px;
 	margin-right: -479px;
 }
 
 .indicators {
-    position: relative;
-    color: white;
-    top: 101%;
+	position: relative;
+	color: white;
+	top: 101%;
 	margin-right: 22.5%;
 	height: 40px;
-    transform: translate(-50%);
-    display: flex;
+	transform: translate(-50%);
+	display: flex;
 	justify-content: center;
 	align-items: center;
-    gap: 7px;
+	gap: 7px;
 }
 
 .indicators span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: var(--secundary-color);
-    border-radius: 50%;
-    user-select: none;
-    cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	background-color: var(--secundary-color);
+	border-radius: 50%;
+	user-select: none;
+	cursor: pointer;
 	font-weight: 600;
 	border: solid 1px var(--secundary-color);
 }
 
 .indicators span:hover {
-    background-color: var(--terciary-color);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 3px black;
+	background-color: var(--terciary-color);
+	color: rgb(255, 255, 255);
+	box-shadow: 0 0 3px black;
 	font-weight: 1000;
 }
 
 .indicators .selected {
-    background-color: var(--terciary-color);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 3px black;
+	background-color: var(--terciary-color);
+	color: rgb(255, 255, 255);
+	box-shadow: 0 0 3px black;
 }
 
-  /* --- START MIDDLE ---*/
+/* --- START MIDDLE ---*/
 
-  .middle{
+.middle {
 	width: 85%;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	justify-content: center;
 	align-content: center;
-  }
+}
 
-  /* --- STAR FORM ----*/
+/* --- STAR FORM ----*/
 
-  #feedback-form {
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    margin: 70px 50px 50px 50px;
+#feedback-form {
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	margin: 70px 50px 50px 50px;
 	width: 95%;
 }
 
 .textLabel {
-    margin: 30px;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-color);
+	margin: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--text-color);
 }
 
 #feedback-form label {
-    font-weight: bold; 
-    margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 #feedback-form input {
 	margin-bottom: 10px;
-    padding: 10px;
+	padding: 10px;
 	width: 80%;
-    border-radius: 5px;
-    font-size: 16px;
-    word-wrap: break-word;
+	border-radius: 5px;
+	font-size: 16px;
+	word-wrap: break-word;
 }
 
 #feedback-form button {
-    background-color: var(--secundary-color);
-    color: white;
-    margin-top: 10px;
-    width: 100px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
+	background-color: var(--secundary-color);
+	color: white;
+	margin-top: 10px;
+	width: 100px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 #feedback-form button:hover {
-    background-color: var(--terciary-color);
+	background-color: var(--terciary-color);
 	color: white
 }
 
 .nome-label {
-    color: #FF5733;
+	color: var(--secundary-color);
 }
 
 .email-label {
-    color: #FF5733; 
+	color: var(--secundary-color);
 }
 
 .text-label {
-    color: #FF5733; 
+	color: var(--secundary-color);
 }
 
 #name-input {
-    width: 50%;
+	width: 50%;
 }
 
 #email-input {
-    width: 50%;
+	width: 50%;
 }
 
 #feedback-input {
-    height: 100px;
-    width: 50%;
+	height: 100px;
+	width: 50%;
 }
 
 #file-input {
@@ -285,13 +285,13 @@
 
 /* ---  START MAPS  --- */
 
-#map{
+#map {
 	width: 85%;
 	border-radius: 10px;
 	margin: 100px 100px 50px 50px;
 }
 
-.custom-map-control-button{
+.custom-map-control-button {
 	background-color: #fff;
 	border: 1px solid var(--text-color);
 	border-radius: 5px;
@@ -301,7 +301,7 @@
 	cursor: pointer;
 }
 
-.custom-map-control-button:hover{
+.custom-map-control-button:hover {
 	background-color: rgb(235, 235, 235);
 }
 
@@ -312,24 +312,22 @@
 	grid-template-columns: 45% 55%;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(
-		180deg,
-		rgba(4, 112, 107, 0.986) 0%,
-		hsla(42, 36%, 78%, 1) 90%
-	);
+	background: linear-gradient(180deg,
+			rgba(4, 112, 107, 0.986) 0%,
+			hsla(42, 36%, 78%, 1) 90%);
 	box-shadow: inset 0 0.5rem 2rem #46725d(0, 0, 0, 0.6);
 	border: rgb(230, 16, 219) solid 5px;
 }
 
-.tituloDhouse{
-  margin: 20px 150px;
+.tituloDhouse {
+	margin: 20px 150px;
 }
 
 .footer-wotc-terms {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 1rem; 
+	gap: 1rem;
 	font-size: 12px;
 	font-weight: 700;
 	margin: 50px 0px 0px 150px;
@@ -518,13 +516,11 @@
 	}
 
 	.upcoming-sets {
-		background: linear-gradient(
-			to bottom,
-			#000 0%,
-			#000 20%,
-			#dcd0b4 20%,
-			#dcd0b4 100%
-		);
+		background: linear-gradient(to bottom,
+				#000 0%,
+				#000 20%,
+				#dcd0b4 20%,
+				#dcd0b4 100%);
 	}
 
 	.upcoming-container {
