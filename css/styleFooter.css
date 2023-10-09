@@ -1,0 +1,78 @@
+/* ----------------------------------------------------- FOOTER --------------------------------------------------------- */
+
+.footer-container {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: var(--primary-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-left {
+    margin: 20px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-left a {
+    font-size: 80px;
+    color: var(--text-color);
+}
+
+.footer-left button {
+    margin: 10px;
+    width: 180px;
+    height: 30px;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border-radius 1s;
+}
+
+.footer-left button:hover {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.dev-info-container {
+    display: flex;
+    color: var(--text-color);
+}
+
+.dev-info {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--quarter-color);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+}
+
+.dev-info h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.dev-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dev-socials {
+    display: flex;
+}
+
+.dev-socials a {
+    font-size: 24px;
+    padding: 5px;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.dev-socials a:hover {
+    color: var(--terciary-color);
+}
