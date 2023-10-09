@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/css/dialogLogin.css">
+    <link rel="stylesheet" href="css/dialogLogin.css">
+    <link rel="stylesheet" href="css/styleFooter.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     </link>
 </head>
 
@@ -31,6 +36,7 @@
 
             <a id="iconeLogin" class="iconeEntrada" href=""><img src="imagem/icones/user.png"></a>
             <div id="nomeUsuario"></div>
+            <a class="iconeEntrada"><img src="../imagem/icones/place.png"></a>
             <a class="iconeEntrada"><img src="imagem/icones/shopping.png"></a>
         </div>
 
@@ -128,14 +134,55 @@
         </div>
     </dialog>
 
-    <footer>
-        <p>Todos os direitos reservados</p>
+    <footer class="footer-container">
+        <div class="footer-left">
+            <div class="tituloDhouse-footer">
+                <h1><a href="index.html">D-house</a></h1>
+            </div>
+            <div class="buttonSpace">
+                <button target="_blank">Termos</button>
+                <button target="_blank">Política de Privacidade</button>
+                <button target="_blank">Código de Conduta</button>
+            </div>
+        </div>
+
+        <div class="dev-info-container">
+            <div class="dev-info">
+                <h3>Arthur Botelho</h3>
+                <h4>Frontend Developer</h4>
+
+                <div class="dev-socials">
+                    <a href="https://github.com/ArthurBBotelho/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ArthurBBotelho" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="dev-info">
+                <h3>Breno Alcântara</h3>
+                <h4>Frontend Developer</h4>
+
+                <div class="dev-socials">
+                    <a href="https://github.com/breno-alcantara" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/brenosalcantara" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="dev-info">
+                <h3>Emily Comin</h3>
+                <h4>Frontend Developer</h4>
+
+                <div class="dev-socials">
+                    <a href="https://github.com/###" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/###/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
     </footer>
 
 
     <script src="script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./javaScript/scriptPaginaLogin.js"></script>
+    <script src="javaScript/scriptPaginaLogin.js"></script>
 
 </body>
 
