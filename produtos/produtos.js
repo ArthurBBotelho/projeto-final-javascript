@@ -174,7 +174,6 @@ function somaResultado() {
     resultadoCarrinhoRender.classList.add("resultadoCarrinhoRender")
     resultadoCarrinhoRender.innerHTML = `
     <h3>Valor do Carrinho: ${resultadoCarrinho}</h3>
-    <button ${onclick = "botaoFechar(e)"}>Finalizar Compra</button>
     `
 
     document.getElementById("produtosCarrinho").appendChild(resultadoCarrinhoRender) // Renderiza o resultado da soma do carrinho para o HTML 
