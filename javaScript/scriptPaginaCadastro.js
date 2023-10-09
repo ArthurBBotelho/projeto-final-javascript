@@ -3,6 +3,7 @@
     let segundoNome = document.getElementById('segundoNome');
     let email = document.getElementById('email');
     let endereco = document.getElementById('endereco');
+    let numero = document.getElementById('numero')
     let senha = document.getElementById('senha');
     let cep = document.getElementById('cep');
 
@@ -28,68 +29,55 @@
 document.getElementById('enviarCadastro').onclick = function btnCadastro(e) {
     e.preventDefault();
 
-    //cria a variavel cadastro e nela pega o cadastro do localstorage ou se não tiver cria um novo
-    // let cadastro = JSON.parse(localStorage.getItem("cadastroUsuario") || '[]')
-    //salvar a pessoa no array
-    // cadastro.push(
-    //     {
-    //     primeiroNome: primeiroNome.value,
-    //     segundoNome: segundoNome.value,
-    //     email: email.value,
-    //     telefone: telefone.value,
-    //     endereco: endereco.value,
-    //     senha: senha.value
-    //     }
-    // )
 
+    //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
+    if (primeiroNome.value && segundoNome.value && email.value && telefone.value && endereco.value && senha.value != undefined) {
+        
     //Usanso API JSONPlaceholder
-    fetch('https://my-json-server.typicode.com/ArthurBBotelho/projeto-final-javascript/db.json/profile', { 
-        method: 'PUT',
+    fetch('http://localhost:3000/cadastroUsuarios', {
+        method: 'POST',
         body: JSON.stringify({
-           primeiroNome: primeiroNome.value,
-           segundoNome: segundoNome.value,
-           email: email.value,
-           telefone: telefone.value,
-           endereco: endereco.value,
-           senha: senha.value
+           'primeiroNome': primeiroNome.value,
+           'segundoNome': segundoNome.value,
+           'email': email.value,
+           'telefone': telefone.value,
+           'cep': cep.value,
+           'endereco': endereco.value,
+           'numero': numero.value,
+           'senha': senha.value
        }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
       })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-
-    // //salvar esse array no localstorage
-    // localStorage.setItem("cadastroUsuario", JSON.stringify(cadastro));
-    
-    //valida se os formulários estão preenchidos e apresenta com a biblioteca SweetAlert
-    if (primeiroNome && segundoNome && email && telefone && endereco && senha != "") {
-       Swal.fire({
-           position: 'center',
-           icon: 'success',
-           title: 'Cadastro realizado com sucesso!',
-           background: '#f1f4de',
-           showConfirmButton: false,
-           })
-        } else {
-            Swal.fire({
+        .then((response) => response.json());
+        
+        Swal.fire({
             position: 'center',
-            icon: 'error',
-            title: 'Complete seu cadastro!',
-            timer: 1000,
+            icon: 'success',
+            title: 'Cadastro realizado com sucesso!',
             background: '#f1f4de',
             showConfirmButton: false,
-       }) 
-   }
-   //salvando o nome do usuário recem cadastrado no localStorage
+            timer: 1500
+            })
+
+            // setTimeout( () =>{
+                window.location.href = "../index.html"
+            // }, 1000)
+    } else {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Preencha seus dados!',
+            background: '#f1f4de',
+            showConfirmButton: false,
+            timer: 1500
+            }) 
+    }
+
+    //salvando o nome do usuário recem cadastrado no localStorage
    localStorage.setItem("salvarNomeUsuario", JSON.stringify(primeiroNome.value));
    //pedindo para alterar a div criada vazia na index e colocar o nome salvo do localStoraga
    document.getElementById("nomeUsuario").innerHTML = "Olá, " + primeiroNome.value;
-   //definindo 1 segundo de tempo para o usuario ver a mensagem positiva e mandar o usuário para a index
-   setTimeout( () =>{
-       window.location.href = "../index.html"
-   }, 1000)
-  
+   //definindo 1 segundo de tempo para o usuario ver a mensagem positiva e mandar o usuário para a index  
 }
-
