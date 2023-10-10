@@ -89,6 +89,7 @@ function validEmail(email) {
 
 //---------------------------------------------------------------NOME DE USUÁRIO LOGADO
 let pegaNomeUsuario = JSON.parse(localStorage.getItem("salvarNomeUsuario"));
+
 console.log(pegaNomeUsuario)
 if (pegaNomeUsuario == null) {
 

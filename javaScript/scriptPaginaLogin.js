@@ -7,51 +7,66 @@ document.getElementById("buttonLogin").onclick = function getLogin(e) {
     //pegando elementos do HTML
     let inputUserName = document.getElementById("inputUserName").value;
     let inputPassword = document.getElementById("inputPassword").value;
-    let loginOk = false
     
 //percorre o array de objetos procurando o mesmo texto do input
    fetch('http://localhost:3000/cadastroUsuarios')
   .then((response) => response.json())
   .then((data) => {
-     console.log(data) 
         for (let i = 0; i <= data.length; i++) {
-            console.log(data.length);
             console.log(inputUserName)
+            // && inputPassword == data[i].senha
+            if(inputUserName || inputPassword == ""){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Preencha seus dados!',
+                    background: '#f1f4de',
+                    timer: 1000,
+                    showConfirmButton: false
+                })
+            }
             if (inputUserName == data[i].email && inputPassword == data[i].senha) {
-                let loginOk = true
-                //seleciona a div ao lado do carrinho para aparecer o nome do usuário salvo no cadastro
-                localStorage.setItem("salvarNomeUsuario", JSON.stringify(data.primeiroNome));   
+                localStorage.setItem("salvarNomeUsuario", JSON.stringify(data[i].primeiroNome));
+                console.log(data[i].primeiroNome)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Bem vindo!',
+                    background: '#f1f4de',
+                    timer: 1000,
+                    showConfirmButton: false,
+                })
+                setTimeout( () =>{
+                    window.location.href = "../index.html"
+                }, 1000)
+              break
+             }
+            if(inputUserName != data[i].email){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'E-mail não cadastrado!',
+                    background: '#f1f4de',
+                    timer: 1000,
+                    showConfirmButton: false
+                });
             }
-            else {
-            inputUserName != data[i].email
-
-            Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'E-mail não cadastrado!',
-            background: '#f1f4de',
-            timer: 1000,
-            showConfirmButton: false
-            });
-             return
-            }
-        }
+        } 
     })
-
-   if (loginOk == true) {
-        Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Bem vindo!',
-        background: '#f1f4de',
-        timer: 1000,
-        showConfirmButton: false,
-        })
-        setTimeout( () =>{
-            window.location.href = "../index.html"
-        }, 1000)
-   }
-   else {
-      document.getElementById("erroCadastro").innerHTML = "verifique e-mail e senha"
-   }
 }
+//    if (loginOk == true) {
+//         Swal.fire({
+//         position: 'center',
+//         icon: 'success',
+//         title: 'Bem vindo!',
+//         background: '#f1f4de',
+//         timer: 1000,
+//         showConfirmButton: false,
+//         })
+//         setTimeout( () =>{
+//             window.location.href = "../index.html"
+//         }, 1000)
+//    }
+//    else {
+//       document.getElementById("erroCadastro").innerHTML = "verifique e-mail e senha"
+//    }
