@@ -83,6 +83,13 @@
     left: 20%;
 }
 
+#mostraQuantidade{
+    position: absolute;
+    color: var(--secundary-color);
+    z-index: 5;
+    bottom: 42px;
+    padding: 3px;
+}
 #carrinhoSuperior {
     margin: 10px;
     padding: 10px;

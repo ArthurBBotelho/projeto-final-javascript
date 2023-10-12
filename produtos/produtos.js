@@ -113,6 +113,29 @@ for (const produto of produtos) {
     return e;
   };
 */
+
+// --------------------------------------------------------------------- ABRIR O MODAL CARRINHO
+
+let carrinhoModal = document.getElementById("carrinhoModal")
+
+document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
+    e.preventDefault()
+    console.log("Usuário abriu carrinho")
+    carrinhoModal.showModal();
+}
+
+// --------------------------------------------------------------------- FECHAR O MODAL CARRINHO
+
+document.getElementById('btnFechar').onclick = function botaoFechar(e) {
+    e.preventDefault()
+    console.log("Usuário fechou carrinho")
+    carrinhoModal.close();
+}
+
+window.onload = () => {
+    carregarCarrinho()
+}
+
 // --------------------------------------------------------------------- CARRINHO
 
 const carrinho = []
@@ -135,6 +158,13 @@ function adicionarProduto() {
 
     renderCarrinho(nome, price, imagem)
     somaResultado()
+    //criar uma div no html para mostrar a quatidade do array do carrinho
+    console.log(carrinho.length)
+    document.getElementById("mostraQuantidade").innerHTML = carrinho.length
+
+    setTimeout(() => {
+        botaoFechar()
+    }, 1000);
 }
 
 //---------------------------------------------------------------------- CONTEÚDO QUE SERÁ EXIBIDO DENTRO DO DIALOG CARRINHO
@@ -208,7 +238,8 @@ limparCarrinho.addEventListener('click', limparProdutos)
 function limparProdutos() {
     localStorage.removeItem("carrinhoSalvo")
 
-    document.querySelector("#produtosCarrinho").remove()
+    document.querySelector("#produtosCarrinho").remove();
+    document.getElementById("mostraQuantidade").innerHTML = " "
 }
 
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
@@ -217,24 +248,3 @@ for (i = 0; i < arrayCarrinho.length; i++) {
     arrayCarrinho[i].addEventListener('click', adicionarProduto)
 }
 
-// --------------------------------------------------------------------- ABRIR O MODAL CARRINHO
-
-let carrinhoModal = document.getElementById("carrinhoModal")
-
-document.getElementById('iconeCarrinho').onclick = function botaoCarrinho(e) {
-    e.preventDefault()
-    console.log("Usuário abriu carrinho")
-    carrinhoModal.showModal();
-}
-
-// --------------------------------------------------------------------- FECHAR O MODAL CARRINHO
-
-document.getElementById('btnFechar').onclick = function botaoFechar(e) {
-    e.preventDefault()
-    console.log("Usuário fechou carrinho")
-    carrinhoModal.close();
-}
-
-window.onload = () => {
-    carregarCarrinho()
-}
