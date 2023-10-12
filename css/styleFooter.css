@@ -1,7 +1,7 @@
 /* ----------------------------------------------------- FOOTER --------------------------------------------------------- */
 
 .footer-container {
-    height: 300px;
+    height: 205px;
     display: grid;
     grid-template-columns: 50% 50%;
     background: var(--primary-color);
@@ -12,21 +12,23 @@
 .footer-left {
     margin: 20px;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .footer-left a {
-    font-size: 80px;
+    font-size:30px;
     color: var(--text-color);
 }
 
 .footer-left button {
     margin: 10px;
-    width: 180px;
+    width: 120px;
     height: 30px;
-    border: 2px solid var(--text-color);
+    border: 1px solid var(--text-color);
     background-color: transparent;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     transition: border-radius 1s;
 }
@@ -34,15 +36,31 @@
 .footer-left button:hover {
     border-radius: 30px;
     cursor: pointer;
+  
 }
 
 .dev-info-container {
     display: flex;
     color: var(--text-color);
+    justify-content: flex-end;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.tituloDhouse-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSpace{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .dev-info {
-    width: 250px;
+    height: 121px;
     margin: 20px;
     padding: 20px;
     color: var(--text-color);
