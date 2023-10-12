@@ -144,28 +144,6 @@ let arrayCarrinho = document.querySelectorAll("#adicionarCarrinho")
 console.log(arrayCarrinho)
 let dialogCarrinho = document.querySelector("#carrinhoModal")
 
-// --------------------------------------------------------------------- FUNÇÃO ADICIONAR PRODUTOS NO CARRINHO
-
-function adicionarProduto() {
-    const nome = this.parentElement.childNodes[0].innerText
-
-    const price = this.parentElement.childNodes[4].innerText
-
-    const imagem = this.parentElement.childNodes[2].innerHTML
-
-    carrinho.push({ nome, price, imagem })
-    console.log(carrinho)
-
-    renderCarrinho(nome, price, imagem)
-    somaResultado()
-    //criar uma div no html para mostrar a quatidade do array do carrinho
-    console.log(carrinho.length)
-    document.getElementById("mostraQuantidade").innerHTML = carrinho.length
-
-    setTimeout(() => {
-        botaoFechar()
-    }, 1000);
-}
 
 //---------------------------------------------------------------------- CONTEÚDO QUE SERÁ EXIBIDO DENTRO DO DIALOG CARRINHO
 
@@ -208,19 +186,33 @@ function somaResultado() {
 
     document.getElementById("produtosCarrinho").appendChild(resultadoCarrinhoRender) // Renderiza o resultado da soma do carrinho para o HTML 
 }
+// --------------------------------------------------------------------- FUNÇÃO ADICIONAR PRODUTOS NO CARRINHO
+
+function adicionarProduto() {
+    const nome = this.parentElement.childNodes[0].innerText
+
+    const price = this.parentElement.childNodes[4].innerText
+
+    const imagem = this.parentElement.childNodes[2].innerHTML
+    carrinho.push({ nome, price, imagem })
+    console.log(carrinho)
+    
+    renderCarrinho(nome, price, imagem)
+    somaResultado()
+    //pega a div no html para mostrar a quatidade do array do carrinho de produtos
+    document.getElementById("mostraQuantidade").innerHTML = carrinho.length
+    carrinhoModal.showModal();
+    setTimeout(() => {
+        carrinhoModal.close();
+    }, 1000);
+    localStorage.setItem("carrinhoSalvo", JSON.stringify(carrinho));
+}
+
 
 //---------------------------------------------------------------------- ADICIONAR LOCAL STORAGE
 
-let salvarCarrinho = document.getElementById("salvarCarrinho")
-
-salvarCarrinho.addEventListener('click', armazenarCarrinho => {
-    const storageCarrinho = (chave, valor) => { localStorage.setItem(chave, valor) }
-    storageCarrinho("carrinhoSalvo", JSON.stringify(carrinho))
-})
-
 function carregarCarrinho() {
     const armazenados = JSON.parse(localStorage.getItem("carrinhoSalvo"));
-    console.log(armazenados)
 
     for (const produtos of armazenados) {
         renderCarrinho(produtos.nome, produtos.price, produtos.imagem)
@@ -228,7 +220,6 @@ function carregarCarrinho() {
     }
     somaResultado()
 }
-
 // --------------------------------------------------------------------- FUNÇÃO LIMPAR STORAGE E ITENS NO CARRINHO
 
 let limparCarrinho = document.getElementById("limparCarrinho")
@@ -236,10 +227,12 @@ let limparCarrinho = document.getElementById("limparCarrinho")
 limparCarrinho.addEventListener('click', limparProdutos)
 
 function limparProdutos() {
-    localStorage.removeItem("carrinhoSalvo")
-
-    document.querySelector("#produtosCarrinho").remove();
-    document.getElementById("mostraQuantidade").innerHTML = " "
+    // document.querySelector("#produtosCarrinho").remove()
+    document.getElementById("mostraQuantidade").innerHTML= " "
+    document.getElementById("produtosCarrinho").innerHTML= " "
+    localStorage.removeItem("carrinhoSalvo");
+    carrinho = []
+    
 }
 
 // --------------------------------------------------------------------- FUNÇÃO PARA SOMAR PRODUTOS ADICIONADOS NO CARRINHO
