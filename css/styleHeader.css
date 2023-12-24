@@ -9,13 +9,11 @@
     height: 50px;
     text-decoration: none;
     position: fixed;
-    z-index: 5;
-    width: 93%;
+    width: 93vw;
   }
-
-li::marker {
+/* li::marker {
   content: ' ';
-}
+} */
 
   .tituloDhouse {
     display: flex;

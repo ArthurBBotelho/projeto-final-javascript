@@ -16,16 +16,18 @@
 }
 /*--------------------------------------------------------------BODY */
 
-.container-cadastro{
-  display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 .containerPC{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10%;
+  
+}
+.container-cadastro{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
 }
 #divSenha{
   display: flex;
