@@ -1,8 +1,8 @@
 document.getElementById("buttonLogin").onclick = function getLogin(e) {
   e.preventDefault();
   //pegando elementos do HTML
-  let inputUserName = document.getElementById("inputUserName").value;
-  let inputPassword = document.getElementById("inputPassword").value;
+  let inputUserName = document.getElementById("inputUserName");
+  let inputPassword = document.getElementById("inputPassword");
 
   //percorre o array de objetos procurando o mesmo texto do input
   fetch("http://localhost:3000/cadastroUsuarios")
