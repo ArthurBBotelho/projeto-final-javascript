@@ -27,14 +27,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .container-login {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px;
+  margin-top: 10%;
 }
 
 .container-form {
@@ -50,8 +48,8 @@ body {
 }
 
 .container-login img {
-  height: 374px;
-  width: 245px;
+  height: 300px;
+  width: 225px;
 }
 
 .complementos {
@@ -136,4 +134,8 @@ button:hover {
   left: 305px;
   top: -12px;
   position: relative;
+}
+
+.ajudaCadastro{
+  margin: 20px 0;
 }
